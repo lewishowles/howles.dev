@@ -1,8 +1,8 @@
-import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default {
 	plugins: {
-		"@stylistic": stylisticJs,
+		"@stylistic": stylistic,
 	},
 	rules: {
 		"@stylistic/array-bracket-newline": ["error", { multiline: true }],
@@ -31,6 +31,7 @@ export default {
 			{ blankLine: "always", prev: "let", next: "const" },
 			{ blankLine: "always", prev: "*", next: "break" },
 			{ blankLine: "always", prev: ["const", "let"], next: "*" },
+			{ blankLine: "always", prev: "*", next: "return" },
 			{ blankLine: "any", prev: "const", next: "const" },
 			{ blankLine: "any", prev: "let", next: "let" },
 		],

@@ -1,6 +1,5 @@
-import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
+import { fileURLToPath, URL } from "node:url";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
@@ -8,6 +7,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			"@": fileURLToPath(new URL("./src", import.meta.url)),
+			"@cypress": fileURLToPath(new URL("./test/cypress", import.meta.url)),
 		},
 	},
 });

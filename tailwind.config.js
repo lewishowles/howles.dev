@@ -1,4 +1,5 @@
 import colors from "tailwindcss/colors";
+import hocusPlugin from "tailwindcss-hocus";
 
 export default {
 	darkMode: "selector",
@@ -25,6 +26,6 @@ export default {
 			pink: colors.pink,
 		},
 	},
-	plugins: [],
+	plugins: [hocusPlugin],
 };
 
