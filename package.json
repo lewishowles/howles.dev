@@ -8,9 +8,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test:unit": "vitest",
-		"test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
-		"test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-		"lint": "eslint . --fix"
+		"lint": "eslint . --fix",
+		"deploy": "gh-pages -d dist --cname howles.dev"
 	},
 	"dependencies": {
 		"pinia": "^2.2.1",
@@ -29,6 +28,7 @@
 		"eslint-plugin-cypress": "^3.4.0",
 		"eslint-plugin-tailwindcss": "^3.17.4",
 		"eslint-plugin-vue": "^9.27.0",
+		"gh-pages": "^6.1.1",
 		"globals": "^15.9.0",
 		"jsdom": "^24.1.1",
 		"postcss": "^8.4.41",
