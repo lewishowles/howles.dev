@@ -1,3 +1,3 @@
 <template>
-	Home
+	howles.dev is under construction!
 </template>
