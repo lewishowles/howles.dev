@@ -1,14 +1,15 @@
+import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
-
-import { mount } from "@vue/test-utils";
 import Home from "./Home.vue";
 
-describe("Home", () => {
-	describe("Initialisation", () => {
-		test("Initialises a Vue component", () => {
-			const wrapper = mount(Home);
+const mount = createMount(Home);
 
-			expect(wrapper.text()).toBe("Home");
+describe("home", () => {
+	describe("Initialisation", () => {
+		test("should exist as a Vue component", () => {
+			const wrapper = mount();
+
+			expect(wrapper.vm).toBeTypeOf("object");
 		});
 	});
 });

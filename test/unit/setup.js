@@ -1,6 +1,8 @@
-import * as components from "@/components";
 import { config } from "@vue/test-utils";
+import * as components from "@lewishowles/components";
 
-const componentsList = components?.default;
+console.log(components);
 
-config.global.components = componentsList;
+Object.keys(components).forEach(key => {
+	config.global.components[key] = components[key];
+});

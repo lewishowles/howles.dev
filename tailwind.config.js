@@ -6,6 +6,8 @@ export default {
 	content: [
 		"./index.html",
 		"./src/**/*.vue",
+		"./src/**/*.cy.js",
+		"./node_modules/@lewishowles/components/dist/components.js",
 	],
 	theme: {
 		colors: {

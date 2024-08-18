@@ -6,5 +6,5 @@ export default [
 		rules: {
 			"tailwindcss/no-custom-classname": ["off"],
 		},
-	}
+	},
 ];

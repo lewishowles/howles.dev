@@ -1,4 +1,4 @@
-import components from "@/components";
+import components from "@lewishowles/components";
 import { mount } from "cypress/vue";
 
 Cypress.Commands.add("mount", (component, options = {}) => {
