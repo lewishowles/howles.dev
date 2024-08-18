@@ -1,4 +1,5 @@
 import colors from "tailwindcss/colors";
+import defaultTheme from "tailwindcss/defaultTheme";
 import hocusPlugin from "tailwindcss-hocus";
 
 export default {
@@ -10,6 +11,12 @@ export default {
 		"./node_modules/@lewishowles/components/dist/components.js",
 	],
 	theme: {
+		extend: {
+			fontFamily: {
+				sans: ["\"Inter Variable\"", ...defaultTheme.fontFamily.sans],
+				mono: ["\"IBM Plex Mono\"", ...defaultTheme.fontFamily.mono],
+			},
+		},
 		colors: {
 			// Set our preferred colours from those provided by Tailwind
 			transparent: "transparent",

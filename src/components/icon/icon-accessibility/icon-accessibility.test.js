@@ -1,10 +1,10 @@
 import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
-import HomePage from "./HomePage.vue";
+import IconAccessibility from "./icon-accessibility.vue";
 
-const mount = createMount(HomePage);
+const mount = createMount(IconAccessibility);
 
-describe("/", () => {
+describe("icon-accessibility", () => {
 	describe("Initialisation", () => {
 		test("should exist as a Vue component", () => {
 			const wrapper = mount();

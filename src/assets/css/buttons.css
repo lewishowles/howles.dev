@@ -1,13 +1,38 @@
 @layer components {
 	.button {
-		@apply px-4 py-2 rounded-lg;
+		@apply px-4 py-2 rounded-full;
+	}
+
+	@property --primary-gradient-start {
+		syntax: "<color>";
+		initial-value: theme("colors.pink.700");
+		inherits: false;
+	}
+
+	@property --primary-gradient-end {
+		syntax: "<color>";
+		initial-value: theme("colors.purple.800");
+		inherits: false;
 	}
 
 	.button--primary {
 		@apply button;
-		@apply bg-purple-800 text-white;
-		@apply hocus:bg-purple-900 text-white;
-		@apply active:bg-purple-950 text-white;
+		@apply transition-all font-semibold text-white;
+		@apply hocus:text-white;
+		@apply active:text-white;
+
+		background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+		transition: --primary-gradient-start 150ms, --primary-gradient-end 150ms;
+
+		&:hover, &:focus {
+			--primary-gradient-start: theme("colors.pink.800");
+			--primary-gradient-end: theme("colors.purple.900");
+		}
+
+		&:active {
+			--primary-gradient-start: theme("colors.pink.900");
+			--primary-gradient-end: theme("colors.purple.950");
+		}
 	}
 
 	.button--muted {
