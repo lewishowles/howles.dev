@@ -1,7 +1,7 @@
 <template>
 	<summary-details
 		v-bind="{ floating: true, align: 'end', icon: currentThemeIcon, closeWithClickOutside: true }"
-		class="absolute end-0 top-0 me-6 mt-6"
+		class="absolute end-0 top-0 z-10 me-6 mt-6"
 		summary-classes="rounded-md border border-transparent p-2 text-grey-500 transition-colors hocus:border-grey-200 hocus:bg-white dark:text-pink-300 dark:hocus:border-transparent dark:hocus:bg-grey-950"
 		details-classes="animate-fade-in-down mt-2 flex flex-col whitespace-nowrap rounded-md border border-grey-200 bg-white py-2 text-sm shadow-sm dark:border-transparent dark:bg-grey-950/20"
 		icon-classes="size-5"
