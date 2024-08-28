@@ -7,10 +7,6 @@
 @tailwind utilities;
 
 @layer base {
-	body {
-		@apply text-grey-600;
-	}
-
 	svg {
 		height: 1em;
 		width: 1em;
@@ -23,5 +19,9 @@
 	a {
 		@apply text-purple-800 underline underline-offset-4;
 		@apply hocus:text-purple-900 hocus:no-underline;
+	}
+
+	img {
+		max-width: 100%;
 	}
 }

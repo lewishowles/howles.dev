@@ -1,5 +1,7 @@
 <template>
-	<div class="flex flex-col items-center bg-gradient-to-b from-grey-50 pt-16" data-test="page-header">
+	<theme-selector />
+
+	<div class="flex flex-col items-center bg-gradient-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
 		<img src="@/assets/images/glasses/light.svg" width="256" height="108" />
 
 		<h1 class="text-center text-[5rem] font-extrabold leading-none text-grey-950">
@@ -21,7 +23,7 @@
 					<span class="font-bold">I’m looking for a new role!</span>
 				</div>
 
-				Find out more about me—and what I can bring to your team
+				Find out more about me—and what I can bring to your team.
 
 				<link-tag href="#" v-bind="{ iconStart: 'icon-download' }" class="button--primary ms-auto text-sm no-underline">
 					View CV
@@ -30,3 +32,7 @@
 		</div>
 	</div>
 </template>
+
+<script setup>
+import ThemeSelector from "@/components/theme-selector/theme-selector.vue";
+</script>
