@@ -5,6 +5,7 @@
 		summary-classes="rounded-md border border-transparent p-2 text-grey-500 transition-colors hocus:border-grey-200 hocus:bg-white dark:text-pink-300 dark:hocus:border-transparent dark:hocus:bg-grey-950"
 		details-classes="animate-fade-in-down mt-2 flex flex-col whitespace-nowrap rounded-md border border-grey-200 bg-white py-2 text-sm shadow-sm dark:border-transparent dark:bg-grey-950/20"
 		icon-classes="size-5"
+		data-test="theme-selector"
 	>
 		<template #summary>
 			<span class="sr-only">Choose theme</span>
@@ -16,6 +17,7 @@
 				class="px-4 py-2 transition-colors active:bg-purple-100 active:text-purple-800 hocus:bg-purple-50 hocus:text-purple-700 dark:active:bg-pink-500/20 dark:active:text-pink-400 dark:hocus:bg-pink-400/20 dark:hocus:text-pink-300"
 				:class="{ 'text-purple-700 dark:text-pink-300': theme.key === currentTheme }"
 				icon-classes="size-4"
+				data-test="theme-selector-button"
 				@click="setTheme(theme.key)"
 			>
 				{{ theme.label }}
