@@ -3,35 +3,38 @@
 
 	<div class="page-header flex flex-col items-center bg-gradient-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
 		<div class="glasses">
-			<img src="@/assets/images/glasses/light.svg" class="dark:hidden" width="256" height="108" />
-			<img src="@/assets/images/glasses/dark.svg" class="hidden dark:block" width="256" height="108" />
+			<img src="@/assets/images/glasses/light.svg" class="h-[3.75rem] w-36 md:size-auto dark:hidden" width="256" height="108" />
+			<img src="@/assets/images/glasses/dark.svg" class="hidden h-[3.75rem] w-36 md:size-auto dark:block" width="256" height="108" />
 		</div>
 
-		<h1 class="text-center text-[5rem] font-extrabold leading-none text-grey-950 dark:text-grey-50">
+		<h1 class="text-center text-5xl font-extrabold leading-none text-grey-950 md:text-[5rem] dark:text-grey-50">
 			Lewis Howles
 		</h1>
 
-		<div class="flex items-center gap-4 text-xl text-blue-800 dark:text-yellow-100">
-			<div class="h-px w-10 bg-current" />
+		<div class="mt-1 flex items-center gap-2 text-sm text-blue-800 md:gap-4 md:text-xl dark:text-yellow-100">
+			<div class="hidden h-px w-10 bg-current md:block" />
 			<span class="font-mono">&lt;</span>
 			<span class="font-extralight">Versatile UI/UX Developer, Designer & Leader</span>
 			<span class="font-mono">/&gt;</span>
-			<div class="h-px w-10 bg-current" />
+			<div class="hidden h-px w-10 bg-current md:block" />
 		</div>
 
-		<div class="mt-8 w-full max-w-5xl rounded-full border border-grey-200 p-1 dark:border-transparent">
-			<div class="flex items-center gap-4 rounded-full border-purple-200 bg-purple-50 px-6 py-5 text-purple-800 dark:border-transparent dark:bg-purple-400/20 dark:text-white">
-				<div class="flex items-center gap-2">
-					<icon-lightbulb class="size-4" />
-					<span class="font-bold">I’m looking for a new role!</span>
+		<div class="mt-8 w-full max-w-5xl md:rounded-full md:border md:border-grey-200 md:p-1 dark:border-transparent">
+			<div class="flex flex-col items-center gap-2 bg-gradient-to-t from-purple-50 px-6 pb-10 pt-6 text-center text-purple-800 md:flex-row md:gap-4 md:rounded-full md:border md:border-purple-200 md:bg-purple-50 md:bg-none md:py-5 md:text-left dark:border-transparent dark:bg-purple-400/20 dark:bg-none dark:pb-6 dark:pt-5 dark:text-white">
+				<div class="contents flex-col gap-x-2 ps-2 md:flex lg:flex-row lg:ps-0">
+					<div class="flex items-center gap-2">
+						<icon-lightbulb class="size-4" />
+						<span class="font-bold">I’m looking for a new role!</span>
+					</div>
+
+					Find out more about me—and what I can bring to your team.
 				</div>
 
-				Find out more about me—and what I can bring to your team.
-
-				<link-tag href="#" v-bind="{ iconStart: 'icon-download' }" class="button--primary ms-auto text-sm no-underline">
+				<link-tag href="#" v-bind="{ iconStart: 'icon-download' }" class="button--primary mt-2 text-sm no-underline md:ms-auto md:mt-0">
 					View CV
 				</link-tag>
 			</div>
+			<div class="h-2 bg-gradient-to-r from-pink-700 to-purple-800 md:hidden dark:hidden" />
 		</div>
 	</div>
 </template>
