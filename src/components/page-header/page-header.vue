@@ -1,7 +1,7 @@
 <template>
 	<theme-selector />
 
-	<div class="page-header flex flex-col items-center bg-gradient-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
+	<div class="page-header flex w-full flex-col items-center bg-gradient-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
 		<div class="glasses">
 			<img src="@/assets/images/glasses/light.svg" class="h-[3.75rem] w-36 md:size-auto dark:hidden" width="256" height="108" />
 			<img src="@/assets/images/glasses/dark.svg" class="hidden h-[3.75rem] w-36 md:size-auto dark:block" width="256" height="108" />
