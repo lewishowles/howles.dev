@@ -1,6 +1,6 @@
 @layer components {
 	.button {
-		@apply px-4 py-2 rounded-full;
+		@apply px-[1em] py-[0.5em] rounded-full;
 	}
 
 	@property --primary-gradient-start {

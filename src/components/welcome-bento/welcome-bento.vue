@@ -6,8 +6,8 @@
 			</p>
 			<p>I’m a passionate, versatile UI/UX Developer and Designer, with over <strong>15 years</strong> experience spanning UI Design, Front-end Development, Web Design, Graphic Design, Accessibility and, historically, Backend Development.</p>
 		</div>
-		<div class="col-start-2 row-span-2 rounded-2xl border border-grey-200 bg-white p-6 dark:border-transparent dark:bg-black/20">
-			Paddock
+		<div class="col-start-2 row-span-2">
+			<paddock-status />
 		</div>
 		<div class="col-start-3 row-span-4 bg-grey-100">
 			Project
@@ -31,15 +31,5 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
-const props = defineProps({
-
-});
+import PaddockStatus from "./fragments/paddock-status/paddock-status.vue";
 </script>
-
-<style>
-.welcome-bento {
-
-}
-</style>
