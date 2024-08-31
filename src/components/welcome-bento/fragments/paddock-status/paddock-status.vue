@@ -6,16 +6,16 @@
 
 		<div v-show="isReady">
 			<div class="flex gap-4">
-				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-green-600': paddockSecure, 'animate-pulse bg-red-600': !paddockSecure }" />
+				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-green-600 dark:bg-green-300': paddockSecure, 'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure }" />
 				<div>
 					<icon-loading v-show="isLoading" class="my-0.5 animate-spin" />
-					<div v-show="!isLoading" class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600': paddockSecure, 'text-red-600': !paddockSecure }">
+					<div v-show="!isLoading" class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600 dark:text-green-300': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure }">
 						<icon-check-circled v-if="paddockSecure" />
 						<icon-danger v-else />
 
 						<span class="text-sm">{{ currentStatusDescriptor }}</span>
 					</div>
-					<div class="mb-1 text-lg font-semibold transition-colors" :class="{ 'text-grey-950': paddockSecure, 'text-red-600': !paddockSecure }">
+					<div class="mb-1 text-lg font-semibold transition-colors" :class="{ 'text-grey-950 dark:text-grey-50': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure }">
 						Tyrannosaurus Paddock
 					</div>
 					<pill-badge icon-start="icon-clock">
@@ -26,13 +26,13 @@
 
 			<div v-show="!isLoading" class="mb-5 mt-6">
 				<ul class="flex gap-0.5 overflow-hidden rounded">
-					<li v-for="status in statuses" :key="status.statusCheckId" v-bind="{ title: status.outcomeLabel }" class="h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600': status.pass, 'bg-red-600': !status.pass }">
+					<li v-for="status in statuses" :key="status.statusCheckId" v-bind="{ title: status.outcomeLabel }" class="h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
 						<span class="sr-only">
 							{{ status.outcomeLabel }}
 						</span>
 					</li>
 				</ul>
-				<div class="mt-1 flex justify-between text-xs text-grey-500">
+				<div class="mt-1 flex justify-between text-xs text-grey-500 dark:text-grey-400">
 					<span>{{ startDate }}</span>
 					<span>Today</span>
 				</div>
