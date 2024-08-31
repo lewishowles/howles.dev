@@ -1,8 +1,12 @@
 import { config } from "@vue/test-utils";
-import * as components from "@lewishowles/components";
+import { createApp } from "vue";
+import componentLibrary from "@lewishowles/components";
 
-console.log(components);
+// Create a Vue app instance
+const app = createApp({});
 
-Object.keys(components).forEach(key => {
-	config.global.components[key] = components[key];
-});
+// Install your plugin
+app.use(componentLibrary);
+
+// Set the global config for Vue Test Utils
+config.global.plugins = [componentLibrary];

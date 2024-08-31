@@ -1,5 +1,5 @@
+import { computed, ref } from "vue";
 import { getFriendlyDisplay, isFunction } from "@lewishowles/helpers/general";
-import { ref } from "vue";
 
 /**
  * Mock API helpers to better mimic a more real-world application.
@@ -9,6 +9,21 @@ export default function useApi() {
 	const isLoading = ref(false);
 	// Whether data has loaded successfully.
 	const isReady = ref(false);
+	// The date that this API call was last run successfully.
+	const lastRunDate = ref(null);
+
+	// The time component of the last run date, if found.
+	const lastRunTime = computed(() => {
+		if (!(lastRunDate.value instanceof Date)) {
+			return "Never";
+		}
+
+		return lastRunDate.value.toLocaleTimeString("en-GB", {
+			hour: "2-digit",
+			minute: "2-digit",
+			hour12: false,
+		});
+	});
 
 	/**
 	 * Add an arbitrary delay to load sample data.
@@ -41,6 +56,8 @@ export default function useApi() {
 
 			isReady.value = true;
 
+			lastRunDate.value = new Date();
+
 			return dataGenerator(...params);
 		} finally {
 			isLoading.value = false;
@@ -50,6 +67,7 @@ export default function useApi() {
 	return {
 		isLoading,
 		isReady,
+		lastRunTime,
 		load,
 	};
 }

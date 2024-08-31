@@ -1,29 +1,32 @@
 <template>
-	<div class="rounded-2xl border border-grey-200 bg-white p-6 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none">
+	<div class="rounded-2xl border p-6 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none" :class="{ 'border-grey-200': paddockSecure, 'border-red-200': !paddockSecure }">
 		<loading-indicator v-show="!isReady && isLoading">
 			Checking status
 		</loading-indicator>
 
 		<div v-show="isReady">
 			<div class="flex gap-4">
-				<div class="w-1 rounded-full bg-green-600" />
+				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-green-600': paddockSecure, 'animate-pulse bg-red-600': !paddockSecure }" />
 				<div>
-					<div class="flex items-center gap-2 text-green-600">
-						<icon-check-circled />
-						<span class="text-sm">Secure</span>
+					<icon-loading v-show="isLoading" class="my-0.5 animate-spin" />
+					<div v-show="!isLoading" class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600': paddockSecure, 'text-red-600': !paddockSecure }">
+						<icon-check-circled v-if="paddockSecure" />
+						<icon-danger v-else />
+
+						<span class="text-sm">{{ currentStatusDescriptor }}</span>
 					</div>
-					<div class="mb-1 text-lg font-semibold text-grey-950">
+					<div class="mb-1 text-lg font-semibold transition-colors" :class="{ 'text-grey-950': paddockSecure, 'text-red-600': !paddockSecure }">
 						Tyrannosaurus Paddock
 					</div>
 					<pill-badge icon-start="icon-clock">
-						Last checked: Today, 05:25
+						Last checked: Today, {{ lastRunTime }}
 					</pill-badge>
 				</div>
 			</div>
 
-			<div v-show="!isLoading" class="mb-5 mt-6 w-max">
+			<div v-show="!isLoading" class="mb-5 mt-6">
 				<ul class="flex gap-0.5 overflow-hidden rounded">
-					<li v-for="status in statuses" :key="status.statusCheckId" v-bind="{ title: status.outcomeLabel }" class="h-7 w-2" :class="{ 'bg-green-600': status.pass, 'bg-red-600': !status.pass }">
+					<li v-for="status in statuses" :key="status.statusCheckId" v-bind="{ title: status.outcomeLabel }" class="h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600': status.pass, 'bg-red-600': !status.pass }">
 						<span class="sr-only">
 							{{ status.outcomeLabel }}
 						</span>
@@ -53,11 +56,18 @@ import { get } from "@lewishowles/helpers/object";
 import { getFriendlyDisplay } from "@lewishowles/helpers/general";
 import { nanoid } from "nanoid";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
-import useApi from "@/composables/api";
+import useApi from "@/composables/use-api";
 
-const { isLoading, isReady, load } = useApi();
+const { isLoading, isReady, load, lastRunTime } = useApi();
 // The historical status checks performed on the paddock.
 const statuses = ref([]);
+// The current (most recent) status.
+const currentStatus = computed(() => tail(statuses.value));
+// Whether the paddock is currently secure, based on the most recent check. If
+// we're currently loading, we'll assume secure for now.
+const paddockSecure = computed(() => isLoading.value || get(currentStatus.value, "pass"));
+// A simple descriptor for the current status.
+const currentStatusDescriptor = computed(() => (paddockSecure.value ? "Secure" : "Breach"));
 // The check now button, which allows us to reset it when loading is complete.
 const checkNowButton = ref(null);
 
@@ -100,17 +110,15 @@ async function loadData(includeSurprise = false) {
  *     Whether to include a surprise in the loaded data.
  */
 function dataGenerator(includeSurprise = false) {
-	const startingYear = 1990;
-	const dataPoints = 34;
+	const startYear = 1990;
+	const endYear = new Date().getFullYear();
 	const response = [];
 
-	for (let i = 0; i < dataPoints; i++) {
-		const year = startingYear + i;
-
+	for (let currentYear = startYear; currentYear <= endYear; currentYear++) {
 		response.push({
 			statusCheckId: nanoid(),
-			pass: year !== 1993,
-			year,
+			pass: currentYear !== 1993,
+			year: currentYear,
 		});
 	}
 
