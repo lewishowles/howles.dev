@@ -1,0 +1,20 @@
+{
+	"header": {
+		"subtitle": "Versatile UI/UX Developer, Designer & Leader"
+	},
+
+	"theme": {
+		"label": "Choose theme",
+		"mode": {
+			"light": "Light mode",
+			"dark": "Dark mode",
+			"system": "System (auto)"
+		}
+	},
+
+	"role": {
+		"title": "I’m looking for a new role!",
+		"text": "Find out more about me—and what I can bring to your team.",
+		"button": "View CV"
+	}
+}

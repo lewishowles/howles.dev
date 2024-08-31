@@ -8,7 +8,7 @@
 		data-test="theme-selector"
 	>
 		<template #summary>
-			<span class="sr-only">Choose theme</span>
+			<span class="sr-only">{{ t("theme.label") }}</span>
 		</template>
 
 		<template v-for="theme in themes" :key="theme.key">
@@ -29,7 +29,9 @@
 <script setup>
 import { computed } from "vue";
 import { useColorMode } from "@vueuse/core";
+import { useI18n } from "vue-i18n";
 
+const { t } = useI18n();
 // The user's current theme, based on a local storage key and the system
 // settings.
 const currentTheme = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false });
@@ -38,9 +40,9 @@ const currentThemeIcon = computed(() => (currentTheme.value === "dark" ? "icon-m
 
 // Available theme selections.
 const themes = [
-	{ key: "dark", label: "Dark mode", icon: "icon-moon" },
-	{ key: "light", label: "Light mode", icon: "icon-sun" },
-	{ key: "auto", label: "System (auto)", icon: "icon-laptop" },
+	{ key: "light", label: t("theme.mode.light"), icon: "icon-sun" },
+	{ key: "dark", label: t("theme.mode.dark"), icon: "icon-moon" },
+	{ key: "auto", label: t("theme.mode.system"), icon: "icon-laptop" },
 ];
 
 /**
