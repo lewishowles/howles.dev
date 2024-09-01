@@ -1,5 +1,5 @@
 <template>
-	<div class="rounded-2xl border p-6 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none" :class="{ 'border-grey-200': paddockSecure, 'border-red-200': !paddockSecure }">
+	<div class="rounded-2xl border p-6 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none" :class="{ 'border-grey-200': paddockSecure, 'border-red-200': !paddockSecure }" data-test="paddock-status">
 		<loading-indicator v-show="!isReady && isLoading">
 			Checking status
 		</loading-indicator>
@@ -26,7 +26,7 @@
 
 			<div v-show="!isLoading" class="mb-5 mt-6">
 				<ul class="flex gap-0.5 overflow-hidden rounded">
-					<li v-for="status in statuses" :key="status.statusCheckId" v-bind="{ title: status.outcomeLabel }" class="h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
+					<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
 						<span class="sr-only">
 							{{ status.outcomeLabel }}
 						</span>
@@ -53,8 +53,8 @@
 import { computed, ref } from "vue";
 import { firstDefined, isNonEmptyArray, tail } from "@lewishowles/helpers/array";
 import { get } from "@lewishowles/helpers/object";
+import { getApiUrl } from "@/api";
 import { getFriendlyDisplay } from "@lewishowles/helpers/general";
-import { nanoid } from "nanoid";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
 import useApi from "@/composables/use-api";
 
@@ -89,7 +89,13 @@ loadData();
  */
 async function loadData(includeSurprise = false) {
 	try {
-		const response = await load(dataGenerator, includeSurprise);
+		let file = "default";
+
+		if (includeSurprise) {
+			file = "surprise";
+		}
+
+		const response = await load(getApiUrl("paddock-status", file));
 
 		if (!isNonEmptyArray(response)) {
 			throw new Error(`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`);
@@ -101,33 +107,6 @@ async function loadData(includeSurprise = false) {
 	} catch (error) {
 		console.log("paddock-status[loadData]", error);
 	}
-}
-
-/**
- * Generate basic sample data for display, as though coming from an API.
- *
- * @param  {boolean}  includeSurprise
- *     Whether to include a surprise in the loaded data.
- */
-function dataGenerator(includeSurprise = false) {
-	const startYear = 1990;
-	const endYear = new Date().getFullYear();
-	const response = [];
-
-	for (let currentYear = startYear; currentYear <= endYear; currentYear++) {
-		response.push({
-			statusCheckId: nanoid(),
-			pass: currentYear !== 1993,
-			year: currentYear,
-		});
-	}
-
-	// The surprise is... an active breach!
-	if (includeSurprise) {
-		tail(response).pass = false;
-	}
-
-	return response;
 }
 
 /**
