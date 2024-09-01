@@ -35,3 +35,10 @@ Using Javascript to write end-to-end testing is a Front-end developer's dream co
 It's flexible enough to allow extensive helper methods, which is a personal love of mine, and the ability to easily mock API responses makes it effortless to test edge cases.
 
 The recent ability to test components in isolation gives a level of component testing that is just cumbersome to complete in a unit test framework and gives a level of confidence that is hard to achieve elsewhere.
+
+## Extras
+
+- The website should be as accessible as possible, with clear focus styling, appropriate screen-reader features, etc.
+- API data is loaded from `json` files to mimic the API workflow. In a full project, I would prefer to use an API helper class to handle any transformations and data retrieval as simply as possible.
+- Text is provided via `vue-i18n` translations to mimic a larger-scale app. Again, in a full app, loading and selecting the preferred language would be handled by a translation composable.
+- All animations should be disabled when `prefers-reduced-motion: reduce` is set.
