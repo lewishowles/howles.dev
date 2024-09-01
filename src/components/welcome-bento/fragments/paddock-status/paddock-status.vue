@@ -1,5 +1,5 @@
 <template>
-	<div class="rounded-2xl border p-6 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none" :class="{ 'border-grey-200': paddockSecure, 'border-red-200': !paddockSecure }" data-test="paddock-status">
+	<div class="relative overflow-hidden rounded-2xl border p-6 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none" :class="{ 'border-grey-200': paddockSecure, 'border-red-200': !paddockSecure }" data-test="paddock-status">
 		<loading-indicator v-show="!isReady && isLoading">
 			Checking status
 		</loading-indicator>
@@ -26,7 +26,7 @@
 
 			<div v-show="!isLoading" class="mb-5 mt-6">
 				<ul class="flex gap-0.5 overflow-hidden rounded">
-					<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
+					<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
 						<span class="sr-only">
 							{{ status.outcomeLabel }}
 						</span>
@@ -45,6 +45,8 @@
 			<ui-button ref="checkNowButton" class="button--muted text-sm" v-bind="{ iconStart: 'icon-reload', reactive: true }" @click="loadData(true)">
 				Check now
 			</ui-button>
+
+			<div v-if="!paddockSecure" class="animate-fade-in-up warning-tape absolute inset-x-0 bottom-0 h-2" />
 		</div>
 	</div>
 </template>
@@ -128,3 +130,15 @@ function augmentResponse(response) {
 	});
 }
 </script>
+
+<style>
+.warning-tape {
+	background: repeating-linear-gradient(
+		-45deg,
+		theme('colors.yellow.400'),
+		theme('colors.yellow.400') 15px,
+		theme('colors.grey.950') 15px,
+		theme('colors.grey.950') 30px
+	);
+}
+</style>

@@ -79,5 +79,9 @@
 		.animate-fade-in-left {
 			animation: fadeInLeft;
 		}
+
+		@for $i from 1 to 40 {
+			.delay:nth-child($i) { animation-delay: calc($i * 5ms); }
+		}
 	}
 }
