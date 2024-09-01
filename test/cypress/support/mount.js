@@ -1,5 +1,6 @@
-import components from "@lewishowles/components";
 import { mount } from "cypress/vue";
+import components from "@lewishowles/components";
+import i18n from "@/i18n";
 
 Cypress.Commands.add("mount", (component, options = {}) => {
 	options.global = options.global || {};
@@ -11,6 +12,7 @@ Cypress.Commands.add("mount", (component, options = {}) => {
 	options.global.plugins.push({
 		install(app) {
 			app.use(components);
+			app.use(i18n);
 		},
 	});
 

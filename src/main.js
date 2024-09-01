@@ -3,9 +3,9 @@ import "@/assets/css/main.css";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import components from "@lewishowles/components";
-import i18n from "./i18n";
+import i18n from "@/i18n";
 
-import App from "./App.vue";
+import App from "@/App.vue";
 
 const app = createApp(App);
 
