@@ -1,8 +1,8 @@
 <template>
 	<div class="w-full max-w-5xl md:rounded-full md:border md:border-grey-200 md:p-1 dark:border-transparent" data-test="looking-for-work">
-		<div class="flex flex-col items-center gap-2 bg-gradient-to-t from-purple-50 px-6 pb-10 pt-6 text-center text-purple-800 md:flex-row md:gap-4 md:rounded-full md:border md:border-purple-200 md:bg-purple-50 md:bg-none md:py-5 md:text-left dark:border-transparent dark:bg-purple-400/20 dark:bg-none dark:pb-6 dark:pt-5 dark:text-white dark:md:pb-5">
+		<div class="flex flex-col items-center gap-2 bg-gradient-to-t from-purple-50 px-6 pb-10 pt-6 text-center text-purple-800 md:flex-row md:gap-4 md:rounded-full md:border md:border-purple-200 md:bg-purple-50 md:bg-none md:py-5 md:text-left dark:border-transparent dark:from-purple-400/20 dark:pb-6 dark:pt-5 dark:text-white dark:md:bg-purple-400/20 dark:md:bg-none dark:md:pb-5">
 			<div class="contents flex-col gap-x-2 ps-2 md:flex lg:flex-row lg:ps-0">
-				<div class="flex items-center gap-2">
+				<div class="flex flex-wrap items-center justify-center gap-2">
 					<icon-lightbulb class="size-4" />
 					<span class="font-bold">{{ t("role.title") }}</span>
 				</div>
