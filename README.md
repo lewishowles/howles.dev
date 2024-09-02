@@ -38,7 +38,12 @@ The recent ability to test components in isolation gives a level of component te
 
 ## Extras
 
-- The website should be as accessible as possible, with clear focus styling, appropriate screen-reader features, etc.
+- The website should be almost as accessible as possible, with clear focus styling, appropriate screen-reader features, etc.
 - API data is loaded from `json` files to mimic the API workflow. In a full project, I would prefer to use an API helper class to handle any transformations and data retrieval as simply as possible.
 - Text is provided via `vue-i18n` translations to mimic a larger-scale app. Again, in a full app, loading and selecting the preferred language would be handled by a translation composable.
 - All animations should be disabled when `prefers-reduced-motion: reduce` is set.
+
+## Room for improvement
+
+- In a full-fledge project, I would like to have a `form-wrapper` type component. This would handle the form interaction, field models, validation, and generating a proper error summary above the form.
+- API interaction is very basic. In a full-fledged project, I would create an `API` class, combined with a more full-fledge `use-api` composable, which handled the various different types of API call, and made it possible to easily mock any individual API method during testing.

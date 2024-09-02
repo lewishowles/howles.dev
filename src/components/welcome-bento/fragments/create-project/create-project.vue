@@ -9,11 +9,15 @@
 		</p>
 
 		<form-layout>
-			<form-input v-model="project.name">
+			<form-input ref="projectNameInput" v-model="project.name" v-bind="{ inputAttributes: { required: true } }">
 				{{ t("create_project.form.project_name.label") }}
 
 				<template #help>
 					{{ t("create_project.form.project_name.help") }}
+				</template>
+
+				<template #error>
+					{{ errorMessages.name }}
 				</template>
 			</form-input>
 
@@ -50,6 +54,7 @@
 </template>
 
 <script setup>
+import { isNonEmptyString } from "@lewishowles/helpers/string";
 import { reactive, ref } from "vue";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
 import { useI18n } from "vue-i18n";
@@ -62,11 +67,19 @@ const { delay } = useApi();
 const submitButton = ref(null);
 // The default option for type.
 const defaultType = ref("blank");
+// A reference to the project name field, allowing us to focus on it if an error
+// occurs.
+const projectNameInput = ref(null);
 
 // The current values of the form.
 const project = reactive({
 	name: null,
 	type: defaultType.value,
+});
+
+// Any error messages to display to the user.
+const errorMessages = reactive({
+	name: null,
 });
 
 // Whether to display a success message.
@@ -77,14 +90,42 @@ const showingSuccessMessage = ref(false);
  */
 async function createProject() {
 	try {
-		await delay(1000);
+		const isValid = validateForm();
 
-		runComponentMethod(submitButton.value, "reset");
+		if (!isValid) {
+			return;
+		}
+
+		await delay(1000);
 
 		showSuccessMessage();
 	} catch {
 		console.log("create-project[createProject]: Failed to create project");
+	} finally {
+		runComponentMethod(submitButton.value, "reset");
 	}
+}
+
+/**
+ * Validate our form. In a more complete project a `form-wrapper` component
+ * would handle this for us based on validation criteria applied to the
+ * fields.
+ */
+function validateForm() {
+	// Reset any previous validation.
+	errorMessages.name = null;
+
+	let isValid = true;
+
+	if (!isNonEmptyString(project.name)) {
+		errorMessages.name = t("create_project.form.project_name.error.empty");
+
+		runComponentMethod(projectNameInput.value, "triggerFocus");
+
+		isValid = false;
+	}
+
+	return isValid;
 }
 
 /**

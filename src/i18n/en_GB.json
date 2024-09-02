@@ -65,7 +65,10 @@
 		"form": {
 			"project_name": {
 				"label": "Project name",
-				"help": "The project name is seen by anyone you invite, and will be used when generating templates."
+				"help": "The project name is seen by anyone you invite, and will be used when generating templates.",
+				"error": {
+					"empty": "Enter a name for the project"
+				}
 			},
 			"project_type": {
 				"label": "Project type",
@@ -76,6 +79,7 @@
 				]
 			},
 			"submit": "Create project",
+
 			"success": "Projected created successfully"
 		}
 	}
