@@ -73,7 +73,7 @@ const currentStatus = computed(() => tail(statuses.value));
 // we're currently loading, we'll assume secure for now.
 const paddockSecure = computed(() => isLoading.value || get(currentStatus.value, "pass"));
 // A simple descriptor for the current status.
-const currentStatusDescriptor = computed(() => (paddockSecure.value ? t("paddock_status.status.secure") : t("paddock_status.status.secure")));
+const currentStatusDescriptor = computed(() => (paddockSecure.value ? t("paddock_status.status.secure") : t("paddock_status.status.breach")));
 // The check now button, which allows us to reset it when loading is complete.
 const checkNowButton = ref(null);
 
@@ -126,7 +126,7 @@ function augmentResponse(response) {
 
 	return response.map(status => {
 		// Provide a representative label that can be used for accessibility.
-		const outcome = status.pass ? "Secure" : "Security breach";
+		const outcome = status.pass ? t("paddock_status.status.secure") : t("paddock_status.status.breach");
 
 		status.outcomeLabel = `${status.year}: ${outcome}`;
 
