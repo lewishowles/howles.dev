@@ -1,5 +1,5 @@
 import { deepMerge } from "@lewishowles/helpers/object";
-import { mount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 
 /**
  * Returns a function to simplify mounting components in Vitest by providing
@@ -27,6 +27,6 @@ export function createMount(component, defaultOptions = {}) {
 		const isDirectProps = !Object.hasOwn(options, "props") && !Object.hasOwn(options, "slots");
 		const providedOptions = isDirectProps ? { props: options } : options;
 
-		return mount(component, deepMerge(defaultOptions, providedOptions));
+		return shallowMount(component, deepMerge(defaultOptions, providedOptions));
 	};
 };

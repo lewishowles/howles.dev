@@ -1,7 +1,7 @@
 import { config } from "@vue/test-utils";
+import { vi } from "vitest";
 import componentLibrary from "@lewishowles/components";
 import i18n from "@/i18n";
-import { vi } from "vitest";
 
 // Set the global config for Vue Test Utils
 config.global.plugins = [componentLibrary, i18n];

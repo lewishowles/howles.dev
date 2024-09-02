@@ -46,6 +46,7 @@ export default function useApi() {
 			let response = await fetch(url);
 
 			response = response.json();
+
 			isReady.value = true;
 			lastRunDate.value = new Date();
 
@@ -62,6 +63,11 @@ export default function useApi() {
 	 *     The time, in milliseconds, to wait.
 	 */
 	function delay(time) {
+		// If we're in a test environment, let's not overcomplicate things.
+		if (import.meta.env.MODE === "test") {
+			return Promise.resolve();
+		}
+
 		return new Promise(resolve => setTimeout(resolve, time));
 	}
 

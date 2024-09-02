@@ -44,5 +44,18 @@
 				"& more!"
 			]
 		}
+	},
+
+	"paddock_status": {
+		"loading": "Checking status",
+		"title": "Tyrannosaurus Paddock",
+		"last_checked": "Last checked: Today, {time}",
+		"today": "Today",
+		"check_now": "Check now",
+		"status": {
+			"secure": "Secure",
+			"breach": "Breach"
+		}
+	},
 	}
 }

@@ -41,7 +41,7 @@
 		@apply hocus:bg-grey-50 hocus:border-grey-300;
 		@apply active:bg-grey-100 active:border-grey-400;
 		@apply dark:bg-white/20 dark:border-transparent;
-		@apply dark:hocus:bg-white/30;
-		@apply dark:active:bg-white/40;
+		@apply dark:hocus:bg-white/30 dark:hocus:border-transparent;
+		@apply dark:active:bg-white/40 dark:hocus:border-transparent;
 	}
 }
