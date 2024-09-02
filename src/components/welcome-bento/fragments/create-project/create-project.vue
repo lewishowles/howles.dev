@@ -1,6 +1,6 @@
 <template>
-	<div class="relative rounded-2xl border border-grey-300 px-6 py-5 shadow-sm dark:border-transparent dark:bg-black/20 dark:shadow-none">
-		<h2 class="mb-1 text-lg font-semibold">
+	<div class="relative rounded-2xl border border-grey-300 px-6 py-5 shadow-sm dark:border-transparent dark:bg-grey-950/20 dark:shadow-none">
+		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
 			{{ t("create_project.title") }}
 		</h2>
 
@@ -29,7 +29,7 @@
 				</template>
 			</radio-group>
 
-			<form-actions class="inset-well bg-grey-50">
+			<form-actions class="inset-well bg-grey-50 dark:bg-grey-950/30">
 				<ui-button ref="submitButton" v-bind="{ reactive: true }" class="button--primary" @click="createProject">
 					{{ t("create_project.form.submit") }}
 				</ui-button>
