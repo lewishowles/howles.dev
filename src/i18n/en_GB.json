@@ -75,7 +75,8 @@
 					{ "label": "Use a template", "value": "template" }
 				]
 			},
-			"submit": "Create project"
+			"submit": "Create project",
+			"success": "Projected created successfully"
 		}
 	}
 }

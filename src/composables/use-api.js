@@ -72,6 +72,7 @@ export default function useApi() {
 	}
 
 	return {
+		delay,
 		isLoading,
 		isReady,
 		lastRunTime,
