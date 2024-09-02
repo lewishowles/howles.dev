@@ -57,5 +57,25 @@
 			"breach": "Breach"
 		}
 	},
+
+	"create_project": {
+		"title": "Create project",
+		"intro": "Projects allow you to bring together designs, code, and research into one space.",
+
+		"form": {
+			"project_name": {
+				"label": "Project name",
+				"help": "The project name is seen by anyone you invite, and will be used when generating templates."
+			},
+			"project_type": {
+				"label": "Project type",
+				"introduction": "What type of project would you like to create?",
+				"options": [
+					{ "label": "Blank project", "value": "blank" },
+					{ "label": "Use a template", "value": "template" }
+				]
+			},
+			"submit": "Create project"
+		}
 	}
 }

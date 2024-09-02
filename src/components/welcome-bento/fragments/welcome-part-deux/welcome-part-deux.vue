@@ -12,7 +12,7 @@
 			{{ t("welcome.part_deux.button") }}
 		</link-tag>
 
-		<ul class="inset-well mt-10 flex flex-wrap gap-3 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 text-xs text-purple-800 md:gap-5 md:bg-grey-950/20 md:bg-none md:text-sm md:text-white dark:bg-grey-950/20 dark:bg-none dark:max-md:text-grey-200">
+		<ul class="inset-well-intro mt-10 flex flex-wrap gap-3 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 text-xs text-purple-800 md:gap-5 md:bg-grey-950/20 md:bg-none md:text-sm md:text-white dark:bg-grey-950/20 dark:bg-none dark:max-md:text-grey-200">
 			<li v-for="skill in tm('welcome.part_deux.skills')" :key="skill" class="rounded-full border border-current px-[1em] py-[0.5em]" data-test="welcome-part-deux-skill">
 				{{ rt(skill) }}
 			</li>

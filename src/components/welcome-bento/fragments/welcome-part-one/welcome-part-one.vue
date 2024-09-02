@@ -4,7 +4,7 @@
 			{{ t("welcome.part_one.hi") }}
 		</p>
 
-		<i18n-t keypath="welcome.part_one.text" tag="p">
+		<i18n-t keypath="welcome.part_one.text" tag="p" scope="global">
 			<template #experience>
 				<strong>{{ t("welcome.part_one.experience") }}</strong>
 			</template>
