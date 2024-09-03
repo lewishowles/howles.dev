@@ -2,7 +2,7 @@
 	.inset-well {
 		--offset: 4px;
 
-		border-radius: 0.75rem;
+		border-radius: calc(1rem - var(--offset));
 		margin-bottom: calc(-1.25rem + var(--offset));
 		margin-left: calc(-1.5rem + var(--offset));
 		margin-right: calc(-1.5rem + var(--offset));
@@ -12,10 +12,10 @@
 		padding-top: calc(1.25rem - var(--offset));
 	}
 
-	.inset-well-intro {
+	.inset-well--intro {
 		--offset: 4px;
 
-		border-radius: 0.75rem;
+		border-radius: calc(1rem - var(--offset));
 		margin-bottom: calc(-2.5rem + var(--offset));
 		margin-left: calc(-3rem + var(--offset));
 		margin-right: calc(-3rem + var(--offset));

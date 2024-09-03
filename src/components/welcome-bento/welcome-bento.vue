@@ -15,8 +15,8 @@
 			<div class="col-start-1 row-span-4 bg-grey-100">
 				Staff duties
 			</div>
-			<div class="col-start-3 bg-grey-100">
-				Users
+			<div class="col-start-3">
+				<headline-users />
 			</div>
 		</template>
 
@@ -32,6 +32,7 @@
 import { useMediaQuery } from "@vueuse/core";
 
 import CreateProject from "./fragments/create-project/create-project.vue";
+import HeadlineUsers from "./fragments/headline-users/headline-users.vue";
 import PaddockStatus from "./fragments/paddock-status/paddock-status.vue";
 import WelcomePartDeux from "./fragments/welcome-part-deux/welcome-part-deux.vue";
 import WelcomePartOne from "./fragments/welcome-part-one/welcome-part-one.vue";

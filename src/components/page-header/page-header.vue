@@ -11,7 +11,7 @@
 			Lewis Howles
 		</h1>
 
-		<div class="mt-1 flex items-center gap-2 px-2 text-center text-sm text-blue-800 md:gap-4 md:text-xl dark:text-yellow-100">
+		<div class="mt-1 flex items-center gap-2 px-2 text-center text-sm text-purple-800 md:gap-4 md:text-xl dark:text-yellow-100">
 			<div class="hidden h-px w-10 bg-current md:block" />
 			<span class="whitespace-nowrap font-mono">&lt;</span>
 			<span class="text-balance font-extralight">{{ t("header.subtitle") }}</span>

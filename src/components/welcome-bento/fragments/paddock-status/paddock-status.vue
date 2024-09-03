@@ -1,5 +1,5 @@
 <template>
-	<div class="relative overflow-hidden rounded-2xl border p-6 shadow-sm dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
+	<div class="relative overflow-hidden rounded-2xl border p-6 shadow dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
 		<loading-indicator v-show="!isReady && isLoading">
 			{{ t("paddock_status.loading") }}
 		</loading-indicator>
