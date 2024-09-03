@@ -1,5 +1,5 @@
 <template>
-	<div class="relative rounded-2xl border border-grey-300 px-6 py-5 shadow-sm dark:border-transparent dark:bg-grey-950/20 dark:shadow-none">
+	<div class="relative rounded-2xl border border-grey-300 px-6 py-5 shadow dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" data-test="create-project">
 		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
 			{{ t("create_project.title") }}
 		</h2>
@@ -8,7 +8,7 @@
 			{{ t("create_project.intro") }}
 		</p>
 
-		<form-layout>
+		<form-layout data-test="create-project-form">
 			<form-input ref="projectNameInput" v-model="project.name" v-bind="{ inputAttributes: { required: true } }">
 				{{ t("create_project.form.project_name.label") }}
 
@@ -44,7 +44,7 @@
 			leave-from-class="opacity-100 transform translate-y-0"
 			leave-to-class="opacity-0 transform translate-y-4"
 		>
-			<div v-show="showingSuccessMessage" class="absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-green-500 to-green-600 p-6 text-white">
+			<div v-show="showingSuccessMessage" class="absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-green-500 to-green-600 p-6 text-white" data-test="create-project-success">
 				<icon-check-circled class="size-6" />
 
 				{{ t("create_project.form.success") }}
@@ -132,12 +132,12 @@ function validateForm() {
  * Show a sample success message and reset the form.
  */
 async function showSuccessMessage() {
+	resetForm();
+
 	showingSuccessMessage.value = true;
 
 	setTimeout(() => {
 		showingSuccessMessage.value = false;
-
-		resetForm();
 	}, 2000);
 }
 
