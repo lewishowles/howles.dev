@@ -55,7 +55,7 @@
 
 <script setup>
 import { isNonEmptyString } from "@lewishowles/helpers/string";
-import { reactive, ref } from "vue";
+import { reactive, ref, useTemplateRef } from "vue";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
@@ -66,12 +66,12 @@ const { t, tm } = useI18n();
 const { delay } = useApi();
 // A reference to the submit button, allowing us to reset it after project
 // creation or on error.
-const submitButton = ref(null);
+const submitButton = useTemplateRef("submitButton");
 // The default option for type.
 const defaultType = ref("blank");
 // A reference to the project name field, allowing us to focus on it if an error
 // occurs.
-const projectNameInput = ref(null);
+const projectNameInput = useTemplateRef("projectNameInput");
 
 // The current values of the form.
 const project = reactive({

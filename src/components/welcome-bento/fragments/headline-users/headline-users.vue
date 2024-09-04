@@ -47,7 +47,7 @@ const { t } = useI18n();
 const { load, isLoading } = useApi();
 
 // The statistics as loaded from the API.
-const statistics = ref(null);
+const statistics = ref([]);
 // The current period user count.
 const currentPeriod = computed(() => {
 	const figure = get(statistics.value, "current_period.user_count");

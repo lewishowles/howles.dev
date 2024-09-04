@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, useTemplateRef } from "vue";
 import { firstDefined, isNonEmptyArray, tail } from "@lewishowles/helpers/array";
 import { get } from "@lewishowles/helpers/object";
 import { getApiUrl } from "@/api";
@@ -90,7 +90,7 @@ const currentStatusDescriptor = computed(() => {
 });
 
 // The check now button, which allows us to reset it when loading is complete.
-const checkNowButton = ref(null);
+const checkNowButton = useTemplateRef("checkNowButton");
 
 // The start date for the status responses.
 const startDate = computed(() => {
