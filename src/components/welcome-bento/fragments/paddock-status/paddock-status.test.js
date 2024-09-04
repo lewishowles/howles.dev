@@ -18,14 +18,16 @@ describe("paddock-status", () => {
 	});
 
 	describe("Methods", () => {
-		test("loadData", async() => {
-			fetch.mockResolvedValueOnce({ json: () => sampleData });
+		describe("loadData", () => {
+			test("should load data from the correct source", async() => {
+				fetch.mockResolvedValueOnce({ json: () => sampleData });
 
-			mount();
+				mount();
 
-			await flushPromises();
+				await flushPromises();
 
-			expect(fetch).toHaveBeenCalledWith("/data/paddock-status/default.json");
+				expect(fetch).toHaveBeenCalledWith("/data/paddock-status/default.json");
+			});
 		});
 	});
 });

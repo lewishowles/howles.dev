@@ -8,8 +8,7 @@
 			<div class="flex gap-4">
 				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-grey-300 dark:bg-white/20': isLoading, 'bg-green-600 dark:bg-green-300': !isLoading && paddockSecure, 'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure }" />
 				<div>
-					<icon-loading v-show="isLoading" class="my-0.5 size-4 animate-spin" />
-					<div v-show="!isLoading" class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600 dark:text-green-300': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure }">
+					<div class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600 dark:text-green-300': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure, 'invisible': isLoading }">
 						<icon-check-circled v-if="paddockSecure" />
 						<icon-danger v-else />
 

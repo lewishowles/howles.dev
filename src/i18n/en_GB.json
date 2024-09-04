@@ -82,5 +82,10 @@
 
 			"success": "Projected created successfully"
 		}
+	},
+
+	"headline_users": {
+		"title": "Unique users, last 30 days",
+		"error": "Error"
 	}
 }
