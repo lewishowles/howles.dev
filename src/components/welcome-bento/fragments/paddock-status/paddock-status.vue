@@ -1,5 +1,5 @@
 <template>
-	<div class="relative overflow-hidden rounded-2xl border p-6 shadow dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
+	<bento-box class="relative overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
 		<loading-indicator v-show="!isReady && isLoading">
 			{{ t("paddock_status.loading") }}
 		</loading-indicator>
@@ -49,7 +49,7 @@
 
 			<div v-if="!paddockSecure" class="animate-fade-in-up warning-tape absolute inset-x-0 bottom-0 h-2" />
 		</div>
-	</div>
+	</bento-box>
 </template>
 
 <script setup>
@@ -61,6 +61,8 @@ import { getFriendlyDisplay } from "@lewishowles/helpers/general";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
+
+import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
 
 const { t } = useI18n();
 const { isLoading, isReady, load, lastRunTime } = useApi();

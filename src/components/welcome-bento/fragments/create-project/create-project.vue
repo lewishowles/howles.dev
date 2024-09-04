@@ -1,5 +1,5 @@
 <template>
-	<div class="relative rounded-2xl border border-grey-300 px-6 py-5 shadow dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" data-test="create-project">
+	<bento-box class="relative" data-test="create-project">
 		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
 			{{ t("create_project.title") }}
 		</h2>
@@ -50,7 +50,7 @@
 				{{ t("create_project.form.success") }}
 			</div>
 		</transition>
-	</div>
+	</bento-box>
 </template>
 
 <script setup>
@@ -59,6 +59,8 @@ import { reactive, ref } from "vue";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
+
+import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
 
 const { t, tm } = useI18n();
 const { delay } = useApi();

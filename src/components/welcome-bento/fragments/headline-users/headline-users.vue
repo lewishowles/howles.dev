@@ -1,5 +1,5 @@
 <template>
-	<div class="group relative flex cursor-pointer items-center gap-4 rounded-2xl border border-grey-300 p-6 shadow transition-colors hocus:bg-gradient-to-b hocus:from-white hocus:to-grey-100 dark:border-transparent dark:bg-grey-950/20 dark:shadow-none dark:hocus:bg-grey-950/30 dark:hocus:bg-none" data-test="headline-users" tabindex="0">
+	<bento-box class="group flex cursor-pointer items-center gap-4 py-6 transition-colors hocus:bg-gradient-to-b hocus:from-white hocus:to-grey-100 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none" tabindex="0" data-test="headline-users">
 		<div class="size-14 rounded-full bg-gradient-to-br from-pink-700 to-purple-800 p-4">
 			<icon-user class="size-6 text-white" />
 		</div>
@@ -28,7 +28,7 @@
 		</div>
 
 		<icon-chevron-right class="group-hocus:animate-fade-in-right ms-auto size-5 shrink-0 text-grey-400 motion-safe:opacity-0" data-test="headline-users-chevron" />
-	</div>
+	</bento-box>
 </template>
 
 <script setup>
@@ -40,6 +40,8 @@ import { isNonEmptyString } from "@lewishowles/helpers/string";
 import { isNumber } from "@lewishowles/helpers/number";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
+
+import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
 
 const { t } = useI18n();
 const { load, isLoading } = useApi();
