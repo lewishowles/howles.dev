@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test, vi } from "vitest";
+import { describe, expect, test } from "vitest";
 import { flushPromises } from "@vue/test-utils";
 import PaddockStatus from "./paddock-status.vue";
 import sampleData from "./fixtures/default.json";

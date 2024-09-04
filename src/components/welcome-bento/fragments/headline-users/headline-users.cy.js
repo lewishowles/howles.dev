@@ -1,12 +1,13 @@
-import HeadlineUsers from "./headline-users.vue";
 import { createMount } from "@cypress/support/mount";
+import { getApiUrl } from "@/api";
+import HeadlineUsers from "./headline-users.vue";
 import sampleData from "./fixtures/users.json";
 
 const mount = createMount(HeadlineUsers);
 
 describe("headline-users", () => {
 	it("A component is rendered", () => {
-		cy.intercept("/data/analytics/users.json", sampleData);
+		cy.intercept(getApiUrl("analytics", "users"), sampleData);
 
 		mount();
 
@@ -16,7 +17,7 @@ describe("headline-users", () => {
 	});
 
 	it("Interaction hints should appear on focus", () => {
-		cy.intercept("/data/analytics/users.json", sampleData);
+		cy.intercept(getApiUrl("analytics", "users"), sampleData);
 
 		mount();
 
@@ -28,7 +29,7 @@ describe("headline-users", () => {
 	});
 
 	it("A failed load is handled", () => {
-		cy.intercept("/data/analytics/users.json", { statusCode: 500 });
+		cy.intercept(getApiUrl("analytics", "users"), { statusCode: 500 });
 
 		mount();
 

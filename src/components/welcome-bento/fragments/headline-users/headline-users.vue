@@ -42,7 +42,7 @@ import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
 
 const { t } = useI18n();
-const { load, isLoading, isReady } = useApi();
+const { load, isLoading } = useApi();
 
 // The statistics as loaded from the API.
 const statistics = ref(null);

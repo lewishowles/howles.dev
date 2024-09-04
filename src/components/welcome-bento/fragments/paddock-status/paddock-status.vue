@@ -12,7 +12,7 @@
 						<icon-check-circled v-if="paddockSecure" />
 						<icon-danger v-else />
 
-						<span class="text-sm">{{ currentStatusDescriptor }}</span>
+						<span class="text-sm" data-test="paddock-status-status">{{ currentStatusDescriptor }}</span>
 					</div>
 					<div class="mb-1 text-lg font-semibold transition-colors" :class="{ 'text-grey-950 dark:text-grey-50': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure }">
 						{{ t("paddock_status.title") }}
@@ -24,8 +24,8 @@
 			</div>
 
 			<div class="mb-5 mt-6">
-				<div v-show="!isLoading">
-					<ul class="flex gap-0.5 overflow-hidden rounded">
+				<div v-show="!isLoading && isReady && haveStatuses">
+					<ul class="flex gap-0.5 overflow-hidden rounded" data-test="paddock-status-markers">
 						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
 							<span class="sr-only">
 								{{ status.outcomeLabel }}
@@ -66,13 +66,27 @@ const { t } = useI18n();
 const { isLoading, isReady, load, lastRunTime } = useApi();
 // The historical status checks performed on the paddock.
 const statuses = ref([]);
+// Whether any statuses are present.
+const haveStatuses = computed(() => isNonEmptyArray(statuses.value));
 // The current (most recent) status.
 const currentStatus = computed(() => tail(statuses.value));
 // Whether the paddock is currently secure, based on the most recent check. If
 // we're currently loading, we'll assume secure for now.
 const paddockSecure = computed(() => isLoading.value || get(currentStatus.value, "pass"));
+
 // A simple descriptor for the current status.
-const currentStatusDescriptor = computed(() => (paddockSecure.value ? t("paddock_status.status.secure") : t("paddock_status.status.breach")));
+const currentStatusDescriptor = computed(() => {
+	if (isReady.value && haveStatuses.value) {
+		if (paddockSecure.value) {
+			return t("paddock_status.status.secure");
+		}
+
+		return t("paddock_status.status.breach");
+	}
+
+	return t("paddock_status.status.unknown");
+});
+
 // The check now button, which allows us to reset it when loading is complete.
 const checkNowButton = ref(null);
 

@@ -54,7 +54,8 @@
 		"check_now": "Check now",
 		"status": {
 			"secure": "Secure",
-			"breach": "Breach"
+			"breach": "Breach",
+			"unknown": "Unknown"
 		}
 	},
 
