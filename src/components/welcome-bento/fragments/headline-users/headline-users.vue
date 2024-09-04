@@ -1,5 +1,5 @@
 <template>
-	<div class="group relative flex cursor-pointer items-center gap-4 rounded-2xl border border-grey-300 p-6 pr-12 shadow transition-colors hocus:bg-gradient-to-b hocus:from-white hocus:to-grey-100 dark:border-transparent dark:bg-grey-950/20 dark:shadow-none dark:hocus:bg-grey-950/30 dark:hocus:bg-none" data-test="headline-users" tabindex="0">
+	<div class="group relative flex cursor-pointer items-center gap-4 rounded-2xl border border-grey-300 p-6 shadow transition-colors hocus:bg-gradient-to-b hocus:from-white hocus:to-grey-100 dark:border-transparent dark:bg-grey-950/20 dark:shadow-none dark:hocus:bg-grey-950/30 dark:hocus:bg-none" data-test="headline-users" tabindex="0">
 		<div class="size-14 rounded-full bg-gradient-to-br from-pink-700 to-purple-800 p-4">
 			<icon-user class="size-6 text-white" />
 		</div>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 
-		<icon-chevron-right class="absolute end-0 top-1/2 mr-6 size-5 -translate-y-1/2 text-grey-400 opacity-0 transition-opacity group-hocus:opacity-100" data-test="headline-users-chevron" />
+		<icon-chevron-right class="group-hocus:animate-fade-in-right ms-auto size-5 shrink-0 text-grey-400 motion-safe:opacity-0" data-test="headline-users-chevron" />
 	</div>
 </template>
 
