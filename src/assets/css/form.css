@@ -1,8 +1,8 @@
 @layer components {
 	.form-input {
-		@apply block w-full rounded-md px-3 py-2 shadow-sm outline-none ring-1 ring-inset ring-grey-300 transition-shadow placeholder:text-grey-400 focus:ring-2;
+		@apply block w-full rounded-md px-3 py-2 shadow-sm outline-none ring-1 ring-inset ring-grey-300 transition-shadow placeholder:text-grey-400;
 		@apply hover:ring-grey-400;
-		@apply focus:ring-purple-600;
+		@apply focus:ring-2 focus:ring-purple-600;
 		@apply dark:bg-white/20 dark:ring-white/30;
 		@apply dark:hover:ring-white/50;
 		@apply dark:focus:ring-purple-400;
@@ -27,6 +27,7 @@
 	.button-group {
 		@apply block cursor-pointer border border-grey-300 px-3 py-2 transition-all;
 		@apply hover:border-grey-400 hover:bg-grey-50;
+		@apply peer-focus:ring-2 peer-focus:ring-purple-800 peer-focus:ring-offset-2;
 		@apply peer-checked:border-transparent peer-checked:bg-gradient-to-br peer-checked:from-pink-700 peer-checked:to-purple-800 peer-checked:text-white;
 		@apply dark:border-transparent dark:bg-white/20;
 		@apply dark:hover:bg-white/30;
