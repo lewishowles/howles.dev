@@ -1,12 +1,12 @@
 import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
 import { flushPromises } from "@vue/test-utils";
-import PaddockStatus from "./paddock-status.vue";
-import sampleData from "./fixtures/default.json";
+import StaffDuties from "./staff-duties.vue";
+import sampleData from "./fixtures/duties.json";
 
-const mount = createMount(PaddockStatus);
+const mount = createMount(StaffDuties);
 
-describe("paddock-status", () => {
+describe("staff-duties", () => {
 	describe("Initialisation", () => {
 		test("should exist as a Vue component", () => {
 			fetch.mockResolvedValue({ json: () => sampleData });
@@ -26,7 +26,7 @@ describe("paddock-status", () => {
 
 				await flushPromises();
 
-				expect(fetch).toHaveBeenCalledWith("/data/paddock-status/default.json");
+				expect(fetch).toHaveBeenCalledWith("/data/analytics/duties.json");
 			});
 
 			test("should allow an alternative data source", async() => {
@@ -38,7 +38,7 @@ describe("paddock-status", () => {
 
 				await wrapper.vm.loadData("surprise");
 
-				expect(fetch).toHaveBeenCalledWith("/data/paddock-status/surprise.json");
+				expect(fetch).toHaveBeenCalledWith("/data/analytics/surprise.json");
 			});
 		});
 	});

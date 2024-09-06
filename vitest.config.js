@@ -6,10 +6,10 @@ export default mergeConfig(
 	viteConfig,
 	defineConfig({
 		test: {
-			setupFiles: "./test/unit/setup.js",
 			environment: "jsdom",
-			root: fileURLToPath(new URL("./", import.meta.url)),
 			include: ["src/**/*.test.js"],
+			root: fileURLToPath(new URL("./", import.meta.url)),
+			setupFiles: "./test/unit/setup.js",
 		},
 	}),
 );

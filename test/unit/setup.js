@@ -1,10 +1,12 @@
 import { config } from "@vue/test-utils";
+import { createTestingPinia } from "@pinia/testing";
+import { fn } from "@vitest/spy";
 import { vi } from "vitest";
 import componentLibrary from "@lewishowles/components";
 import i18n from "@/i18n";
 
 // Set the global config for Vue Test Utils
-config.global.plugins = [componentLibrary, i18n];
+config.global.plugins = [componentLibrary, i18n, createTestingPinia({ createSpy: fn })];
 
 // Mock fetch globally. With a full implementation, an API class would exist,
 // which has various methods to make calling APIs and retrieving that data

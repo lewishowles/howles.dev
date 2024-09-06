@@ -1,6 +1,6 @@
 <template>
 	<bento-box class="relative overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
-		<loading-indicator v-show="!isReady && isLoading">
+		<loading-indicator v-show="!isReady && isLoading" v-bind="{ large: true }">
 			{{ t("paddock_status.loading") }}
 		</loading-indicator>
 
@@ -43,7 +43,7 @@
 				</loading-indicator>
 			</div>
 
-			<ui-button ref="checkNowButton" class="button--muted text-sm" v-bind="{ iconStart: 'icon-reload', reactive: true }" @click="loadData(true)">
+			<ui-button ref="checkNowButton" class="button--muted text-sm" v-bind="{ iconStart: 'icon-reload', reactive: true }" @click="loadData('surprise')">
 				{{ t("paddock_status.check_now") }}
 			</ui-button>
 
@@ -53,19 +53,21 @@
 </template>
 
 <script setup>
-import { computed, ref, useTemplateRef } from "vue";
+import { computed, ref, useTemplateRef, watch } from "vue";
 import { firstDefined, isNonEmptyArray, tail } from "@lewishowles/helpers/array";
 import { get } from "@lewishowles/helpers/object";
 import { getApiUrl } from "@/api";
 import { getFriendlyDisplay } from "@lewishowles/helpers/general";
 import { runComponentMethod } from "@lewishowles/helpers/vue";
 import { useI18n } from "vue-i18n";
+import { useSecurityStore } from "@/stores/security";
 import useApi from "@/composables/use-api";
 
 import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
 
 const { t } = useI18n();
 const { isLoading, isReady, load, lastRunTime } = useApi();
+const securityStore = useSecurityStore();
 // The historical status checks performed on the paddock.
 const statuses = ref([]);
 // Whether any statuses are present.
@@ -102,20 +104,25 @@ const startDate = computed(() => {
 loadData();
 
 /**
+ * When detecting that the paddock is insecure, update our security store.
+ */
+watch(paddockSecure, () => {
+	if (!isReady.value) {
+		return;
+	}
+
+	securityStore.updateStatus(paddockSecure.value);
+});
+
+/**
  * Load the historical status checks for the paddock. In this example, we
  * simulate an API call and reasonable API response for this kind of data.
  *
- * @param  {boolean}  includeSurprise
- *     Whether to include a surprise in the loaded data.
+ * @param  {string}  file
+ *     The file from which to load data.
  */
-async function loadData(includeSurprise = false) {
+async function loadData(file = "default") {
 	try {
-		let file = "default";
-
-		if (includeSurprise) {
-			file = "surprise";
-		}
-
 		const response = await load(getApiUrl("paddock-status", file));
 
 		if (!isNonEmptyArray(response)) {

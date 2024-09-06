@@ -69,9 +69,9 @@ const comparison = computed(() => {
 	}
 
 	const difference = current - previous;
-	const percentageDifference = (difference / previous) * 100;
+	const percentageDifference = difference / previous;
 
-	return formatNumber(percentageDifference / 100, "percent");
+	return formatNumber(percentageDifference, "percent");
 });
 
 loadData();

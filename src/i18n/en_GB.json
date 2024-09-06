@@ -85,6 +85,18 @@
 		}
 	},
 
+	"staff_duties": {
+		"title": "Staff duties",
+		"intro": "Time spent by staff on various tasks, as reported by time sheets.",
+		"loading": "Loading data",
+		"categories": {
+			"care": "Dinosaur care",
+			"security": "Security measures",
+			"tours": "Tours and exhibits",
+			"emergency": "Emergency protocols"
+		}
+	},
+
 	"headline_users": {
 		"title": "Unique users, last 30 days",
 		"error": "Error"
