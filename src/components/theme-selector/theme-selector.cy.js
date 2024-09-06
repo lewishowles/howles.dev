@@ -4,7 +4,7 @@ import { createMount } from "@cypress/support/mount";
 const mount = createMount(ThemeSelector);
 
 describe("theme-selector", () => {
-	it("Renders a theme selector", () => {
+	it("A component is rendered", () => {
 		mount();
 
 		cy.getByData("theme-selector").shouldBeVisible();
@@ -28,7 +28,7 @@ describe("theme-selector", () => {
 
 			openMenu();
 
-			cy.getByData("theme-selector-button").contains("Dark mode").click();
+			cy.getByData("theme-selector-button").contains("Dark").click();
 
 			cy.get("html").shouldHaveClass("dark");
 		});

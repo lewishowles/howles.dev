@@ -13,7 +13,35 @@
 	}
 
 	.form-radio {
-		@apply size-4 appearance-none rounded-full outline-none ring-1 ring-grey-300 transition-all checked:bg-current checked:text-purple-800 checked:ring-current focus:ring-2 focus:ring-purple-800 checked:focus:ring-offset-2 dark:bg-white/20 dark:ring-white/30 dark:checked:text-purple-500 dark:focus:ring-purple-500;
+		@apply size-4 appearance-none rounded-full outline-none ring-1 ring-grey-300 transition-all;
+		@apply dark:bg-white/20 dark:ring-white/30;
+		@apply hover:bg-grey-50 hover:ring-grey-400;
+		@apply dark:hover:bg-white/30 dark:hover:ring-white/40;
+		@apply focus:ring-2 focus:ring-purple-800;
+		@apply dark:focus:ring-purple-500;
+		@apply checked:bg-current checked:text-purple-800 checked:ring-current;
+		@apply dark:checked:text-purple-500;
+		@apply checked:focus:ring-offset-2;
+	}
+
+	.button-group {
+		@apply block cursor-pointer border border-grey-300 px-3 py-2 transition-all;
+		@apply hover:border-grey-400 hover:bg-grey-50;
+		@apply peer-checked:border-transparent peer-checked:bg-gradient-to-br peer-checked:from-pink-700 peer-checked:to-purple-800 peer-checked:text-white;
+		@apply dark:border-transparent dark:bg-white/20;
+		@apply dark:hover:bg-white/30;
+
+		&--first {
+			@apply rounded-s-full;
+		}
+
+		&--middle {
+			@apply border-s-0 dark:ms-0.5;
+		}
+
+		&--last {
+			@apply rounded-e-full;
+		}
 	}
 
 	[type="radio"]:checked {

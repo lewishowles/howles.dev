@@ -5,11 +5,11 @@
 
 	"theme": {
 		"label": "Choose theme",
-		"mode": {
-			"light": "Light mode",
-			"dark": "Dark mode",
-			"system": "System (auto)"
-		}
+		"options": [
+			{ "label": "Default", "value": "auto", "icon": "icon-laptop" },
+			{ "label": "Light", "value": "light", "icon": "icon-sun" },
+			{ "label": "Dark", "value": "dark", "icon": "icon-moon" }
+		]
 	},
 
 	"role": {
@@ -82,6 +82,15 @@
 			"submit": "Create project",
 
 			"success": "Projected created successfully"
+		}
+	},
+
+	"user_preferences": {
+		"title": "Preferences",
+		"intro": "Customise your Howles experience by adjusting your preferences.",
+		"theme": {
+			"label": "Theme",
+			"intro": "Your chosen theme affects how the site looks. By choosing Default, the site will match your Operating System or browser settings."
 		}
 	},
 

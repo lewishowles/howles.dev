@@ -9,8 +9,8 @@
 			<div class="col-start-3 row-span-4">
 				<create-project />
 			</div>
-			<div class="col-start-2 row-span-4 bg-grey-100">
-				Preferences
+			<div class="col-start-2 row-span-4">
+				<user-preferences />
 			</div>
 			<div class="col-start-1 row-span-4">
 				<staff-duties />
@@ -35,6 +35,7 @@ import CreateProject from "./fragments/create-project/create-project.vue";
 import HeadlineUsers from "./fragments/headline-users/headline-users.vue";
 import PaddockStatus from "./fragments/paddock-status/paddock-status.vue";
 import StaffDuties from "./fragments/staff-duties/staff-duties.vue";
+import UserPreferences from "./fragments/user-preferences/user-preferences.vue";
 import WelcomePartDeux from "./fragments/welcome-part-deux/welcome-part-deux.vue";
 import WelcomePartOne from "./fragments/welcome-part-one/welcome-part-one.vue";
 
