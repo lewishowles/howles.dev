@@ -19,7 +19,6 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
 import { useColorMode } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
