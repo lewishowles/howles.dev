@@ -109,5 +109,18 @@
 	"headline_users": {
 		"title": "Unique users, last 30 days",
 		"error": "Error"
+	},
+
+	"team_access": {
+		"title": "Team access",
+		"intro": "Collaborate with your team.",
+		"loading": "Loading users",
+		"no_users": "No users found",
+		"users": {
+			"unknown": "Guest",
+			"roles": {
+				"owner": "Owner"
+			}
+		}
 	}
 }
