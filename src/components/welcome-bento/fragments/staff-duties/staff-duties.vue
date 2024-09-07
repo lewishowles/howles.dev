@@ -1,5 +1,5 @@
 <template>
-	<bento-box data-test="staff-duties">
+	<bento-box class="h-full" data-test="staff-duties">
 		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
 			{{ t("staff_duties.title") }}
 		</h2>

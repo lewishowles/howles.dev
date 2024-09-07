@@ -1,6 +1,6 @@
 <template>
-	<bento-box class="relative overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
-		<loading-indicator v-show="!isReady && isLoading" v-bind="{ large: true }">
+	<bento-box class="relative flex h-full flex-col justify-center overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
+		<loading-indicator v-show="!isReady && isLoading" v-bind="{ large: true }" class="my-auto">
 			{{ t("paddock_status.loading") }}
 		</loading-indicator>
 

@@ -8,7 +8,7 @@ const mount = createMount(PaddockStatus);
 
 describe("paddock-status", () => {
 	it("A component is rendered", () => {
-		cy.intercept(getApiUrl("paddock-status", "default"), sampleData);
+		cy.intercept(getApiUrl("paddock-status"), sampleData);
 
 		mount();
 
@@ -18,7 +18,7 @@ describe("paddock-status", () => {
 	});
 
 	it("A failed load is handled", () => {
-		cy.intercept(getApiUrl("paddock-status", "default"), { statusCode: 500 });
+		cy.intercept(getApiUrl("paddock-status"), { statusCode: 500 });
 
 		mount();
 
@@ -27,7 +27,7 @@ describe("paddock-status", () => {
 	});
 
 	it("An active breach handled", () => {
-		cy.intercept(getApiUrl("paddock-status", "default"), breachData);
+		cy.intercept(getApiUrl("paddock-status"), breachData);
 
 		mount();
 

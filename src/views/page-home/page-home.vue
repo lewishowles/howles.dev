@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col items-center md:gap-28">
+	<div class="flex flex-col items-center lg:gap-28">
 		<page-header />
 		<welcome-bento />
 	</div>
