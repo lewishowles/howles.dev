@@ -15,7 +15,7 @@
 			<ui-button
 				:icon-start="theme.icon"
 				class="px-4 py-2 transition-colors active:bg-purple-100 active:text-purple-800 hocus:bg-purple-50 hocus:text-purple-700 dark:active:bg-pink-500/20 dark:active:text-pink-400 dark:hocus:bg-pink-400/20 dark:hocus:text-pink-300"
-				:class="{ 'text-purple-700 dark:text-pink-300': theme.value === currentTheme }"
+				:class="{ 'text-purple-700 dark:text-pink-300': theme.value === selectedTheme }"
 				icon-classes="size-4"
 				data-test="theme-selector-button"
 				@click="setTheme(theme.value)"
@@ -32,11 +32,16 @@ import { useColorMode } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
 const { t, tm } = useI18n();
+
 // The user's current theme, based on a local storage key and the system
-// settings.
-const currentTheme = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false });
+// settings. We use `store` here because it returns the selected mode -
+// including "auto" - not just the current theme.
+const colourMode = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false });
+const currentTheme = colourMode;
+const { store: selectedTheme } = colourMode;
+
 // The appropriate icon representing the currently selected theme.
-const currentThemeIcon = computed(() => (currentTheme.value === "dark" ? "icon-moon" : "icon-sun"));
+const currentThemeIcon = computed(() => (currentTheme === "dark" ? "icon-moon" : "icon-sun"));
 
 /**
  * Set a new theme.

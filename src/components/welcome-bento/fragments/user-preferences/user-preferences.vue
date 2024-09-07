@@ -8,7 +8,7 @@
 			{{ t("user_preferences.intro") }}
 		</p>
 
-		<button-group v-model="currentTheme" v-bind="{ options: tm('theme.options') }">
+		<button-group v-model="selectedTheme" v-bind="{ options: tm('theme.options') }">
 			{{ t('user_preferences.theme.label') }}
 
 			<template #introduction>
@@ -26,6 +26,7 @@ import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.v
 
 const { t, tm } = useI18n();
 // The user's current theme, based on a local storage key and the system
-// settings.
-const currentTheme = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false });
+// settings. We use `store` here because it returns the selected mode -
+// including "auto" - not just the current theme.
+const { store: selectedTheme } = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false });
 </script>
