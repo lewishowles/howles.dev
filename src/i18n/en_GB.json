@@ -122,5 +122,49 @@
 				"owner": "Owner"
 			}
 		}
+	},
+
+	"core_values": {
+		"pre_title": "What’s at the heart of everything?",
+		"title": "My core values",
+		"intro": "Some of the things I try to hold dear when it comes to work, design, development, and more.",
+		"values": {
+			"ease_of_use": {
+				"title": "Ease of use",
+				"text": "Designers and developers should prioritise making things easier for the user, even if that means making things harder for themselves."
+			},
+			"inclusivity": {
+				"title": "Inclusivity & accessibility",
+				"text": "Products should be accessible to everyone, regardless of their abilities. Always remember that not everyone is like you."
+			},
+			"helping_hand": {
+				"title": "Be a helping hand",
+				"text": "Be the one to assist and support, not the one to dismiss. Sharing ideas almost always results in a more complete outcome."
+			},
+			"joy": {
+				"title": "Work with joy",
+				"text": "Happy people work harder and produce better products. Fostering a fun, but dedicated, team gives the best of both worlds and breaks boundaries."
+			},
+			"communication": {
+				"title": "Clear communication",
+				"text": "There is no place for jargon. When communicating with anyone, use language they will understand and make them feel empowered to contribute."
+			},
+			"design": {
+				"title": "Design everywhere",
+				"text": "Design can be part of everything we do, and there is nothing that can’t be given the attention of designers to make it even better."
+			},
+			"detail": {
+				"title": "Attention to detail",
+				"text": "Taking pride in your work and being able to focus on consistency and detail, as well as the big picture, makes for a more delightful experience for the user."
+			},
+			"efficiency": {
+				"title": "Efficiency",
+				"text": "Working with efficiency is more fun. The less repetitive, boilerplate work there is to do, the more everyone can focus on something meaningful."
+			},
+			"improvement": {
+				"title": "Continuous improvement",
+				"text": "We can always make things better than they were, even in small ways. Every project teaches us something new to apply going forward."
+			}
+		}
 	}
 }

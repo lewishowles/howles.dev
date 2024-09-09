@@ -1,5 +1,5 @@
 <template>
-	<div class="rounded-2xl border border-grey-300 shadow dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" :class="paddingClasses" data-test="bento-box">
+	<div class="rounded-2xl border border-grey-300 shadow transition-colors dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" :class="paddingClasses" data-test="bento-box">
 		<slot />
 	</div>
 </template>

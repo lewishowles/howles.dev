@@ -29,7 +29,7 @@
 				</template>
 			</radio-group>
 
-			<form-actions class="inset-well bg-grey-50 dark:bg-grey-950/30">
+			<form-actions class="inset-well bg-grey-50 transition-colors dark:bg-grey-950/30">
 				<ui-button ref="submitButton" v-bind="{ reactive: true }" class="button--primary" @click="createProject">
 					{{ t("create_project.form.submit") }}
 				</ui-button>
