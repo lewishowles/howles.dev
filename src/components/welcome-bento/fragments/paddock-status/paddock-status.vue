@@ -26,7 +26,7 @@
 			<div class="mb-5 mt-6">
 				<div v-show="!isLoading && isReady && haveStatuses">
 					<ul class="flex gap-0.5 overflow-hidden rounded" data-test="paddock-status-markers">
-						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
+						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay-micro h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
 							<span class="sr-only">
 								{{ status.outcomeLabel }}
 							</span>

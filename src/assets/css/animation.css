@@ -77,11 +77,15 @@
 		}
 
 		.animate-fade-in-left {
-			animation: fadeInLeft;
+			animation-name: fadeInLeft;
 		}
 
 		@for $i from 1 to 40 {
-			.delay:nth-child($i) { animation-delay: calc($i * 5ms); }
+			.delay-micro:nth-child($i) { animation-delay: calc($i * 10ms); }
+		}
+
+		@for $i from 1 to 40 {
+			.delay:nth-child($i) { animation-delay: calc($i * 50ms); }
 		}
 	}
 }

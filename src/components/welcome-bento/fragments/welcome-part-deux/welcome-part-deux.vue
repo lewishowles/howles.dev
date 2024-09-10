@@ -19,8 +19,8 @@
 			</link-tag>
 		</div>
 
-		<ul class="inset-well--intro mt-10 flex flex-wrap gap-3 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 text-xs text-purple-800 lg:gap-5 lg:bg-grey-950/20 lg:bg-none lg:text-sm lg:text-white dark:bg-grey-950/20 dark:bg-none dark:max-lg:text-grey-200">
-			<li v-for="skill in tm('welcome.part_deux.skills')" :key="skill" class="rounded-full border border-current px-[1em] py-[0.5em]" data-test="welcome-part-deux-skill">
+		<ul ref="skills" class="inset-well--intro mt-10 flex flex-wrap gap-3 rounded-2xl bg-gradient-to-br from-pink-50 to-purple-50 text-xs text-purple-800 lg:gap-5 lg:bg-grey-950/20 lg:bg-none lg:text-sm lg:text-white dark:bg-grey-950/20 dark:bg-none dark:max-lg:text-grey-200">
+			<li v-for="skill in tm('welcome.part_deux.skills')" :key="skill" class="rounded-full border border-current px-[1em] py-[0.5em] motion-safe:opacity-0" :class="{ 'animate-fade-in-left delay': showSkills }" data-test="welcome-part-deux-skill">
 				{{ rt(skill) }}
 			</li>
 		</ul>
@@ -28,7 +28,22 @@
 </template>
 
 <script setup>
+import { ref, useTemplateRef } from "vue";
 import { useI18n } from "vue-i18n";
+import { useIntersectionObserver } from "@vueuse/core";
 
 const { rt, t, tm } = useI18n();
+// Whether the list of skills is visible, so they can be animated in on first
+// appearance.
+const showSkills = ref(false);
+// A reference to our skills list, allowing us to observe it.
+const skillsElement = useTemplateRef("skills");
+
+const { stop } = useIntersectionObserver(skillsElement, ([{ isIntersecting }]) => {
+	showSkills.value = isIntersecting;
+
+	if (isIntersecting) {
+		stop();
+	}
+}, { threshold: 0.6 });
 </script>

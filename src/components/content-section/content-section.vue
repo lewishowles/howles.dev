@@ -14,10 +14,10 @@
 			</p>
 		</div>
 
-		<div class="relative bg-gradient-to-b from-grey-50 to-white dark:from-black/20 dark:to-transparent">
+		<div class="relative bg-gradient-to-b from-grey-50 to-white pt-12 dark:from-black/20 dark:to-transparent">
 			<div class="content-section-pattern absolute inset-x-0 bottom-full h-4 border-b border-current text-grey-200 dark:text-grey-50/10" />
 
-			<div class="px-6 xl:px-0">
+			<div class="mx-auto max-w-7xl px-6 xl:px-0">
 				<slot />
 			</div>
 		</div>
