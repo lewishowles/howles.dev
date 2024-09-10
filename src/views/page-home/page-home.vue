@@ -3,10 +3,12 @@
 		<page-header />
 		<welcome-bento />
 		<core-values />
+		<about-me />
 	</div>
 </template>
 
 <script setup>
+import AboutMe from "@/components/about-me/about-me.vue";
 import CoreValues from "@/components/core-values/core-values.vue";
 import PageHeader from "@/components/page-header/page-header.vue";
 import WelcomeBento from "@/components/welcome-bento/welcome-bento.vue";

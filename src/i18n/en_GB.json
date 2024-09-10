@@ -166,5 +166,17 @@
 				"text": "We can always make things better than they were, even in small ways. Every project teaches us something new to apply going forward."
 			}
 		}
+	},
+
+	"about": {
+		"pre_title": "Who am I?",
+		"title": "About me",
+		"intro": "An introduction to who I am and what I like to bring to teams and projects alike.",
+		"text": [
+			"Championing user experience, developer experience, inclusivity, accessibility, communication, and consistency, I bring a unique view, attention to detail, and the ability to bridge teams. As a Designer and Front-end developer, I genuinely love mixing creativity with technical implementation and wearing both hats on any given day. With the ability to grasp the bigger picture, or zoom in to the smallest detail, I love working with a cross-functional team to help create powerful software, setting the standard that software—and websites—should be easy to use and accessible to as many people as possible.",
+			"Whether planning, designing or developing, I aim to be as well rounded as I can in order to make the best experiences possible, with the ability to advocate for the user, keep a level head, and to help guide decisions. I pride myself in my problem solving, attention to detail, efficiency, and my ability to communicate technical subjects to less technical people.",
+			"I was once described as the glue that brought the team together and I like to help my team whenever I can. I have extensive experience with team supervision and review, including designs, code, and usability. I also love to create libraries and tools, ensuring the highest standards and consistency for everyone to work from."
+		],
+		"quote": "Most of all, I like to bring fun to the workplace—such as adding film references to designs or to code."
 	}
 }
