@@ -69,5 +69,7 @@ for svg_file in "$SVG_DIR"/*.svg; do
 	# Write the Vue component to the output directory
 	echo -e "$vue_content" > "$OUTPUT_DIR/$component_name.vue"
 
+	code "$OUTPUT_DIR/$component_name.vue"
+
 	echo -e "↳ Created ${PURPLE}$component_name${RESET_COLOUR}.vue"
 done
