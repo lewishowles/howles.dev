@@ -10,7 +10,7 @@
 			{{ t("cool_projects.intro") }}
 		</template>
 
-		<ul ref="projects" class="grid gap-6 md:grid-cols-3">
+		<ul ref="projects" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 			<cool-project v-for="value in coreValues" :key="value.key" v-bind="{ icon: value.icon, href: value.href }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showProjects }">
 				<template #title>
 					{{ t(`cool_projects.projects.${value.key}.title`) }}

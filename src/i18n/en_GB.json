@@ -236,5 +236,11 @@
 				"link_text": "View project on GitHub"
 			}
 		}
+	},
+
+	"footer": {
+		"text": "Thanks for making it this far! You can find the design for this site {link_text}, if you’re interested.",
+		"link_text": "on Sketch",
+		"thanks": "Special thanks to Rasa, for believing in me when I didn’t."
 	}
 }
