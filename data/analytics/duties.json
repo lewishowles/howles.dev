@@ -1,0 +1,18 @@
+[
+	{
+		"category": "care",
+		"total_time_logged": 1600
+	},
+	{
+		"category": "security",
+		"total_time_logged": 1200
+	},
+	{
+		"category": "tours",
+		"total_time_logged": 800
+	},
+	{
+		"category": "emergency",
+		"total_time_logged": 400
+	}
+]
