@@ -1,5 +1,5 @@
 <template>
-	<li>
+	<li data-test="cool-project">
 		<a class="group flex h-full flex-col rounded-3xl border border-grey-300 bg-white text-current no-underline transition-all hocus:border-purple-300 hocus:bg-grey-50 hocus:text-current dark:border-0 dark:bg-black/20 dark:hocus:bg-black/30" v-bind="{ href, external: true }">
 			<div class="flex flex-col items-center justify-center gap-12 pt-24 dark:pb-24">
 				<component :is="icon" class="dark:neon-glow size-24 text-blue-800 transition-colors group-hocus:text-purple-800 dark:text-blue-500 dark:group-hocus:text-purple-300" />

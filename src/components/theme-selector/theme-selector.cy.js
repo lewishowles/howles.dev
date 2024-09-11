@@ -21,16 +21,22 @@ describe("theme-selector", () => {
 				.shouldHaveCount(3);
 		});
 
+		it("Dark mode is the default", () => {
+			mount();
+
+			cy.get("html").shouldHaveClass("dark");
+		});
+
 		it("Dark mode can be selected", () => {
 			mount();
 
-			cy.get("html").shouldNotHaveClass("dark");
+			cy.get("html").shouldNotHaveClass("light");
 
 			openMenu();
 
-			cy.getByData("theme-selector-button").contains("Dark").click();
+			cy.getByData("theme-selector-button").contains("Light").click();
 
-			cy.get("html").shouldHaveClass("dark");
+			cy.get("html").shouldHaveClass("light");
 		});
 
 		it("Clicking outside of the theme menu closes it", () => {

@@ -10,13 +10,19 @@ describe("user-preferences", () => {
 		cy.getByData("user-preferences").shouldBeVisible();
 	});
 
-	it("Dark mode can be selected", () => {
+	it("Dark mode is the default", () => {
 		mount();
 
-		cy.get("html").shouldNotHaveClass("dark");
-
-		cy.getByData("form-label").contains("Dark").click();
-
 		cy.get("html").shouldHaveClass("dark");
+	});
+
+	it("Light mode can be selected", () => {
+		mount();
+
+		cy.get("html").shouldNotHaveClass("light");
+
+		cy.getByData("form-label").contains("Light").click();
+
+		cy.get("html").shouldHaveClass("light");
 	});
 });

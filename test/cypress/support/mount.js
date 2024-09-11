@@ -2,6 +2,7 @@ import { createTestingPinia } from "@pinia/testing";
 import { fn } from "@vitest/spy";
 import { mount } from "cypress/vue";
 import components from "@lewishowles/components";
+import GlobalComponents from "@/plugins/global-components";
 import i18n from "@/i18n";
 
 Cypress.Commands.add("mount", (component, options = {}) => {
@@ -14,6 +15,7 @@ Cypress.Commands.add("mount", (component, options = {}) => {
 	options.global.plugins = [
 		components,
 		i18n,
+		GlobalComponents,
 		createTestingPinia({ createSpy: fn }),
 		...options.global.plugins,
 	];
