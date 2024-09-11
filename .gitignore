@@ -2,6 +2,9 @@
 node_modules
 .npmrc
 
+# build artifacts
+dist/*
+
 # macOS files
 .DS_Store
 
