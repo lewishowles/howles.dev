@@ -27,7 +27,7 @@
 			</div>
 		</div>
 
-		<icon-chevron-right class="group-hocus:animate-fade-in-right ms-auto size-5 shrink-0 text-grey-400 motion-safe:opacity-0" data-test="headline-users-chevron" />
+		<icon-chevron-right class="group-hocus:animate-fade-in-right ms-auto size-5 shrink-0 text-grey-400 motion-safe:opacity-0 dark:text-white/30" data-test="headline-users-chevron" />
 	</bento-box>
 </template>
 

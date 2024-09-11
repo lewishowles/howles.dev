@@ -178,5 +178,63 @@
 			"I was once described as the glue that brought the team together and I like to help my team whenever I can. I have extensive experience with team supervision and review, including designs, code, and usability. I also love to create libraries and tools, ensuring the highest standards and consistency for everyone to work from."
 		],
 		"quote": "Most of all, I like to bring fun to the workplace—such as adding film references to designs or to code."
+	},
+
+	"cool_projects": {
+		"pre_title": "See how I work",
+		"title": "Super-cool projects",
+		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create.",
+		"projects": {
+			"website": {
+				"title": "howles.dev",
+				"text": "This website was built using Vue.js and Tailwind to make it as close to the projects I love to build as possible, and the code is all available to view on GitHub.",
+				"link_text": "View project on GitHub"
+			},
+			"design_system": {
+				"title": "Design system",
+				"text": "My personal design system helps to rocket-fuel UI design, providing me with great-looking, consistent, accessible components.",
+				"link_text": "View project in Sketch"
+			},
+			"components": {
+				"title": "Components",
+				"text": "A library of beautiful components, promoting rapid development, while ensuring that usability and accessibility are at the fore. Don’t miss the scaffold scripts!",
+				"link_text": "View project on GitHub"
+			},
+			"helpers": {
+				"title": "Helpers",
+				"text": "A library of gorgeous Javascript methods to make working with—and validating—data quicker and less error-prone, letting the developer concentrate on the fun stuff.",
+				"link_text": "View project on GitHub"
+			},
+			"testing": {
+				"title": "Testing",
+				"text": "Supercharge Cypress and Vitest testing with super-handy helpers for everything from selecting and counting elements to API mocking.",
+				"link_text": "View project on GitHub"
+			},
+			"sketch_nudge_text": {
+				"title": "sketch-nudge-text",
+				"text": "Quickly jump between pre-defined font sizes, weights and colours, because who doesn’t want to save time by using keyboard shortcuts?!",
+				"link_text": "View project on GitHub"
+			},
+			"sketch_rename_symbol_instances": {
+				"title": "sketch-rename-symbol-instances",
+				"text": "Rename all instances of Symbols to match the name of the symbol itself. Particularly useful when swapping a Symbol in-place. Good layer hygiene is good design.",
+				"link_text": "View project on GitHub"
+			},
+			"sort_imports": {
+				"title": "Sort imports",
+				"text": "Destructured imports are easier to see when they're ordered alphabetically. This plugin re-arranges imports, so you don't have to think about it.",
+				"link_text": "View project on GitHub"
+			},
+			"wrap_comments": {
+				"title": "Wrap comments",
+				"text": "Comments look better, to me, wrapped at 80 characters. This plugin re-flows a comment to do just that, so you don’t have to think about it.",
+				"link_text": "View project on GitHub"
+			},
+			"gists": {
+				"title": "Gists",
+				"text": "Useful snippets, particularly for reference and system setup, that don’t fit anywhere else.",
+				"link_text": "View project on GitHub"
+			}
+		}
 	}
 }

@@ -36,7 +36,7 @@ const { t, tm } = useI18n();
 // The user's current theme, based on a local storage key and the system
 // settings. We use `store` here because it returns the selected mode -
 // including "auto" - not just the current theme.
-const colourMode = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false });
+const colourMode = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false, initialValue: "dark" });
 const currentTheme = colourMode;
 const { store: selectedTheme } = colourMode;
 

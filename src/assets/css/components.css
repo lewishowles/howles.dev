@@ -1,0 +1,5 @@
+@layer components {
+	.neon-glow {
+		filter: drop-shadow(0 0 4px currentColor);
+	}
+}

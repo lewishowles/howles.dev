@@ -11,76 +11,12 @@
 		</template>
 
 		<ul ref="values" class="grid gap-6 md:grid-cols-3">
-			<core-value v-bind="{ icon: 'icon-snap' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
+			<core-value v-for="value in coreValues" :key="value.key" v-bind="{ icon: value.icon }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
 				<template #title>
-					{{ t("core_values.values.ease_of_use.title") }}
+					{{ t(`core_values.values.${value.key}.title`) }}
 				</template>
 
-				{{ t("core_values.values.ease_of_use.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-accessibility' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.inclusivity.title") }}
-				</template>
-
-				{{ t("core_values.values.inclusivity.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-helping-hand' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.helping_hand.title") }}
-				</template>
-
-				{{ t("core_values.values.helping_hand.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-joy' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.joy.title") }}
-				</template>
-
-				{{ t("core_values.values.joy.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-speech' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.communication.title") }}
-				</template>
-
-				{{ t("core_values.values.communication.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-paint' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.design.title") }}
-				</template>
-
-				{{ t("core_values.values.design.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-search' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.detail.title") }}
-				</template>
-
-				{{ t("core_values.values.detail.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-efficiency' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.efficiency.title") }}
-				</template>
-
-				{{ t("core_values.values.efficiency.text") }}
-			</core-value>
-
-			<core-value v-bind="{ icon: 'icon-continuous-improvement' }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
-				<template #title>
-					{{ t("core_values.values.improvement.title") }}
-				</template>
-
-				{{ t("core_values.values.improvement.text") }}
+				{{ t(`core_values.values.${value.key}.text`) }}
 			</core-value>
 		</ul>
 	</content-section>
@@ -99,6 +35,19 @@ const { t } = useI18n();
 const showValues = ref(false);
 // A reference to our values list, allowing us to observe it.
 const valuesElement = useTemplateRef("values");
+
+// The list of core value keys, used to generate the components.
+const coreValues = ref([
+	{ key: "ease_of_use", icon: "icon-snap" },
+	{ key: "inclusivity", icon: "icon-accessibility" },
+	{ key: "helping_hand", icon: "icon-helping-hand" },
+	{ key: "joy", icon: "icon-joy" },
+	{ key: "communication", icon: "icon-speech" },
+	{ key: "design", icon: "icon-paint" },
+	{ key: "detail", icon: "icon-search" },
+	{ key: "efficiency", icon: "icon-efficiency" },
+	{ key: "improvement", icon: "icon-continuous-improvement" },
+]);
 
 const { stop } = useIntersectionObserver(valuesElement, ([{ isIntersecting }]) => {
 	showValues.value = isIntersecting;

@@ -1,8 +1,9 @@
 @import url("font.css");
 @import url("buttons.css");
+@import url("animation.css");
+@import url("components.css");
 @import url("form.css");
 @import url("layout.css");
-@import url("animation.css");
 
 @tailwind base;
 @tailwind components;
@@ -21,6 +22,8 @@
 	a {
 		@apply text-purple-800 underline underline-offset-4;
 		@apply hocus:text-purple-900 hocus:no-underline;
+		@apply dark:text-purple-300;
+		@apply dark:hocus:text-purple-400;
 	}
 
 	img {
