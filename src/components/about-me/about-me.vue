@@ -68,11 +68,11 @@ const icons = [
 	--offset: 4px;
 
 	border-radius: calc(1.5rem - var(--offset));
-	margin-bottom: calc(-3rem + var(--offset));
 	margin-left: calc(-3rem + var(--offset));
 	margin-right: calc(-3rem + var(--offset));
 
 	@media (min-width: 1024px) {
+		margin-bottom: calc(-3rem + var(--offset));
 		margin-top: calc(-3rem + var(--offset));
 		margin-left: 0;
 	}

@@ -23,9 +23,9 @@
 </template>
 
 <script setup>
-import { ref, useTemplateRef } from "vue";
+import { computed, ref, useTemplateRef } from "vue";
 import { useI18n } from "vue-i18n";
-import { useIntersectionObserver } from "@vueuse/core";
+import { useIntersectionObserver, useMediaQuery } from "@vueuse/core";
 
 import ContentSection from "@/components/content-section/content-section.vue";
 import CoreValue from "./fragments/core-value/core-value.vue";
@@ -35,6 +35,18 @@ const { t } = useI18n();
 const showValues = ref(false);
 // A reference to our values list, allowing us to observe it.
 const valuesElement = useTemplateRef("values");
+// Whether we're looking at a (relatively) large screen.
+const largeScreen = useMediaQuery("(min-width: 1024px)");
+// The threshold at which to fade in our projects. Since the threshold is a
+// percentage of the element visible at one time, this needs to be smaller on
+// smaller screens.
+const intersectionThreshold = computed(() => {
+	if (!largeScreen.value) {
+		return 0.05;
+	}
+
+	return 0.3;
+});
 
 // The list of core value keys, used to generate the components.
 const coreValues = ref([
@@ -55,5 +67,5 @@ const { stop } = useIntersectionObserver(valuesElement, ([{ isIntersecting }]) =
 	if (isIntersecting) {
 		stop();
 	}
-}, { threshold: 0.3 });
+}, { threshold: intersectionThreshold.value });
 </script>
