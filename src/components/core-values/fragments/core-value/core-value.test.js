@@ -2,7 +2,8 @@ import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
 import CoreValue from "./core-value.vue";
 
-const mount = createMount(CoreValue);
+const defaultProps = { icon: "icon-snap" };
+const mount = createMount(CoreValue, { props: defaultProps });
 
 describe("core-value", () => {
 	describe("Initialisation", () => {

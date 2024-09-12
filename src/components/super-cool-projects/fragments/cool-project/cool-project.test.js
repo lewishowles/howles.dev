@@ -2,7 +2,8 @@ import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
 import CoolProject from "./cool-project.vue";
 
-const mount = createMount(CoolProject);
+const defaultProps = { icon: "project-icon-website", href: "https://howles.dev" };
+const mount = createMount(CoolProject, { props: defaultProps });
 
 describe("cool-project", () => {
 	describe("Initialisation", () => {
