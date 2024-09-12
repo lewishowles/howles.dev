@@ -184,6 +184,11 @@
 		"pre_title": "See how I work",
 		"title": "Super-cool projects",
 		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create.",
+		"type": {
+			"library": "Library",
+			"sketch": "Sketch plugin",
+			"vscode": "Visual Studio Code plugin"
+		},
 		"projects": {
 			"website": {
 				"title": "howles.dev",

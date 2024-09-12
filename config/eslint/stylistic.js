@@ -22,7 +22,7 @@ export default {
 				ExportDeclaration: "always",
 				ObjectExpression: {
 					multiline: true,
-					minProperties: 4,
+					minProperties: 99,
 					consistent: true,
 				},
 			},

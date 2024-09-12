@@ -11,7 +11,7 @@
 		</template>
 
 		<ul ref="projects" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-			<cool-project v-for="value in coreValues" :key="value.key" v-bind="{ icon: value.icon, href: value.href }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showProjects }">
+			<cool-project v-for="value in coreValues" :key="value.key" v-bind="{ icon: value.icon, href: value.href, type: value.type }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showProjects }">
 				<template #title>
 					{{ t(`cool_projects.projects.${value.key}.title`) }}
 				</template>
@@ -44,13 +44,13 @@ const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 
 const coreValues = ref([
 	{ key: "website", icon: "project-icon-website", href: "https://github.com/lewishowles/howles.dev" },
 	// { key: "design_system", icon: "project-icon-design-system", href: "" },
-	{ key: "components", icon: "project-icon-components", href: "https://github.com/lewishowles/components" },
-	{ key: "helpers", icon: "project-icon-helpers", href: "https://github.com/lewishowles/helpers" },
-	{ key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing" },
-	{ key: "sketch_nudge_text", icon: "project-icon-sketch-nudge-text", href: "https://github.com/lewishowles/sketch-nudge-text" },
-	{ key: "sketch_rename_symbol_instances", icon: "project-icon-sketch-rename-symbol-instances", href: "https://github.com/lewishowles/sketch-rename-symbol-instances" },
+	{ key: "components", icon: "project-icon-components", href: "https://github.com/lewishowles/components", type: "library" },
+	{ key: "helpers", icon: "project-icon-helpers", href: "https://github.com/lewishowles/helpers", type: "library" },
+	{ key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library" },
+	{ key: "sketch_nudge_text", icon: "project-icon-sketch-nudge-text", href: "https://github.com/lewishowles/sketch-nudge-text", type: "sketch" },
+	{ key: "sketch_rename_symbol_instances", icon: "project-icon-sketch-rename-symbol-instances", href: "https://github.com/lewishowles/sketch-rename-symbol-instances", type: "sketch" },
 	// { key: "sort_imports", icon: "project-icon-sort-imports", href: "" },
-	{ key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments" },
+	{ key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments", type: "vscode" },
 	{ key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/" },
 	{ key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81" },
 ]);

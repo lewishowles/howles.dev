@@ -1,6 +1,20 @@
 <template>
 	<li data-test="cool-project">
-		<a class="group flex h-full flex-col rounded-3xl border border-grey-300 bg-white text-current no-underline transition-all hocus:border-purple-300 hocus:bg-grey-50 hocus:text-current dark:border-0 dark:bg-black/20 dark:hocus:bg-black/30" v-bind="{ href }" target="_blank">
+		<a class="group relative flex h-full flex-col rounded-3xl border border-grey-300 bg-white text-current no-underline transition-all hocus:border-purple-300 hocus:bg-grey-50 hocus:text-current dark:border-0 dark:bg-black/20 dark:hocus:bg-black/30" v-bind="{ href }" target="_blank">
+			<pill-badge v-if="isLibrary" v-bind="{ colour: 'purple' }" class="absolute end-0 top-0 me-4 mt-4">
+				{{ t("cool_projects.type.library") }}
+			</pill-badge>
+			<pill-badge v-if="isSketchPlugin" v-bind="{ colour: 'yellow' }" class="absolute end-0 top-0 me-4 mt-4 inline-flex gap-2">
+				<img src="@/assets/images/logos/sketch.svg" alt="" class="size-3" />
+
+				{{ t("cool_projects.type.sketch") }}
+			</pill-badge>
+			<pill-badge v-if="isVSCodePlugin" v-bind="{ colour: 'blue' }" class="absolute end-0 top-0 me-4 mt-4 inline-flex gap-2">
+				<img src="@/assets/images/logos/visual-studio-code.svg" alt="" class="size-3" />
+
+				{{ t("cool_projects.type.vscode") }}
+			</pill-badge>
+
 			<div class="flex flex-col items-center justify-center gap-12 pt-24 dark:pb-24">
 				<component :is="icon" class="dark:neon-glow size-24 text-blue-800 transition-colors group-hocus:text-purple-800 dark:text-blue-500 dark:group-hocus:text-purple-300" />
 
@@ -26,7 +40,10 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const props = defineProps({
 	/**
 	 * The icon to display for this project.
 	 */
@@ -42,5 +59,21 @@ defineProps({
 		type: String,
 		required: true,
 	},
+
+	/**
+	 * The type of project - one of "library", "sketch", "vscode", or null.
+	 */
+	type: {
+		type: String,
+		default: null,
+	},
 });
+
+const { t } = useI18n();
+// Whether this is a library project.
+const isLibrary = computed(() => props.type === "library");
+// Whether this is a Sketch plugin
+const isSketchPlugin = computed(() => props.type === "sketch");
+// Whether this is a VS Code plugin
+const isVSCodePlugin = computed(() => props.type === "vscode");
 </script>
