@@ -10,7 +10,11 @@
 				<span class="animate-fade-in-left delay">{{ t("role.text") }}</span>
 			</div>
 
-			<link-tag href="/Lewis Howles - CV.pdf" v-bind="{ iconStart: 'icon-download' }" download class="animate-fade-in-right button--primary mt-2 text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50">
+			<link-tag href="/Lewis Howles - CV.pdf" v-bind="{ iconStart: 'icon-download' }" download class="animate-fade-in-right button--primary mt-2 text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50 dark:hidden">
+				{{ t("role.button") }}
+			</link-tag>
+
+			<link-tag href="/Lewis Howles - CV - Dark.pdf" v-bind="{ iconStart: 'icon-download' }" download class="animate-fade-in-right button--primary mt-2 hidden text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50 dark:inline-flex">
 				{{ t("role.button") }}
 			</link-tag>
 		</div>
