@@ -6,7 +6,7 @@
 
 		<i18n-t keypath="welcome.part_one.text" tag="p" scope="global">
 			<template #experience>
-				<strong>{{ t("welcome.part_one.experience") }}</strong>
+				<strong class="font-bold">{{ t("welcome.part_one.experience") }}</strong>
 			</template>
 		</i18n-t>
 	</div>
