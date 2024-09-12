@@ -28,22 +28,13 @@
 </template>
 
 <script setup>
-import { ref, useTemplateRef } from "vue";
 import { useI18n } from "vue-i18n";
-import { useIntersectionObserver } from "@vueuse/core";
+import { useTemplateRef } from "vue";
+import useIntersect from "@/composables/use-intersect";
 
 const { rt, t, tm } = useI18n();
-// Whether the list of skills is visible, so they can be animated in on first
-// appearance.
-const showSkills = ref(false);
 // A reference to our skills list, allowing us to observe it.
 const skillsElement = useTemplateRef("skills");
-
-const { stop } = useIntersectionObserver(skillsElement, ([{ isIntersecting }]) => {
-	showSkills.value = isIntersecting;
-
-	if (isIntersecting) {
-		stop();
-	}
-}, { threshold: 0.6 });
+// Set up our intersection observer.
+const { show: showSkills } = useIntersect(skillsElement, { threshold: 0.6 });
 </script>

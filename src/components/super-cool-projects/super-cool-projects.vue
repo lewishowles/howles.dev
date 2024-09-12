@@ -27,30 +27,18 @@
 </template>
 
 <script setup>
-import { computed, ref, useTemplateRef } from "vue";
+import { ref, useTemplateRef } from "vue";
 import { useI18n } from "vue-i18n";
-import { useIntersectionObserver, useMediaQuery } from "@vueuse/core";
+import useIntersect from "@/composables/use-intersect";
 
 import ContentSection from "@/components/content-section/content-section.vue";
 import CoolProject from "./fragments/cool-project/cool-project.vue";
 
 const { t } = useI18n();
-// Whether to show the core values elements.
-const showProjects = ref(false);
 // A reference to our values list, allowing us to observe it.
 const projectsElement = useTemplateRef("projects");
-// Whether we're looking at a (relatively) large screen.
-const largeScreen = useMediaQuery("(min-width: 1024px)");
-// The threshold at which to fade in our projects. Since the threshold is a
-// percentage of the element visible at one time, this needs to be smaller on
-// smaller screens.
-const intersectionThreshold = computed(() => {
-	if (!largeScreen.value) {
-		return 0.05;
-	}
-
-	return 0.2;
-});
+// Set up our intersection observer.
+const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 0.05, desktopThreshold: 0.2 });
 
 // The list of core value keys, used to generate the components.
 const coreValues = ref([
@@ -65,12 +53,4 @@ const coreValues = ref([
 	{ key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments" },
 	{ key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/" },
 ]);
-
-const { stop } = useIntersectionObserver(projectsElement, ([{ isIntersecting }]) => {
-	showProjects.value = isIntersecting;
-
-	if (isIntersecting) {
-		stop();
-	}
-}, { threshold: intersectionThreshold.value });
 </script>
