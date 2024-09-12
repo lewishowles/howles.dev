@@ -52,5 +52,6 @@ const coreValues = ref([
 	// { key: "sort_imports", icon: "project-icon-sort-imports", href: "" },
 	{ key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments" },
 	{ key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/" },
+	{ key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81" },
 ]);
 </script>

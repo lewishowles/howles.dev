@@ -234,6 +234,11 @@
 				"title": "Gists",
 				"text": "Useful snippets, particularly for reference and system setup, that don’t fit anywhere else.",
 				"link_text": "View project on GitHub"
+			},
+			"guides": {
+				"title": "Guides",
+				"text": "A few short-form, simple guides, written as part of creating this project.",
+				"link_text": "View guides on Notion"
 			}
 		}
 	},
