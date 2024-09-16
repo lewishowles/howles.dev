@@ -49,7 +49,7 @@ const coreValues = ref([
 	{ key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library" },
 	{ key: "sketch_nudge_text", icon: "project-icon-sketch-nudge-text", href: "https://github.com/lewishowles/sketch-nudge-text", type: "sketch" },
 	{ key: "sketch_rename_symbol_instances", icon: "project-icon-sketch-rename-symbol-instances", href: "https://github.com/lewishowles/sketch-rename-symbol-instances", type: "sketch" },
-	// { key: "sort_imports", icon: "project-icon-sort-imports", href: "" },
+	{ key: "sort_imports", icon: "project-icon-sort-imports", href: "https://github.com/lewishowles/sort-imports", type: "vscode" },
 	{ key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments", type: "vscode" },
 	{ key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/" },
 	{ key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81" },
