@@ -32,7 +32,7 @@
 							</span>
 						</li>
 					</ul>
-					<div class="mt-1 flex justify-between text-xs text-grey-500 dark:text-grey-400">
+					<div class="mt-1 flex justify-between text-xs text-grey-500 dark:text-grey-50/60">
 						<span>{{ startDate }}</span>
 						<span>{{ t("paddock_status.today") }}</span>
 					</div>

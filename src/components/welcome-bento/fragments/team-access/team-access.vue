@@ -12,7 +12,7 @@
 			{{ t("team_access.loading") }}
 		</loading-indicator>
 
-		<div v-show="!isLoading" v-if="isReady && !haveUsers" class="text-grey-500 dark:text-grey-400" data-test="team-access-none-found">
+		<div v-show="!isLoading" v-if="isReady && !haveUsers" class="text-grey-500 dark:text-grey-50/60" data-test="team-access-none-found">
 			{{ t("team_access.no_users") }}
 		</div>
 
@@ -25,7 +25,7 @@
 					<span class="font-semibold text-grey-950 dark:text-grey-50">
 						{{ user.name }}
 					</span>
-					<span class="text-grey-500 dark:text-grey-400">
+					<span class="text-grey-500 dark:text-grey-50/60">
 						{{ user.email }}
 					</span>
 				</div>

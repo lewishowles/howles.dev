@@ -5,7 +5,7 @@
 		</div>
 
 		<div class="flex flex-col">
-			<span class="text-grey-500 dark:text-grey-400">
+			<span class="text-grey-500 dark:text-grey-50/60">
 				{{ t("headline_users.title") }}
 			</span>
 
