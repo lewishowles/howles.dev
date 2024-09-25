@@ -7,7 +7,7 @@
 			<img src="@/assets/images/glasses/dark.svg" alt="" class="hidden h-[3.75rem] w-36 md:size-auto dark:block" width="256" height="108" />
 		</div>
 
-		<h1 class="text-center text-5xl font-extrabold leading-none text-grey-950 md:text-[5rem] dark:text-grey-50">
+		<h1 class="text-center text-5xl font-extrabold leading-none text-grey-950 md:text-[5rem] dark:bg-gradient-to-b dark:from-pink-200 dark:to-grey-50 dark:bg-clip-text dark:text-transparent">
 			Lewis Howles
 		</h1>
 
