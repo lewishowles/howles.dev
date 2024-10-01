@@ -6,9 +6,9 @@
 
 		<div v-show="isReady">
 			<div class="flex gap-4">
-				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-grey-300 dark:bg-white/20': isLoading, 'bg-green-600 dark:bg-green-300': !isLoading && paddockSecure, 'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure }" />
+				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-grey-300 dark:bg-white/20': isLoading, 'bg-green-600 dark:bg-green-400': !isLoading && paddockSecure, 'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure }" />
 				<div>
-					<div class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600 dark:text-green-300': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure, 'invisible': isLoading }">
+					<div class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600 dark:text-green-400': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure, 'invisible': isLoading }">
 						<icon-check-circled v-if="paddockSecure" />
 						<icon-danger v-else />
 
@@ -26,7 +26,8 @@
 			<div class="mb-5 mt-6">
 				<div v-show="!isLoading && isReady && haveStatuses">
 					<ul class="flex gap-0.5 overflow-hidden rounded" data-test="paddock-status-markers">
-						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay-micro h-7 flex-1 hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
+						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay-micro flex h-7 flex-1 items-end hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
+							<div class="h-1/3 w-full bg-grey-950 opacity-20" />
 							<span class="sr-only">
 								{{ status.outcomeLabel }}
 							</span>
