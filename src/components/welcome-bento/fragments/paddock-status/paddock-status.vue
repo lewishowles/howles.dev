@@ -1,10 +1,10 @@
 <template>
 	<bento-box class="relative flex h-full flex-col justify-center overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
-		<loading-indicator v-show="!isReady && isLoading" v-bind="{ large: true }" class="my-auto">
+		<paddock-status-skeleton v-show="isLoading" class="my-auto">
 			{{ t("paddock_status.loading") }}
-		</loading-indicator>
+		</paddock-status-skeleton>
 
-		<div v-show="isReady">
+		<div v-show="!isLoading && isReady">
 			<div class="flex gap-4">
 				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-grey-300 dark:bg-white/20': isLoading, 'bg-green-600 dark:bg-green-400': !isLoading && paddockSecure, 'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure }" />
 				<div>
@@ -24,7 +24,7 @@
 			</div>
 
 			<div class="mb-5 mt-6">
-				<div v-show="!isLoading && isReady && haveStatuses">
+				<div v-show="haveStatuses">
 					<ul class="flex gap-0.5 overflow-hidden rounded" data-test="paddock-status-markers">
 						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay-micro flex h-7 flex-1 items-end hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
 							<div class="h-1/3 w-full bg-grey-950 opacity-20" />
@@ -38,10 +38,6 @@
 						<span>{{ t("paddock_status.today") }}</span>
 					</div>
 				</div>
-
-				<loading-indicator v-show="isLoading" class="h-12 text-sm">
-					{{ t("paddock_status.loading") }}
-				</loading-indicator>
 			</div>
 
 			<ui-button ref="checkNowButton" class="button--muted text-sm" v-bind="{ iconStart: 'icon-reload', reactive: true }" @click="loadData('surprise')">
@@ -65,6 +61,7 @@ import { useSecurityStore } from "@/stores/security";
 import useApi from "@/composables/use-api";
 
 import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
+import PaddockStatusSkeleton from "./fragments/paddock-status-skeleton.vue";
 
 const { t } = useI18n();
 const { isLoading, isReady, load, lastRunTime } = useApi();

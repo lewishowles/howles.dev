@@ -8,9 +8,9 @@
 			{{ t("staff_duties.intro") }}
 		</p>
 
-		<loading-indicator v-show="isLoading" v-bind="{ large: true }">
+		<staff-duties-skeleton v-show="isLoading">
 			{{ t("staff_duties.loading") }}
-		</loading-indicator>
+		</staff-duties-skeleton>
 
 		<donut-chart v-show="!isLoading && haveData" v-bind="{ values: figures, colourful: true }" class="animate-fade-in mx-auto size-52" data-test="staff-duties-chart" />
 
@@ -44,6 +44,7 @@ import { useSecurityStore } from "@/stores/security";
 import useApi from "@/composables/use-api";
 
 import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
+import StaffDutiesSkeleton from "./fragments/staff-duties-skeleton.vue";
 
 const { t } = useI18n();
 const { load, isLoading } = useApi();

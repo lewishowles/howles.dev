@@ -8,9 +8,9 @@
 			{{ t("team_access.intro") }}
 		</p>
 
-		<loading-indicator v-show="isLoading" class="py-2.5">
+		<team-access-skeleton v-show="isLoading">
 			{{ t("team_access.loading") }}
-		</loading-indicator>
+		</team-access-skeleton>
 
 		<div v-show="!isLoading" v-if="isReady && !haveUsers" class="text-grey-500 dark:text-grey-50/60" data-test="team-access-none-found">
 			{{ t("team_access.no_users") }}
@@ -48,6 +48,7 @@ import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
 
 import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
+import TeamAccessSkeleton from "./fragments/team-access-skeleton.vue";
 
 const { t } = useI18n();
 const { isLoading, isReady, load } = useApi();
