@@ -36,20 +36,11 @@
 			</form-actions>
 		</form-layout>
 
-		<transition
-			enter-active-class="transition ease-out duration-500"
-			enter-from-class="opacity-0 transform -translate-y-4"
-			enter-to-class="opacity-100 transform translate-y-0"
-			leave-active-class="transition ease-in duration-500"
-			leave-from-class="opacity-100 transform translate-y-0"
-			leave-to-class="opacity-0 transform translate-y-4"
-		>
-			<div v-show="showingSuccessMessage" class="absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-green-500 to-green-600 p-6 text-white" aria-live="polite" data-test="create-project-success">
-				<icon-check-circled class="size-6" />
+		<div v-show="showingSuccessMessage" class="animate-fade-in-down absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-green-500 to-green-600 p-6 text-white" aria-live="polite" data-test="create-project-success">
+			<icon-check-circled class="size-6" />
 
-				{{ t("create_project.form.success") }}
-			</div>
-		</transition>
+			{{ t("create_project.form.success") }}
+		</div>
 	</bento-box>
 </template>
 
