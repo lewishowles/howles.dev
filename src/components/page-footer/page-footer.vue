@@ -14,9 +14,14 @@
 			</base-icon>
 
 			<i18n-t keypath="footer.text" tag="p" scope="global">
-				<template #link_text>
+				<template #sketch_link_text>
 					<link-tag v-bind="{ href: 'https://www.sketch.com/s/d2f29e4f-768f-4696-9b55-12633742a86c', external: true }" class="dark:text-blue-300">
-						{{ t("footer.link_text") }}
+						{{ t("footer.sketch_link_text") }}
+					</link-tag>
+				</template>
+				<template #github_link_text>
+					<link-tag v-bind="{ href: 'https://github.com/lewishowles/howles.dev', external: true }" class="dark:text-blue-300">
+						{{ t("footer.github_link_text") }}
 					</link-tag>
 				</template>
 			</i18n-t>
