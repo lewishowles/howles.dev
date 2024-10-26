@@ -2,7 +2,7 @@
 
 The `howles.dev` site is the homepage for Lewis Howles.
 
-This site is built as though it were a UI project, using Vue and Tailwind CSS, and tested using Vitest, Cypress. This lets me utilise the site as information, with links to relevant projects, but also to use it to demonstrate my current best practices.
+This site is built as though it were a UI project, using Vue and Tailwind CSS, and tested using Vitest and Cypress. This lets me utilise the site as information, with links to relevant projects, but also to use it to demonstrate my current best practices.
 
 ## Vue
 
@@ -19,8 +19,8 @@ Vue is my framework of choice for Front-end projects. Vue has a strong ecosystem
 
 Tailwind, while sometimes divisive, has been a game-changer for the way I work.
 
-- The utility-first approach works perfectly with frameworks like Vue, making it easy to add and removes styles based on state. It also enables rapid prototyping, often allowing examples to be build as quickly as they can be designed.
-- Utility classes allow for greater consistency, giving a defined set of options for things like font size. Pulling configuration into a library also means multiple projects can be set up with the same setup, giving a level of immediate consistency between projects that is hard to replicate with regular CSS.
+- The utility-first approach works perfectly with frameworks like Vue, making it easy to add and removes styles based on state. It also enables rapid prototyping, often allowing examples to be built as quickly as they can be designed.
+- Utility classes allow for greater consistency, giving a defined set of options for things like font size. Pulling configuration into a library also means multiple projects can be set up in the same way, giving a level of immediate consistency between projects that is more involved to replicate with regular CSS.
 - Tailwind automatically removes unused CSS, optimising the CSS bundle without any effort from the developer.
 - Applying styles directly to the HTML, once you're used to it, allows you to develop much more quickly. It removes the mental effort required to name things, and reduces context switching, meaning fewer delays and distractions.
 
@@ -46,4 +46,4 @@ The recent ability to test components in isolation gives a level of component te
 ## Room for improvement
 
 - In a full-fledge project, I would like to have a `form-wrapper` type component. This would handle the form interaction, field models, validation, and generating a proper error summary above the form.
-- API interaction is very basic. In a full-fledged project, I would create an `API` class, combined with a more full-fledge `use-api` composable, which handled the various different types of API call, and made it possible to easily mock any individual API method during testing.
+- API interaction is very basic. In a full-fledged project, I would create an `API` class, combined with a more full-fledge `use-api` composable, which would handle the various different types of API call, and make it possible to easily mock any individual API method during unit testing.
