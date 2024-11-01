@@ -19,7 +19,9 @@
 					</template>
 				</span>
 
-				<loading-indicator v-show="isLoading" class="my-1.5 text-2xl" />
+				<headline-users-skeleton v-show="isLoading" class="my-1.5">
+					{{ t("headline_users.loading") }}
+				</headline-users-skeleton>
 
 				<pill-badge v-if="comparison" v-bind="{ colour: 'green', iconStart: 'icon-arrow-up' }">
 					{{ comparison }}
@@ -42,6 +44,7 @@ import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
 
 import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
+import HeadlineUsersSkeleton from "./fragments/headline-users-skeleton.vue";
 
 const { t } = useI18n();
 const { load, isLoading } = useApi();

@@ -108,6 +108,7 @@
 
 	"headline_users": {
 		"title": "Unique users, last 30 days",
+		"loading": "Loading data",
 		"error": "Error"
 	},
 
