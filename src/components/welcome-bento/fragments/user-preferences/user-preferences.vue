@@ -1,5 +1,5 @@
 <template>
-	<bento-box class="h-full" data-test="user-preferences">
+	<bento-box class="flex h-full flex-col justify-center" data-test="user-preferences">
 		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
 			{{ t("user_preferences.title") }}
 		</h2>
