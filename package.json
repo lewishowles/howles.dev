@@ -13,7 +13,7 @@
 		"deploy": "gh-pages -d dist --cname howles.dev"
 	},
 	"dependencies": {
-		"@lewishowles/components": "^0.15.0",
+		"@lewishowles/components": "^0.16.1",
 		"@lewishowles/helpers": "^0.13.0",
 		"@vueuse/core": "^11.2.0",
 		"pinia": "^2.2.6",
