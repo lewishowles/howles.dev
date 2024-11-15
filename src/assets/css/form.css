@@ -55,18 +55,18 @@
 		@apply dark:border-transparent dark:bg-white/20;
 		@apply dark:hover:bg-white/30;
 		@apply dark:peer-checked:bg-purple-500;
+	}
 
-		&--first {
-			@apply rounded-s-lg;
-		}
+	.button-group--first {
+		@apply rounded-s-lg;
+	}
 
-		&--middle {
-			@apply border-s-0 dark:ms-0.5;
-		}
+	.button-group--middle {
+		@apply border-s-0 dark:ms-0.5;
+	}
 
-		&--last {
-			@apply rounded-e-lg;
-		}
+	.button-group--last {
+		@apply rounded-e-lg;
 	}
 
 	[type="radio"]:checked {
