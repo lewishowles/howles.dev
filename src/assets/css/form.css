@@ -49,12 +49,18 @@
 	}
 
 	.button-group {
-		@apply block cursor-pointer border border-grey-300 px-3 py-2 transition-all;
-		@apply hover:border-grey-400 hover:bg-grey-50;
+		@apply button cursor-pointer rounded-none transition-all;
+		@apply bg-white border border-grey-300;
+		@apply peer-focus:bg-grey-50 peer-focus:border-grey-400;
+		@apply peer-focus:outline-none;
+		@apply peer-focus:ring-2;
+		@apply peer-focus:ring-purple-600;
+		@apply peer-focus:ring-offset-2;
 		@apply peer-checked:border-purple-800 peer-checked:bg-purple-800 peer-checked:text-white;
-		@apply dark:border-transparent dark:bg-white/20;
-		@apply dark:hover:bg-white/30;
-		@apply dark:peer-checked:bg-purple-500;
+		@apply dark:bg-white/20 dark:border-white/20;
+		@apply dark:peer-focus:bg-white/30 dark:peer-focus:border-white/20;
+		@apply dark:peer-focus:ring-purple-400;
+		@apply dark:peer-checked:bg-purple-500 dark:peer-checked:border-white/40;
 	}
 
 	.button-group--first {
@@ -62,7 +68,7 @@
 	}
 
 	.button-group--middle {
-		@apply border-s-0 dark:ms-0.5;
+		@apply border-s-0;
 	}
 
 	.button-group--last {
