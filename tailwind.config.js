@@ -20,6 +20,9 @@ export default {
 			minWidth: theme => ({
 				...theme("maxWidth"),
 			}),
+			size: {
+				text: "1em",
+			},
 		},
 		colors: {
 			// Set our preferred colours from those provided by Tailwind

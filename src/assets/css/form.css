@@ -1,5 +1,5 @@
 @layer components {
-	[data-test="form-input-wrapper"] {
+	[data-selector="form-input-wrapper"] {
 		@apply ring-1 ring-grey-300 rounded-md;
 		@apply dark:bg-white/20 dark:ring-white/30;
 
@@ -15,13 +15,13 @@
 	}
 
 	.form-input {
-		@apply block w-full rounded-md px-3 py-2 shadow-sm outline-none;
-		@apply placeholder:text-grey-400;
+		@apply block w-full rounded-md px-3 py-2 text-grey-700 shadow-sm outline-none;
+		@apply placeholder:text-grey-500;
 		@apply dark:bg-transparent;
 	}
 
-	[data-test="form-prefix"],
-	[data-test="form-suffix"] {
+	[data-selector="form-prefix"],
+	[data-selector="form-suffix"] {
 		@apply text-grey-500;
 		@apply dark:text-grey-300;
 
@@ -30,22 +30,42 @@
 		}
 	}
 
-	.form-input--error {
-		@apply ring-red-300;
+	textarea {
+		@apply min-h-40;
+
+		field-sizing: content;
 	}
 
-	textarea {
-		field-sizing: content;
+	.form-checkbox {
+		@apply mt-1 size-4 shrink-0 appearance-none rounded outline-none ring-1 ring-grey-300 transition-all;
+		@apply hover:ring-2 hover:ring-grey-500;
+		@apply focus:ring-2 focus:ring-purple-800;
+		@apply checked:bg-current checked:text-purple-800 checked:ring-current;
+		@apply checked:focus:ring-offset-2;
+		@apply dark:bg-white/20 dark:ring-white/30;
+		@apply dark:hover:ring-white/50;
+		@apply dark:focus:ring-purple-400;
+		@apply dark:checked:text-purple-400 dark:checked:ring-current;
+	}
+
+	[type="checkbox"]:checked {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23FFF' d='m12.796 6.086-5.533 5.706a.675.675 0 0 1-.975 0l-3.086-3.2a.727.727 0 0 1 0-1.005l.861-.889a.675.675 0 0 1 .974 0l1.756 1.757 4.17-4.248a.675.675 0 0 1 .973 0l.86.869c.13.133.204.315.204.505s-.073.371-.204.505'/%3E%3C/svg%3E");
 	}
 
 	.form-radio {
 		@apply size-4 appearance-none rounded-full outline-none ring-1 ring-grey-300 transition-all;
-		@apply dark:bg-white/20 dark:ring-white/30;
+		@apply hover:ring-2 hover:ring-grey-500;
 		@apply focus:ring-2 focus:ring-purple-800;
 		@apply checked:bg-current checked:text-purple-800 checked:ring-current;
 		@apply checked:focus:ring-offset-2;
-		@apply dark:focus:ring-purple-500;
-		@apply dark:checked:text-purple-500;
+		@apply dark:bg-white/20 dark:ring-white/30;
+		@apply dark:hover:ring-white/50;
+		@apply dark:focus:ring-purple-400;
+		@apply dark:checked:text-purple-400 dark:checked:ring-current;
+	}
+
+	[type="radio"]:checked {
+		background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
 	}
 
 	.button-group {
@@ -60,7 +80,6 @@
 		@apply dark:bg-white/20 dark:border-white/20;
 		@apply dark:peer-focus:bg-white/30 dark:peer-focus:border-white/20;
 		@apply dark:peer-focus:ring-purple-400;
-		@apply dark:peer-checked:bg-purple-500 dark:peer-checked:border-white/40;
 	}
 
 	.button-group--first {
@@ -75,7 +94,7 @@
 		@apply rounded-e-lg;
 	}
 
-	[type="radio"]:checked {
-		background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")
+	.form-input--error {
+		@apply ring-red-300;
 	}
 }
