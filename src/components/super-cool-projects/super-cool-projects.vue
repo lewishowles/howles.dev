@@ -42,8 +42,12 @@ const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 
 
 // The list of core value keys, used to generate the components.
 const coreValues = ref([
-	{ key: "website", icon: "project-icon-website", href: "https://github.com/lewishowles/howles.dev" },
-	// { key: "design_system", icon: "project-icon-design-system", href: "" },
+	{
+		key: "website", icon: "project-icon-website", href: "https://github.com/lewishowles/howles.dev",
+	},
+	{
+		key: "design_system", icon: "project-icon-design-system", href: "https://www.sketch.com/s/27564627-6160-46a0-be47-f134c22e3aa4",
+	},
 	{
 		key: "components", icon: "project-icon-components", href: "https://github.com/lewishowles/components", type: "library",
 	},
@@ -65,7 +69,11 @@ const coreValues = ref([
 	{
 		key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments", type: "vscode",
 	},
-	{ key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/" },
-	{ key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81" },
+	{
+		key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/",
+	},
+	{
+		key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81",
+	},
 ]);
 </script>
