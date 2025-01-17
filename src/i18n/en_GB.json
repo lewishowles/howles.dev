@@ -245,6 +245,11 @@
 				"title": "Guides",
 				"text": "A few short-form, simple guides, written as part of creating this project.",
 				"link_text": "View guides on Notion"
+			},
+			"reddit": {
+				"title": "Reddit feedback",
+				"text": "Providing constructive design and website feedback to users who ask for it on Reddit, passing on my knowledge and experience, and championing accessibility.",
+				"link_text": "View feedback on Reddit"
 			}
 		}
 	},

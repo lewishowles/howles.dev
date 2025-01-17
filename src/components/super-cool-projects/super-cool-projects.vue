@@ -11,7 +11,7 @@
 		</template>
 
 		<ul ref="projects" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-			<cool-project v-for="value in coreValues" :key="value.key" v-bind="{ icon: value.icon, href: value.href, type: value.type }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showProjects }">
+			<cool-project v-for="value in coolProjects" :key="value.key" v-bind="{ icon: value.icon, href: value.href, type: value.type }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showProjects }">
 				<template #title>
 					{{ t(`cool_projects.projects.${value.key}.title`) }}
 				</template>
@@ -40,8 +40,8 @@ const projectsElement = useTemplateRef("projects");
 // Set up our intersection observer.
 const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 0.05, desktopThreshold: 0.2 });
 
-// The list of core value keys, used to generate the components.
-const coreValues = ref([
+// The list of cool project keys, used to generate the components.
+const coolProjects = ref([
 	{
 		key: "website", icon: "project-icon-website", href: "https://github.com/lewishowles/howles.dev",
 	},
@@ -74,6 +74,9 @@ const coreValues = ref([
 	},
 	{
 		key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81",
+	},
+	{
+		key: "reddit", icon: "project-icon-reddit", href: "https://www.reddit.com/user/lhowles/",
 	},
 ]);
 </script>
