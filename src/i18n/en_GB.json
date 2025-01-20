@@ -255,9 +255,9 @@
 	},
 
 	"footer": {
-		"text": "Thanks for making it this far! Find the design at {sketch_link_text}, or the code on {github_link_text}.",
-		"sketch_link_text": "on Sketch",
-		"github_link_text": "on GitHub",
+		"text": "Thanks for making it this far! Find {sketch_link_text}, or {github_link_text}.",
+		"sketch_link_text": "the design on Sketch",
+		"github_link_text": "the code on GitHub",
 		"thanks": "Special thanks to Rasa, for believing in me when I didn’t."
 	}
 }
