@@ -58,6 +58,12 @@ const coolProjects = ref([
 		key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library",
 	},
 	{
+		key: "snippet_generator", icon: "project-icon-snippet-generator", href: "https://github.com/lewishowles/vscode-snippet-generator", type: "tool",
+	},
+	{
+		key: "boilerplate", icon: "project-icon-boilerplate", href: "https://github.com/lewishowles/boilerplate",
+	},
+	{
 		key: "sketch_nudge_text", icon: "project-icon-sketch-nudge-text", href: "https://github.com/lewishowles/sketch-nudge-text", type: "sketch",
 	},
 	{

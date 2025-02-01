@@ -187,6 +187,7 @@
 		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create. All of these were used in some way in the creation of this website.",
 		"type": {
 			"library": "Library",
+			"tool": "Tool",
 			"sketch": "Sketch plugin",
 			"vscode": "Visual Studio Code plugin"
 		},
@@ -214,6 +215,16 @@
 			"testing": {
 				"title": "Testing",
 				"text": "Supercharge Cypress and Vitest testing with super-handy helpers for everything from selecting and counting elements to API mocking.",
+				"link_text": "View project on GitHub"
+			},
+			"snippet_generator": {
+				"title": "Snippet generator",
+				"text": "A tool to help quickly turn code into re-usable VSCode snippets.",
+				"link_text": "View project on GitHub"
+			},
+			"boilerplate": {
+				"title": "Boilerplate",
+				"text": "A starting point for Vue-based projects, incorporating a number of customisations to the base Vue scaffold that I have come to prefer",
 				"link_text": "View project on GitHub"
 			},
 			"sketch_nudge_text": {

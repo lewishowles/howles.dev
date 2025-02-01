@@ -4,6 +4,9 @@
 			<pill-badge v-if="isLibrary" v-bind="{ colour: 'purple' }" class="absolute end-0 top-0 me-4 mt-4">
 				{{ t("cool_projects.type.library") }}
 			</pill-badge>
+			<pill-badge v-if="isTool" v-bind="{ colour: 'pink' }" class="absolute end-0 top-0 me-4 mt-4">
+				{{ t("cool_projects.type.tool") }}
+			</pill-badge>
 			<pill-badge v-if="isSketchPlugin" v-bind="{ colour: 'yellow' }" class="absolute end-0 top-0 me-4 mt-4 inline-flex gap-2">
 				<img src="@/assets/images/logos/sketch.svg" alt="" class="size-3" />
 
@@ -61,7 +64,7 @@ const props = defineProps({
 	},
 
 	/**
-	 * The type of project - one of "library", "sketch", "vscode", or null.
+	 * The type of project - one of "library", "tool", "sketch", "vscode", or null.
 	 */
 	type: {
 		type: String,
@@ -72,6 +75,8 @@ const props = defineProps({
 const { t } = useI18n();
 // Whether this is a library project.
 const isLibrary = computed(() => props.type === "library");
+// Whether this is a tool.
+const isTool = computed(() => props.type === "tool");
 // Whether this is a Sketch plugin
 const isSketchPlugin = computed(() => props.type === "sketch");
 // Whether this is a VS Code plugin
