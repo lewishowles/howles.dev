@@ -10,7 +10,7 @@
 		"test:unit": "vitest",
 		"test:unit:run": "vitest run",
 		"lint": "eslint . --fix",
-		"deploy": "gh-pages -d dist --cname howles.dev"
+		"deploy": "vite build; gh-pages -d dist --cname howles.dev"
 	},
 	"dependencies": {
 		"@lewishowles/components": "^0.18.0",
