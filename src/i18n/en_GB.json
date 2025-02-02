@@ -184,7 +184,7 @@
 	"cool_projects": {
 		"pre_title": "See how I work",
 		"title": "Super-cool projects",
-		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create. All of these were used in some way in the creation of this website.",
+		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create. All of these were used in some way in the creation of this website or related projects.",
 		"type": {
 			"library": "Library",
 			"tool": "Tool",
@@ -220,6 +220,11 @@
 			"snippet_generator": {
 				"title": "Snippet generator",
 				"text": "A tool to help quickly turn code into re-usable VSCode snippets.",
+				"link_text": "View project on GitHub"
+			},
+			"boilersuit": {
+				"title": "Boilersuit",
+				"text": "A command line tool written in node to quickly scaffold a new project using the Boilerplate repo as a starting point.",
 				"link_text": "View project on GitHub"
 			},
 			"boilerplate": {

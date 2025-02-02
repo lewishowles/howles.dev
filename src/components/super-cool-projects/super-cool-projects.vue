@@ -61,6 +61,9 @@ const coolProjects = ref([
 		key: "snippet_generator", icon: "project-icon-snippet-generator", href: "https://github.com/lewishowles/vscode-snippet-generator", type: "tool",
 	},
 	{
+		key: "boilersuit", icon: "project-icon-boilersuit", href: "https://github.com/lewishowles/boilersuit",
+	},
+	{
 		key: "boilerplate", icon: "project-icon-boilerplate", href: "https://github.com/lewishowles/boilerplate",
 	},
 	{
