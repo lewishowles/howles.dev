@@ -19,7 +19,7 @@
 			<div class="hidden h-px w-10 bg-current md:block" />
 		</div>
 
-		<looking-for-work class="mt-8" />
+		<looking-for-work class="mt-12 lg:mt-8" />
 	</div>
 </template>
 

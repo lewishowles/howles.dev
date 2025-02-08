@@ -1,9 +1,5 @@
 <template>
 	<div class="relative flex flex-col items-start gap-3 bg-gradient-to-b from-grey-100 to-white px-12 py-10 lg:rounded-2xl lg:bg-gradient-to-br lg:from-pink-700 lg:to-purple-800 lg:text-lg lg:text-white dark:max-lg:from-white/5 dark:max-lg:to-transparent" data-test="welcome-part-deux">
-		<svg viewBox="0 0 10 1" preserveAspectRatio="none" class="absolute inset-x-0 bottom-full h-8 w-full text-grey-100 lg:hidden dark:text-white/5">
-			<polygon points="0,1 10,0 10,1" fill="currentColor" />
-		</svg>
-
 		<div class="lg:my-auto">
 			<i18n-t keypath="welcome.part_deux.text" tag="p" scope="global" class="mb-6">
 				<template #easy_to_use>
