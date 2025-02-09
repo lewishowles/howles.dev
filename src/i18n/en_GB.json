@@ -224,7 +224,7 @@
 			},
 			"form_builder": {
 				"title": "Form builder",
-				"text": "A simple tool to help quickly build consistent forms using @lewishowles/components",
+				"text": "A simple tool to help quickly build consistent forms using shorthand, generating form code on the fly.",
 				"link_text": "View project on GitHub"
 			},
 			"boilersuit": {
