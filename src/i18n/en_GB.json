@@ -222,6 +222,11 @@
 				"text": "A tool to help quickly turn code into re-usable VSCode snippets.",
 				"link_text": "View project on GitHub"
 			},
+			"form_builder": {
+				"title": "Form builder",
+				"text": "A simple tool to help quickly build consistent forms using @lewishowles/components",
+				"link_text": "View project on GitHub"
+			},
 			"boilersuit": {
 				"title": "Boilersuit",
 				"text": "A command line tool written in node to quickly scaffold a new project using the Boilerplate repo as a starting point.",
