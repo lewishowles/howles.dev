@@ -61,9 +61,9 @@ const users = computed(() => {
 		return [];
 	}
 
-	return userData.value.reduce((users, user) => {
+	return userData.value.reduce((filteredUsers, user) => {
 		if (!isNonEmptyObject(user)) {
-			return;
+			return filteredUsers;
 		}
 
 		if (!isNonEmptyString(user.name)) {
@@ -72,9 +72,9 @@ const users = computed(() => {
 
 		user.initials = user.name.split(" ").map(word => word.charAt(0).toUpperCase()).join("");
 
-		users.push(user);
+		filteredUsers.push(user);
 
-		return users;
+		return filteredUsers;
 	}, []);
 });
 
