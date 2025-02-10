@@ -14,11 +14,11 @@
 				{{ t("role.button") }}
 			</link-tag>
 
-			<link-tag href="/Lewis Howles - CV - Dark.pdf" v-bind="{ iconStart: 'icon-download' }" download class="animate-fade-in-right button--primary mt-2 hidden text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50 dark:inline-flex">
+			<link-tag href="/Lewis Howles - CV - Dark.pdf" v-bind="{ iconStart: 'icon-download' }" download class="animate-fade-in-right button--primary mt-2 not-dark:hidden text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50 dark:inline-flex">
 				{{ t("role.button") }}
 			</link-tag>
 		</div>
-		<div class="h-2 bg-gradient-to-r from-pink-700 to-purple-800 lg:hidden dark:hidden" />
+		<div class="h-2 bg-linear-to-r from-pink-700 to-purple-800 lg:hidden dark:hidden" />
 	</div>
 </template>
 

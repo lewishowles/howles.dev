@@ -1,49 +1,54 @@
-@layer components {
-	.button {
-		@apply px-[1em] py-[0.5em] rounded-full;
-	}
+@utility button {
+	@apply px-[1em] py-[0.5em] rounded-full;
+}
 
-	@property --primary-gradient-start {
-		syntax: "<color>";
-		initial-value: theme("colors.pink.700");
-		inherits: false;
-	}
+@utility button--primary {
+	@apply button;
+	@apply transition-all font-semibold text-white;
+	@apply hocus:text-white;
+	@apply active:text-white;
 
-	@property --primary-gradient-end {
-		syntax: "<color>";
-		initial-value: theme("colors.purple.800");
-		inherits: false;
-	}
+	background: linear-gradient(
+		135deg,
+		var(--primary-gradient-start),
+		var(--primary-gradient-end)
+	);
 
-	.button--primary {
-		@apply button;
-		@apply transition-all font-semibold text-white;
-		@apply hocus:text-white;
-		@apply active:text-white;
+	transition:
+		box-shadow 150ms,
+		--primary-gradient-start 150ms,
+		--primary-gradient-end 150ms;
 
-		background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-		transition: box-shadow 150ms, --primary-gradient-start 150ms, --primary-gradient-end 150ms;
+	&:hover,
+	&:focus {
+		--primary-gradient-start: var(--color-pink-600);
+		--primary-gradient-end: var(--color-pink-600);
 
-		&:hover, &:focus {
-			--primary-gradient-start: theme("colors.pink.600");
-			--primary-gradient-end: theme("colors.pink.600");
+		box-shadow:
+			0 0 5px rgba(230 25 128 / 5%),
+			0 0 25px rgba(230 25 128 / 10%),
+			0 0 50px rgba(230 25 128 / 15%);
 
-			box-shadow: 0 0 5px rgba(230 25 128 / 20%), 0 0 25px rgba(230 25 128 / 40%), 0 0 50px rgba(230 25 128 / 60%);
+		&:where(.dark, .dark *) {
+			box-shadow:
+				0 0 5px rgba(230 25 128 / 20%),
+				0 0 25px rgba(230 25 128 / 40%),
+				0 0 50px rgba(230 25 128 / 60%);
 		}
-
-		&:active {
-			--primary-gradient-start: theme("colors.pink.900");
-			--primary-gradient-end: theme("colors.purple.950");
-		}
 	}
 
-	.button--muted {
-		@apply button;
-		@apply bg-white border border-grey-300;
-		@apply hocus:bg-grey-50 hocus:border-grey-400;
-		@apply active:bg-grey-100 active:border-grey-500;
-		@apply dark:bg-white/20 dark:border-white/20;
-		@apply dark:hocus:bg-white/30 dark:hocus:border-white/20;
-		@apply dark:active:bg-white/40 dark:hocus:border-white/20;
+	&:active {
+		--primary-gradient-start: var(--color-pink-900);
+		--primary-gradient-end: var(--color-purple-950);
 	}
+}
+
+@utility button--muted {
+	@apply button;
+	@apply bg-white border border-grey-300;
+	@apply hocus:bg-grey-50 hocus:border-grey-400;
+	@apply active:bg-grey-100 active:border-grey-500;
+	@apply dark:bg-white/20 dark:border-white/20;
+	@apply dark:hocus:bg-white/30 dark:hocus:border-white/20;
+	@apply dark:active:bg-white/40 dark:hocus:border-white/20;
 }

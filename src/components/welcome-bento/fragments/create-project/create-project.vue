@@ -36,7 +36,7 @@
 			</form-actions>
 		</form-layout>
 
-		<div v-show="showingSuccessMessage" class="animate-fade-in-down absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-green-500 to-green-600 p-6 text-white" aria-live="polite" data-test="create-project-success">
+		<div v-show="showingSuccessMessage" class="animate-fade-in-down absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-linear-to-br from-green-500 to-green-600 dark:from-green-400 dark:to-green-500 p-6 text-white" aria-live="polite" data-test="create-project-success">
 			<icon-check-circled class="size-6" />
 
 			{{ t("create_project.form.success") }}

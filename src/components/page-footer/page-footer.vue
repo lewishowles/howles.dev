@@ -1,6 +1,6 @@
 <template>
 	<div class="mx-auto w-full max-w-7xl pb-10 text-sm md:px-6 md:pb-20 xl:px-0" data-test="page-footer">
-		<div class="mb-10 h-px max-w-96 bg-gradient-to-r from-grey-200 to-transparent dark:from-white/30" />
+		<div class="mb-10 h-px max-w-96 bg-linear-to-r from-grey-200 to-transparent dark:from-white/30" />
 
 		<div class="flex flex-col flex-wrap gap-4 px-6 md:flex-row md:items-center md:px-0">
 			<base-icon class="page-footer-icon size-4">
@@ -40,19 +40,21 @@ const { t } = useI18n();
 </script>
 
 <style>
+@reference "../../assets/css/main.css";
+
 .page-footer-icon-stop-start {
-	stop-color: theme("colors.purple.800");
+	stop-color: var(--color-purple-800);
 
 	&:where(.dark, .dark *) {
-		stop-color: theme("colors.blue.300");
+		stop-color: var(--color-blue-300);
 	}
 }
 
 .page-footer-icon-stop-end {
-	stop-color: theme("colors.pink.700");
+	stop-color: var(--color-pink-700);
 
 	&:where(.dark, .dark *) {
-		stop-color: theme("colors.blue.300");
+		stop-color: var(--color-blue-300);
 	}
 }
 </style>

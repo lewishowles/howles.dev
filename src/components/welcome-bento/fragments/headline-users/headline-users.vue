@@ -1,6 +1,6 @@
 <template>
-	<bento-box class="group flex cursor-pointer items-center gap-4 py-6 transition-colors hocus:bg-gradient-to-b hocus:from-white hocus:to-grey-100 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none" tabindex="0" data-test="headline-users">
-		<div class="size-14 rounded-full bg-gradient-to-br from-pink-700 to-purple-800 p-4">
+	<bento-box class="group flex cursor-pointer items-center gap-4 py-6 transition-colors hocus:bg-linear-to-b hocus:from-white hocus:to-grey-100 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none" tabindex="0" data-test="headline-users">
+		<div class="size-14 rounded-full bg-linear-to-br from-pink-700 to-purple-800 p-4">
 			<icon-user class="size-6 text-white" />
 		</div>
 

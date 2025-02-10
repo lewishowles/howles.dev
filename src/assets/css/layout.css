@@ -1,27 +1,25 @@
-@layer utilities {
-	.inset-well {
-		--offset: 4px;
+@utility inset-well {
+	--offset: 4px;
 
-		border-radius: calc(1rem - var(--offset));
-		margin-bottom: calc(-1.25rem + var(--offset));
-		margin-left: calc(-1.5rem + var(--offset));
-		margin-right: calc(-1.5rem + var(--offset));
-		padding-bottom: calc(1.25rem - var(--offset));
-		padding-left: calc(1.5rem - var(--offset));
-		padding-right: calc(1.5rem - var(--offset));
-		padding-top: calc(1.25rem - var(--offset));
-	}
+	border-radius: calc(1rem - var(--offset));
+	margin-bottom: calc(-1.25rem + var(--offset));
+	margin-left: calc(-1.5rem + var(--offset));
+	margin-right: calc(-1.5rem + var(--offset));
+	padding-bottom: calc(1.25rem - var(--offset));
+	padding-left: calc(1.5rem - var(--offset));
+	padding-right: calc(1.5rem - var(--offset));
+	padding-top: calc(1.25rem - var(--offset));
+}
 
-	.inset-well--intro {
-		--offset: 4px;
+@utility inset-well--intro {
+	--offset: 4px;
 
-		border-radius: calc(1rem - var(--offset));
-		margin-bottom: calc(-2.5rem + var(--offset));
-		margin-left: calc(-3rem + var(--offset));
-		margin-right: calc(-3rem + var(--offset));
-		padding-bottom: calc(2.5rem - var(--offset));
-		padding-left: calc(3rem - var(--offset));
-		padding-right: calc(3rem - var(--offset));
-		padding-top: calc(2.5rem - var(--offset));
-	}
+	border-radius: calc(1rem - var(--offset));
+	margin-bottom: calc(-2.5rem + var(--offset));
+	margin-left: calc(-3rem + var(--offset));
+	margin-right: calc(-3rem + var(--offset));
+	padding-bottom: calc(2.5rem - var(--offset));
+	padding-left: calc(3rem - var(--offset));
+	padding-right: calc(3rem - var(--offset));
+	padding-top: calc(2.5rem - var(--offset));
 }

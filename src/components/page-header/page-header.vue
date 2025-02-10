@@ -1,13 +1,13 @@
 <template>
 	<theme-selector />
 
-	<div class="page-header flex w-full flex-col items-center bg-gradient-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
+	<div class="page-header flex w-full flex-col items-center bg-linear-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
 		<div class="glasses">
 			<img src="@/assets/images/glasses/light.svg" alt="" class="h-[3.75rem] w-36 md:size-auto dark:hidden" width="256" height="108" />
 			<img src="@/assets/images/glasses/dark.svg" alt="" class="hidden h-[3.75rem] w-36 md:size-auto dark:block" width="256" height="108" />
 		</div>
 
-		<h1 class="text-center text-5xl font-extrabold leading-none text-grey-950 md:text-[5rem] dark:bg-gradient-to-b dark:from-pink-200 dark:to-grey-50 dark:bg-clip-text dark:text-transparent">
+		<h1 class="text-center text-5xl font-extrabold leading-none text-grey-950 md:text-[5rem] dark:bg-linear-to-b dark:from-pink-200 dark:to-grey-50 dark:bg-clip-text dark:text-transparent">
 			Lewis Howles
 		</h1>
 
@@ -33,12 +33,14 @@ const { t } = useI18n();
 </script>
 
 <style>
+@reference "../../assets/css/main.css";
+
 .page-header:where(.dark, .dark *),
 .glasses:where(.dark, .dark *) {
 	position: relative;
 
 	&:before {
-		background: radial-gradient(ellipse at center, theme("colors.neon-pink"), transparent 70%);
+		background: radial-gradient(ellipse at center, var(--color-neon-pink), transparent 70%);
 		content: "";
 		left: 50%;
 		max-width: 100%;

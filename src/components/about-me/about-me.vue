@@ -26,7 +26,7 @@
 			<div class="about-me-gradients relative flex flex-1 flex-col justify-center gap-7 p-12">
 				<icon-film-reel class="dark:neon-glow size-12 text-pink-700 dark:text-pink-200" />
 
-				<div class="bg-gradient-to-br from-pink-700 to-purple-800 bg-clip-text text-4xl font-bold text-transparent dark:from-pink-200 dark:to-purple-300">
+				<div class="bg-linear-to-br from-pink-700 to-purple-800 bg-clip-text text-4xl font-bold text-transparent dark:from-pink-200 dark:to-purple-300">
 					{{ t("about.quote") }}
 				</div>
 

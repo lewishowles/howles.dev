@@ -4,7 +4,7 @@
 			<h2 class="content-section-eyebrow relative mb-1 flex items-center gap-4 font-semibold text-purple-700 xl:mb-2 xl:text-xl dark:text-purple-300">
 				<slot name="eyebrow" />
 
-				<div class="hidden h-px w-64 bg-gradient-to-r from-grey-200 md:block dark:from-grey-50/20" />
+				<div class="hidden h-px w-64 bg-linear-to-r from-grey-200 md:block dark:from-grey-50/20" />
 			</h2>
 			<p class="mb-4 text-4xl font-bold text-grey-950 xl:mb-6 xl:text-5xl dark:text-grey-50">
 				<slot name="title" />
@@ -14,7 +14,7 @@
 			</p>
 		</div>
 
-		<div class="relative bg-gradient-to-b from-grey-50 to-white pt-12 dark:from-black/20 dark:to-transparent">
+		<div class="relative bg-linear-to-b from-grey-50 to-white pt-12 dark:from-black/20 dark:to-transparent">
 			<div class="content-section-pattern absolute inset-x-0 bottom-full h-4 border-b border-current text-grey-200 dark:text-grey-50/10" />
 
 			<div class="mx-auto max-w-7xl px-6 xl:px-0">
@@ -25,14 +25,22 @@
 </template>
 
 <style>
+@reference "../../assets/css/main.css";
+
 .content-section-eyebrow {
 	&::before, &::after {
-		@apply absolute text-grey-200 dark:text-grey-50/20;
+		@apply absolute text-grey-200;
 
 		border-color: currentColor;
 		content: "";
 		right: 100%;
 		top: 0;
+	}
+
+	&:where(.dark, .dark *) {
+		&::before, &::after {
+			@apply text-grey-50/20;
+		}
 	}
 
 	&::before {

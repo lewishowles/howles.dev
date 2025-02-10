@@ -18,7 +18,7 @@
 			<template v-for="(duty, index) in duties" :key="duty.category">
 				<div class="flex items-center py-1">
 					<dt class="flex items-center gap-1.5">
-						<div class="size-3 rounded bg-current" :class="getNextColour(index, brightColours)" />
+						<div class="size-3 rounded-sm bg-current" :class="getNextColour(index, brightColours)" />
 
 						{{ t(`staff_duties.categories.${duty.category}`) }}
 					</dt>
