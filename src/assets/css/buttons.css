@@ -22,11 +22,13 @@
 		@apply active:text-white;
 
 		background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-		transition: --primary-gradient-start 150ms, --primary-gradient-end 150ms;
+		transition: box-shadow 150ms, --primary-gradient-start 150ms, --primary-gradient-end 150ms;
 
 		&:hover, &:focus {
-			--primary-gradient-start: theme("colors.pink.800");
-			--primary-gradient-end: theme("colors.purple.900");
+			--primary-gradient-start: theme("colors.pink.600");
+			--primary-gradient-end: theme("colors.pink.600");
+
+			box-shadow: 0 0 5px rgba(230 25 128 / 20%), 0 0 25px rgba(230 25 128 / 40%), 0 0 50px rgba(230 25 128 / 60%);
 		}
 
 		&:active {

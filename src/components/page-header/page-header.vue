@@ -38,7 +38,7 @@ const { t } = useI18n();
 	position: relative;
 
 	&:before {
-		background: radial-gradient(ellipse at center, theme(colors.neon-pink), transparent 70%);
+		background: radial-gradient(ellipse at center, theme("colors.neon-pink"), transparent 70%);
 		content: "";
 		left: 50%;
 		max-width: 100%;
