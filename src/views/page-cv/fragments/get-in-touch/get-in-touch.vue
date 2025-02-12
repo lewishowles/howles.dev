@@ -1,3 +1,3 @@
 <template>
-	<router-view />
+	Get in touch!
 </template>
