@@ -14,7 +14,7 @@
 		<template v-for="theme in tm('theme.options')" :key="theme.value">
 			<ui-button
 				:icon-start="theme.icon"
-				class="px-4 py-2 transition-colors whitespace-nowrap active:bg-purple-100 active:text-purple-800 hocus:bg-purple-50 hocus:text-purple-700 dark:active:bg-pink-500/20 dark:active:text-pink-400 dark:hocus:bg-pink-400/20 dark:hocus:text-pink-300"
+				class="px-4 py-2 inline-flex items-center transition-colors whitespace-nowrap active:bg-purple-100 active:text-purple-800 hocus:bg-purple-50 hocus:text-purple-700 dark:active:bg-pink-500/20 dark:active:text-pink-400 dark:hocus:bg-pink-400/20 dark:hocus:text-pink-300"
 				:class="{ 'text-purple-700 dark:text-pink-300': theme.value === selectedTheme }"
 				icon-classes="size-4"
 				data-test="theme-selector-button"
