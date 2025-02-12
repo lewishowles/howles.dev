@@ -8,6 +8,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test:unit": "vitest",
+		"test:unit:ui": "vitest --ui",
 		"test:unit:run": "vitest run",
 		"lint": "eslint . --fix",
 		"deploy": "vite build; gh-pages -d dist --cname howles.dev"
@@ -30,6 +31,7 @@
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/postcss": "^4.0.6",
 		"@vitejs/plugin-vue": "^5.2.1",
+		"@vitest/ui": "^3.0.5",
 		"@vue/test-utils": "^2.4.6",
 		"cypress": "^14.0.2",
 		"cypress-real-events": "^1.14.0",
@@ -46,6 +48,7 @@
 		"tailwindcss": "^4.0.6",
 		"tailwindcss-hocus": "^1.0.0",
 		"vite": "^6.1.0",
+		"vite-plugin-vue-devtools": "^7.7.1",
 		"vitest": "^3.0.5"
 	}
 }
