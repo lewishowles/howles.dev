@@ -6,7 +6,7 @@
 			<get-in-touch />
 		</div>
 
-		<div class="grid grid-cols-2 gap-12">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<div class="flex flex-col gap-10">
 				<person-overview />
 
