@@ -1,4 +1,4 @@
-import PageFooter from "./page-footer.vue";
+import PageFooter from "./layout-footer.vue";
 import { createMount } from "@cypress/support/mount";
 
 const mount = createMount(PageFooter);

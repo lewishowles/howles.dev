@@ -1,4 +1,4 @@
-import PageHeader from "./page-header.vue";
+import PageHeader from "./layout-header.vue";
 import { createMount } from "@cypress/support/mount";
 
 const mount = createMount(PageHeader);

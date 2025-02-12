@@ -1,10 +1,10 @@
 import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
-import PageFooter from "./page-footer.vue";
+import PageHeader from "./layout-header.vue";
 
-const mount = createMount(PageFooter);
+const mount = createMount(PageHeader);
 
-describe("page-footer", () => {
+describe("page-header", () => {
 	describe("Initialisation", () => {
 		test("should exist as a Vue component", () => {
 			const wrapper = mount();
