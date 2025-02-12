@@ -9,6 +9,8 @@
 		<div class="grid grid-cols-2 gap-12">
 			<div class="flex flex-col gap-10">
 				<person-overview />
+
+				<preferred-tools />
 			</div>
 		</div>
 	</div>
@@ -18,4 +20,5 @@
 import GetInTouch from "./fragments/get-in-touch/get-in-touch.vue";
 import LayoutHeader from "@/components/layout-header/layout-header.vue";
 import PersonOverview from "./fragments/person-overview/person-overview.vue";
+import PreferredTools from "./fragments/preferred-tools/preferred-tools.vue";
 </script>

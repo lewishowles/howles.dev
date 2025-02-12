@@ -285,7 +285,75 @@
 		"person_overview": {
 			"introduction": "I’m a passionate, versatile UI/UX Developer and Designer, with over {years} experience spanning UI Design, Front-end Development, Web Design, Graphic Design and, historically, Backend Development.",
 			"years": "15 years",
-			"text": "Championing user experience, developer experience, inclusivity, accessibility, communication, and consistency, I bring a unique view, attention to detail, and the ability to bridge teams. As a Designer and Front-end developer, I genuinely love mixing creativity with technical implementation and wearing both hats on any given day. With the ability to grasp the bigger picture, or zoom in to the smallest detail, I love working with a cross-functional team to help create powerful software, setting the standard that software—and websites—should be easy to use and accessible to as many people as possible.\n\nWhether planning, designing or developing, I aim to be as well rounded as I can in order to make the best experiences possible, with the ability to advocate for the user, keep a level head, and to help guide decisions. I pride myself in my problem solving, attention to detail, efficiency, and my ability to communicate technical subjects to less technical people.\n\nI was once described as the glue that brought the team together and I like to help my team whenever I can. I have extensive experience with team supervision and review, including designs, code, APIs, and usability. I also love to create libraries and tools, ensuring the highest standards and consistency for everyone to work from.",
+			"text": "Championing user experience, developer experience, inclusivity, accessibility, communication, and consistency, I bring a unique view, attention to detail, and the ability to bridge teams. As a Designer and Front-end developer, I genuinely love mixing creativity with technical implementation and wearing both hats on any given day. With the ability to grasp the bigger picture, or zoom in to the smallest detail, I love working with a cross-functional team to help create powerful software, setting the standard that software—and websites—should be easy to use and accessible to as many people as possible.\n\nWhether planning, designing or developing, I aim to be as well rounded as I can in order to make the best experiences possible, with the ability to advocate for the user, keep a level head, and to help guide decisions. I pride myself in my problem solving, attention to detail, efficiency, and my ability to communicate technical subjects to less technical people.\n\nI was once described as the glue that brought the team together and I like to help my team whenever I can. I have extensive experience with team supervision and review, including designs, code, APIs, and usability. I also love to create libraries and tools, ensuring the highest standards and consistency for everyone to work from."
+		},
+
+		"preferred_tools": {
+			"title": "Preferred tools, software and frameworks",
+			"intro": "I include these to give an idea of my personality, and how I like to set myself up to get things done quickly and properly.",
+			"tools": [
+				{
+					"name": "Vue.js",
+					"description": "My preferred Front-end framework for rapid, scalable, testable development"
+				},
+				{
+					"name": "Tailwind CSS",
+					"description": "Atomic CSS framework, which works perfectly with frameworks like Vue and helps with consistency"
+				},
+				{
+					"name": "Vite",
+					"description": "Front-end tooling"
+				},
+				{
+					"name": "Bun",
+					"description": "A faster alternative to npm and pnpm"
+				},
+				{
+					"name": "Vitest",
+					"description": "A Vite-native Jest-compatible unit testing framework"
+				},
+				{
+					"name": "Cypress",
+					"description": "Integration and end-to-end testing tool"
+				},
+				{
+					"name": "VS Code",
+					"description": "A cross-platform, extendable, fast IDE-like editor"
+				},
+				{
+					"name": "Sketch",
+					"description": "macOS native, extendable, vector design platform"
+				},
+				{
+					"name": "Notion",
+					"description": "Powerful note-taking app, especially for teams"
+				},
+				{
+					"name": "GitHub Desktop",
+					"description": "Though it seems to lack Git-Flow support, it’s actually a nice app to use"
+				},
+				{
+					"name": "Paste",
+					"description": "Clipboard history manager, making it easy to deal with lots of information at once"
+				},
+				{
+					"name": "ForkLift",
+					"description": "macOS Finder replacement and (S)FTP tool in one"
+				},
+				{
+					"name": "Raycast",
+					"description": "Spotlight / Alfred replacement with powerful extensibility"
+				},
+				{
+					"name": "Hyper",
+					"description": "Extensible, customisable Terminal alternative"
+				},
+				{
+					"name": "Firefox",
+					"description": "The plucky underdog, with, in my opinion, much better Dev Tools"
+				}
+			],
+			"outro": "I’ve also tried Figma in the past, and while it has some tools that Sketch doesn’t, I found it much less intuitive and much less productive. I previously used Photoshop for web design, and have some familiarity with the Adobe suite from that time.\n\nFinally, I have extensive experience with VS Code, Office, Notion, Jira, etc."
 		}
 	},
 
