@@ -14,11 +14,14 @@
 			</div>
 
 			<key-skills />
+
+			<employment-history />
 		</div>
 	</div>
 </template>
 
 <script setup>
+import EmploymentHistory from "./fragments/employment-history/employment-history.vue";
 import GetInTouch from "./fragments/get-in-touch/get-in-touch.vue";
 import KeySkills from "./fragments/key-skills/key-skills.vue";
 import LayoutHeader from "@/components/layout-header/layout-header.vue";

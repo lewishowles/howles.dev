@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-6">
 		<section-title>
 			{{ t("cv.key_skills.title") }}
 		</section-title>

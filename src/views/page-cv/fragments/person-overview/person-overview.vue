@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-6">
 		<div class="relative">
 			<div class="absolute w-4.5 inset-y-0 top-0 right-full mr-8">
 				<div class="absolute inset-y-0 w-4.5 rounded bg-purple-400 dark:bg-pink-400" />

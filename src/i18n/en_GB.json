@@ -424,6 +424,67 @@
 					"description": "I have previously been a facilitator of Andy’s Man Club, and have been visiting the group regularly since January 2024."
 				}
 			]
+		},
+
+		"employment_history": {
+			"title": "Employment history",
+			"companies": [
+				{
+					"name": "AppsAnywhere",
+					"roles": [
+						{
+							"title": "Creative and UI/UX Lead",
+							"dates": "Aug 2023–Jun 2024"
+						},
+						{
+							"title": "UI Lead",
+							"dates": "Sep 2019–Aug 2023"
+						}
+					],
+					"introduction": "At AppsAnywhere, my goal was to help direct the shape of AppsAnywhere and all related products, harnessing the power of the software in a way that’s accessible to all. I championed user experience, accessibility, efficiency and setting a high base standard, helping to take features through ideation, design, presentation, build and testing. Highlights include:",
+					"highlights": [
+						"Setting a new standard for quality and consistency—including creating a style guide for branding and a design system for UI design—and helping to set up best practices for design, code and testing, from shaping new processes and procedures, to setting the foundation for each of our Front-end projects.",
+						"Creating an all-new design system, enabling much faster design for features and projects.",
+						"Creating heavily-tested Javascript Helper and Vue.js Component libraries, as well as a UI Testing library to simplify both unit and integration tests; accelerating development further and ensuring consistency and confidence in the fundamentals. This was exemplified by my ability to keep up with three Backend developers, while often single-handedly covering both Design and Front-end development.",
+						"Re-building the Portal of AppsAnywhere with my tech stack of choice—OpenAPI, Vue.js, Tailwind, Vitest, Cypress and Bun—as well as implementing extensive testing. Beyond removing tech debt, this allowed me to rocket-fuel our ability to iterate and add new features, allowed the implementation of translation to multiple languages for all UI text, including Arabic, reduced customer reported Front-end defects to near zero, and, working with an external auditor, took that Portal to full WCAG 2.0 AA compliance.",
+						"Combining the new tech stack with the existing MVC PHP app to allow progressive improvements to the Admin panel of AppsAnywhere, allowing new features to be developed and tested in a more modern and resilient way, while not affecting the functionality of the existing jQuery-based Front-end (which I actually also built as a freelancer while at ISSL).",
+						"Utilising Jira and Scrumban techniques—such as Daily Stand Ups, Sprint Planning, Sprint Retrospectives and Sprint Reviews—to track, plan, and co-ordinate work with the team and stakeholders.",
+						"Presenting new features in our company-wide Sprint Reviews, explaining the purpose and benefits of features and updates while keeping things light for those that didn't need absolute detail.",
+						"People-centred tasks such as helping our Support team when necessary, introducing AppsAnywhere to new staff and discussing its capabilities with existing staff, and talking to customers about their needs, including running workshops at User Days."
+					]
+				},
+				{
+					"name": "ISSL - Internet Solutions Services Limited",
+					"roles": [
+						{
+							"title": "Director",
+							"dates": "Nov 2017–Sep 2019"
+						},
+						{
+							"title": "Studio Manager",
+							"dates": "Mar 2014–Oct 2017"
+						},
+						{
+							"title": "Senior Web Designer",
+							"dates": "Nov 2010–Mar 2014"
+						},
+						{
+							"title": "Web Designer",
+							"dates": "Apr 2009–Nov 2010"
+						}
+					],
+					"introduction": "My time at ISSL took me from Web Designer to Director and, through hard work and attention to detail, I expanded my own abilities and that of the company, improving our workflows and choosing the right tools to allow us to provide solutions to customers that weren't possible when I joined, as beautiful on the inside as they were on the outside. In the end, I oversaw Web Design and almost all ISSL projects. Highlights include:",
+					"highlights": [
+						"Using technical communication skills to guide customers through the Web Design process, including requirements gathering, design, development, content management and SEO.",
+						"Reacting quickly to changes in direction or requirements, giving the customer what they want without holding up the rest of the process.",
+						"Extensive use of CMS, including creating and maintaining our website boilerplate, allowing a new site to be set up in minutes, ready for the development process.",
+						"Creating features such as window-ready featured property displays.",
+						"Developing an integration for our CMS of choice to allow our Estate Agent customers to utilise our in-house property search in a design-agnostic, flexible way, including features such as nearby amenities.",
+						"Lead developer for Standout Property Manager, including Backend Development as well as Design and Front-end Development, working on both sides of the property management experience, designing ways to make property management easier and more effective for our customers.",
+						"Developing Stand Out Property Websites, a set of powerful, customisable property search website templates for any estate or letting agents, no matter what property software they use. These website templates could be used to quickly create a CMS-powered website based from a hand-crafted template, with the most complete set of features we had ever offered, all while offering a same-day turnaround if necessary."
+					]
+				}
+			]
 		}
 	},
 
