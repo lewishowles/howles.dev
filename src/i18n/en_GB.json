@@ -354,6 +354,76 @@
 				}
 			],
 			"outro": "I’ve also tried Figma in the past, and while it has some tools that Sketch doesn’t, I found it much less intuitive and much less productive. I previously used Photoshop for web design, and have some familiarity with the Adobe suite from that time.\n\nFinally, I have extensive experience with VS Code, Office, Notion, Jira, etc."
+		},
+
+		"key_skills": {
+			"title": "Key skills",
+			"skills": [
+				{
+					"icon": "icon-leaf",
+					"description": "The ability to participate in the entire lifecycle of a product, from concept and design to testing and deployment."
+				},
+				{
+					"icon": "icon-accessibility",
+					"description": "A strong understanding of web technologies, particularly HTML, CSS, and Javascript, but also user experience and accessibility, doing my best to ensure no-one is left behind. My passion for inclusive design fuels my drive to craft delightful user experiences."
+				},
+				{
+					"icon": "icon-brush",
+					"description": "Great design sensibilities—and a desire to apply those to all things. Making things look good, but more importantly, making them easy to use, whatever the device. Extensive experience using Sketch on macOS, with a working knowledge of Figma (Sketch is much more intuitive to me, and I’m experienced in writing plugins for it)."
+				},
+				{
+					"icon": "icon-document",
+					"description": "The ability to turn ideas and wishlists into requirements and a plan of action, differentiating must, should, and could."
+				},
+				{
+					"icon": "icon-bug",
+					"description": "A strong sense of the importance of testing—from Unit to Integration to End-to-end. Eventually, you even come to enjoy it."
+				},
+				{
+					"icon": "icon-robot",
+					"description": "Efficiency and automation are my thing. I frequently write helpful code to perform repetitive tasks, or come up with ways to allow common features to be implemented more and more quickly—ask me about Form Builder, Page Scaffold, or my component scaffold scripts."
+				},
+				{
+					"icon": "icon-magnify",
+					"description": "If efficiency and automation are my thing, so are attention to detail and problem solving. I pride myself in my ability to work out a problem, and to provide more than just an MVP every time."
+				},
+				{
+					"icon": "icon-speech",
+					"description": "Excellent technical communication and writing skills, giving me the ability to communicate complex topics or requirements to team members, stakeholders, and customers at their level."
+				},
+				{
+					"icon": "icon-lightbulb",
+					"description": "Front-end developers know that it often feels like keeping on top of things is a full-time job in itself, and my eagerness to learn and keep up explains why I’m signed up to more newletters than I can keep up with."
+				},
+				{
+					"icon": "icon-film",
+					"description": "I strive to be friendly and helpful, rather than dismissive, and I believe I have the ability to bring a team closer together and bring fun to the workplace—such as adding film references to designs or to code. But I can also work alone, as was often the case as a solo Front-end developer. I love to use to-do lists to keep me focused."
+				},
+				{
+					"icon": "icon-loading",
+					"description": "A solid understanding of RESTful API deisgn and integration, and OpenAPI specifications—including using Prism for initial development, and reviewing API specs with Backend teams to ensure they make sense for an end user both in terms of structure and documentation."
+				},
+				{
+					"icon": "icon-branch",
+					"description": "Long-term use of Git for version control."
+				},
+				{
+					"icon": "icon-database",
+					"description": "Working knowledge of database design and decent SQL query skills."
+				},
+				{
+					"icon": "icon-run",
+					"description": "Experienced in working as part of an Agile team, using a mixture of Scrum and Kanban techniques."
+				},
+				{
+					"icon": "icon-sparkle",
+					"description": "Experienced in leveraging AI tools to perform mundane tasks, such as generating fixtures, converting code between languages, etc."
+				},
+				{
+					"icon": "icon-help",
+					"description": "I have previously been a facilitator of Andy’s Man Club, and have been visiting the group regularly since January 2024."
+				}
+			]
 		}
 	},
 

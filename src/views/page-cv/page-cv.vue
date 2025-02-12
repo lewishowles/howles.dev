@@ -12,12 +12,15 @@
 
 				<preferred-tools />
 			</div>
+
+			<key-skills />
 		</div>
 	</div>
 </template>
 
 <script setup>
 import GetInTouch from "./fragments/get-in-touch/get-in-touch.vue";
+import KeySkills from "./fragments/key-skills/key-skills.vue";
 import LayoutHeader from "@/components/layout-header/layout-header.vue";
 import PersonOverview from "./fragments/person-overview/person-overview.vue";
 import PreferredTools from "./fragments/preferred-tools/preferred-tools.vue";
