@@ -12,7 +12,7 @@
 		]
 	},
 
-	"role": {
+	"new_role": {
 		"title": "I’m looking for a new role!",
 		"text": "Find out more about me—and what I can bring to your team.",
 		"button": "View CV"
@@ -276,6 +276,8 @@
 	},
 
 	"cv": {
+		"download_cv": "Download CV",
+
 		"get_in_touch": {
 			"location": "Littleborough, Greater Manchester",
 			"linkedin": "linkedin.com/in/lewishowles",

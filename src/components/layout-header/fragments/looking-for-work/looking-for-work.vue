@@ -4,14 +4,14 @@
 			<div class="contents gap-x-2 ps-2 lg:flex lg:flex-row lg:ps-0">
 				<div class="animate-fade-in-left flex flex-wrap items-center justify-center gap-2">
 					<icon-lightbulb class="size-4" />
-					<span class="font-bold">{{ t("role.title") }}</span>
+					<span class="font-bold">{{ t("new_role.title") }}</span>
 				</div>
 
-				<span class="animate-fade-in-left delay">{{ t("role.text") }}</span>
+				<span class="animate-fade-in-left delay">{{ t("new_role.text") }}</span>
 			</div>
 
 			<router-link v-bind="{ to: { name: 'cv' } }" class="animate-fade-in-right button--primary mt-2 inline-flex items-center gap-2 text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50">
-				{{ t("role.button") }}
+				{{ t("new_role.button") }}
 
 				<icon-arrow-right />
 			</router-link>
