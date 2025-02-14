@@ -21,10 +21,18 @@
 
 			<fun-fact />
 		</div>
+
+		<router-link v-bind="{ to: { name: 'home' } }" class="inline-flex items-center gap-2 self-start">
+			<icon-arrow-left />
+
+			{{ t("cv.footer.home") }}
+		</router-link>
 	</div>
 </template>
 
 <script setup>
+import { useI18n } from "vue-i18n";
+
 import EducationHistory from "./fragments/education-history/education-history.vue";
 import EmploymentHistory from "./fragments/employment-history/employment-history.vue";
 import FunFact from "./fragments/fun-fact/fun-fact.vue";
@@ -33,4 +41,6 @@ import KeySkills from "./fragments/key-skills/key-skills.vue";
 import LayoutHeader from "@/components/layout-header/layout-header.vue";
 import PersonOverview from "./fragments/person-overview/person-overview.vue";
 import PreferredTools from "./fragments/preferred-tools/preferred-tools.vue";
+
+const { t } = useI18n();
 </script>

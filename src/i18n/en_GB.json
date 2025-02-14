@@ -497,6 +497,10 @@
 		"fun_fact": {
 			"title": "Fun fact",
 			"text": "I own ~60 pairs of trainers, and love lots of colour."
+		},
+
+		"footer": {
+			"home": "Back home"
 		}
 	},
 

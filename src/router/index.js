@@ -15,6 +15,17 @@ const router = createRouter({
 			component: () => import("@/views/page-cv/page-cv.vue"),
 		},
 	],
+	scrollBehavior(to, from, savedPosition) {
+		if (to.hash) {
+			return { el: to.hash };
+		}
+
+		if (savedPosition) {
+			return savedPosition;
+		}
+
+		return { top: 0 };
+	},
 });
 
 export default router;
