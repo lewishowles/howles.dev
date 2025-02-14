@@ -20,11 +20,9 @@
 
 		<skeleton-indicator class="mb-2 mt-6 h-7 w-full rounded-sm" />
 
-		<div class="mb-5 flex justify-between">
+		<div class="mb-1 flex justify-between">
 			<skeleton-indicator class="h-3 w-10 rounded-sm" />
 			<skeleton-indicator class="h-3 w-10 rounded-sm" />
 		</div>
-
-		<skeleton-indicator class="h-10 w-32 rounded-full" />
 	</skeleton-loader>
 </template>

@@ -26,8 +26,8 @@
 					<div class="h-px grow bg-gradient-to-r from-grey-200 dark:from-white/30" />
 				</div>
 
-				<ol class="flex flex-col mb-6 motion-safe:opacity-0" :class="{ 'animate-fade-in-up delay': showEmployment }">
-					<li v-for="(role, roleIndex) in company.roles" :key="roleIndex" class="relative flex items-baseline gap-4">
+				<ol class="mb-6 flex flex-col gap-2 motion-safe:opacity-0 lg:gap-0" :class="{ 'animate-fade-in-up delay': showEmployment }">
+					<li v-for="(role, roleIndex) in company.roles" :key="roleIndex" class="relative flex flex-col items-baseline lg:flex-row lg:gap-4">
 						<div class="absolute end-full me-4 mt-2 size-2 translate-x-1/2 rounded-full bg-grey-200 dark:bg-white/30" />
 
 						<span class="font-bold">{{ role.title }}</span>

@@ -4,7 +4,7 @@
 			{{ t("cv.fun_fact.title") }}
 		</section-title>
 
-		<div class="flex items-center gap-4">
+		<div class="flex items-center gap-4 text-balance">
 			<blended-icon icon="icon-run" />
 
 			{{ t("cv.fun_fact.text") }}

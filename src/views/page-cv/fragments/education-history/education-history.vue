@@ -4,8 +4,8 @@
 			{{ t("cv.education_history.title") }}
 		</section-title>
 
-		<div class="flex flex-col gap-2 lg:flex-row lg:items-center">
-			<logo-sheffield class="w-10 h-auto" />
+		<div class="flex flex-col gap-4 lg:flex-row lg:items-center">
+			<logo-sheffield class="w-10 h-auto text-[#440099] dark:text-current" />
 
 			<div class="flex flex-col">
 				<i18n-t keypath="cv.education_history.degree" tag="strong" scope="global" class="font-bold">
