@@ -32,17 +32,14 @@
 			<fun-fact />
 		</div>
 
-		<router-link v-bind="{ to: { name: 'home' } }" class="inline-flex items-center gap-2 self-start">
-			<icon-arrow-left />
-
-			{{ t("cv.footer.home") }}
-		</router-link>
+		<cv-footer />
 	</div>
 </template>
 
 <script setup>
 import { useI18n } from "vue-i18n";
 
+import CvFooter from "./fragments/cv-footer/cv-footer.vue";
 import EducationHistory from "./fragments/education-history/education-history.vue";
 import EmploymentHistory from "./fragments/employment-history/employment-history.vue";
 import FunFact from "./fragments/fun-fact/fun-fact.vue";
