@@ -16,12 +16,18 @@
 			<key-skills />
 
 			<employment-history />
+
+			<education-history />
+
+			<fun-fact />
 		</div>
 	</div>
 </template>
 
 <script setup>
+import EducationHistory from "./fragments/education-history/education-history.vue";
 import EmploymentHistory from "./fragments/employment-history/employment-history.vue";
+import FunFact from "./fragments/fun-fact/fun-fact.vue";
 import GetInTouch from "./fragments/get-in-touch/get-in-touch.vue";
 import KeySkills from "./fragments/key-skills/key-skills.vue";
 import LayoutHeader from "@/components/layout-header/layout-header.vue";

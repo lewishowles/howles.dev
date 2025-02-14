@@ -485,6 +485,18 @@
 					]
 				}
 			]
+		},
+
+		"education_history": {
+			"title": "Education history",
+			"degree": "BSc Computer Science, {university_name}",
+			"university_name": "University of Sheffield",
+			"grade": "Second-class Honours, Upper Division"
+		},
+
+		"fun_fact": {
+			"title": "Fun fact",
+			"text": "I own ~60 pairs of trainers, and love lots of colour."
 		}
 	},
 
