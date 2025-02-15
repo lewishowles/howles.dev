@@ -29,6 +29,8 @@ defineProps({
 
 .page-header:where(.dark, .dark *),
 .glasses:where(.dark, .dark *) {
+	--fade-in-end: 0.5;
+
 	position: relative;
 
 	&:before {
@@ -36,11 +38,12 @@ defineProps({
 		content: "";
 		left: 50%;
 		max-width: 100%;
-		opacity: 0.5;
+		opacity: 0;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -1;
+		animation: fadeIn 1s ease-in-out forwards;
 	}
 }
 
