@@ -1,5 +1,5 @@
 <template>
-	<div class="animate-fade-in-right absolute start-0 top-0 ms-4 mt-5">
+	<div class="animate-fade-in-right absolute start-0 top-0 z-10 ms-4 mt-5">
 		<link-tag href="/Lewis Howles - CV.pdf" v-bind="{ iconStart: 'icon-download' }" download class="button--primary text-sm no-underline lg:ring-offset-purple-50 dark:hidden">
 			{{ t("cv.download_cv") }}
 		</link-tag>
