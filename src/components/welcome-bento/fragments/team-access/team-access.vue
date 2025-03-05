@@ -18,7 +18,7 @@
 
 		<ul v-show="!isLoading" v-if="isReady && haveUsers">
 			<li v-for="user in users" :key="user.id" class="flex items-center gap-2" data-test="team-access-user">
-				<div class="flex size-10 items-center justify-center rounded-full border border-purple-200 bg-purple-50 font-bold text-purple-800">
+				<div class="flex size-10 items-center justify-center rounded-full border border-purple-200 bg-purple-50 font-bold text-purple-800 dark:border-purple-400/30 dark:bg-purple-400/20 dark:text-purple-200">
 					{{ user.initials }}
 				</div>
 				<div class="flex flex-col">
