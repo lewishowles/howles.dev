@@ -45,5 +45,4 @@ The recent ability to test components in isolation gives a level of component te
 
 ## Room for improvement
 
-- In a full-fledge project, I would like to have a `form-wrapper` type component. This would handle the form interaction, field models, validation, and generating a proper error summary above the form.
 - API interaction is very basic. In a full-fledged project, I would create an `API` class, combined with a more full-fledge `use-api` composable, which would handle the various different types of API call, and make it possible to easily mock any individual API method during unit testing.
