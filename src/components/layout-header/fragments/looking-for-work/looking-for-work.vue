@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full max-w-5xl text-sm lg:rounded-full lg:border lg:border-grey-200 lg:p-1 lg:text-base dark:border-purple-400/20" data-test="looking-for-work">
-		<div class="flex flex-col items-center gap-2 bg-purple-50 px-12 py-10 text-center text-purple-800 lg:flex-row lg:gap-4 lg:rounded-full lg:border lg:border-purple-200 lg:py-5 lg:text-left dark:border-transparent dark:bg-purple-400/20 dark:text-white dark:lg:py-5">
+		<div class="flex flex-col items-center gap-2 bg-purple-50 px-12 py-6 text-center text-purple-800 lg:flex-row lg:gap-4 lg:rounded-full lg:border lg:border-purple-200 lg:py-5 lg:py-10 lg:text-left dark:border-transparent dark:bg-purple-400/20 dark:text-white dark:lg:py-5">
 			<div class="contents gap-x-2 ps-2 lg:flex lg:flex-row lg:ps-0">
 				<div class="animate-fade-in-left flex flex-wrap items-center justify-center gap-2">
 					<icon-lightbulb class="size-4" />

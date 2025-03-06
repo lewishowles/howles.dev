@@ -1,6 +1,6 @@
 <template>
 	<div class="welcome-bento mx-auto w-full max-w-7xl grid-cols-3 gap-6 text-sm lg:grid lg:px-6 xl:px-0" data-test="welcome-bento">
-		<welcome-part-one class="col-start-1 row-span-4 row-start-1 -mt-16 lg:mt-0" />
+		<welcome-part-one class="col-start-1 row-span-4 row-start-1 -mt-12 mx-4 rounded-lg lg:mx-0 lg:mt-0" />
 
 		<template v-if="includeUiExamples">
 			<div class="col-start-2 row-span-3 row-start-1">
