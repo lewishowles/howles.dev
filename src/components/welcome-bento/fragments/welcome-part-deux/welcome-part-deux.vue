@@ -1,5 +1,5 @@
 <template>
-	<div class="relative flex flex-col items-start gap-3 px-12 py-10 lg:rounded-2xl lg:bg-linear-to-br lg:from-pink-700 lg:to-purple-800 lg:text-lg lg:text-white dark:max-lg:from-white/5 dark:max-lg:to-transparent" data-test="welcome-part-deux">
+	<div class="relative flex flex-col items-start gap-3 px-12 pt-6 pb-10 lg:rounded-2xl lg:bg-linear-to-br lg:from-pink-700 lg:to-purple-800 lg:py-10 lg:text-lg lg:text-white dark:max-lg:from-white/5 dark:max-lg:to-transparent" data-test="welcome-part-deux">
 		<div class="lg:my-auto">
 			<i18n-t keypath="welcome.part_deux.text" tag="p" scope="global" class="mb-6">
 				<template #easy_to_use>
