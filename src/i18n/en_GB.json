@@ -242,6 +242,11 @@
 				"text": "Quickly jump between pre-defined font sizes, weights and colours, because who doesn’t want to save time by using keyboard shortcuts?!",
 				"link_text": "View project on GitHub"
 			},
+			"sketch_organise_symbols": {
+				"title": "sketch-organise-symbols",
+				"text": "Organise symbol masters in a predictable way based on their names, keeping like symbols together",
+				"link_text": "View project on GitHub"
+			},
 			"sketch_rename_symbol_instances": {
 				"title": "sketch-rename-symbol-instances",
 				"text": "Rename all instances of Symbols to match the name of the symbol itself. Particularly useful when swapping a Symbol in-place. Good layer hygiene is good design.",

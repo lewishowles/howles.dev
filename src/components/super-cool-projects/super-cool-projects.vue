@@ -73,6 +73,9 @@ const coolProjects = ref([
 		key: "sketch_nudge_text", icon: "project-icon-sketch-nudge-text", href: "https://github.com/lewishowles/sketch-nudge-text", type: "sketch",
 	},
 	{
+		key: "sketch_organise_symbols", icon: "project-icon-sketch-organise-symbols", href: "https://github.com/lewishowles/sketch-organise-symbols", type: "sketch",
+	},
+	{
 		key: "sketch_rename_symbol_instances", icon: "project-icon-sketch-rename-symbol-instances", href: "https://github.com/lewishowles/sketch-rename-symbol-instances", type: "sketch",
 	},
 	{
