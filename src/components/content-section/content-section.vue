@@ -6,9 +6,11 @@
 
 				<div class="hidden h-px w-64 bg-linear-to-r from-grey-200 md:block dark:from-grey-50/20" />
 			</h2>
+
 			<p class="mb-6 text-4xl font-bold text-grey-950 xl:mb-6 xl:text-5xl dark:text-grey-50">
 				<slot name="title" />
 			</p>
+
 			<p class="max-w-[37.5rem]">
 				<slot name="intro" />
 			</p>
