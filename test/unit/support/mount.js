@@ -1,5 +1,13 @@
 import { deepMerge } from "@lewishowles/helpers/object";
-import { shallowMount, mount } from "@vue/test-utils";
+import { mount, shallowMount, RouterLinkStub } from "@vue/test-utils";
+
+const globalOptions = {
+	global: {
+		components: {
+			RouterLink: RouterLinkStub,
+		},
+	},
+};
 
 /**
  * Returns a function to simplify mounting components in Vitest by providing
@@ -29,7 +37,10 @@ export function createMount(component, defaultOptions = {}, mountFunction = shal
 		const isDirectProps = !Object.hasOwn(options, "props") && !Object.hasOwn(options, "slots");
 		const providedOptions = isDirectProps ? { props: options } : options;
 
-		return mountFunction(component, deepMerge(defaultOptions, providedOptions));
+		return mountFunction(
+			component,
+			deepMerge(defaultOptions, globalOptions, providedOptions),
+		);
 	};
 };
 
