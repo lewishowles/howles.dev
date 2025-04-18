@@ -187,10 +187,12 @@
 		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create. All of these were used in some way in the creation of this website or related projects.",
 		"back_to_top": "Back to projects",
 		"type": {
-			"library": "Library",
-			"tool": "Tool",
-			"sketch": "Sketch plugin",
-			"vscode": "Visual Studio Code plugin"
+			"primary": "Primary",
+			"library": "Libraries",
+			"tool": "Tools",
+			"sketch": "Sketch plugins",
+			"vscode": "Visual Studio Code plugins",
+			"misc": "Miscellaneous"
 		},
 		"projects": {
 			"website": {
@@ -263,15 +265,20 @@
 				"text": "Comments look better, to me, wrapped at 80 characters. This plugin re-flows a comment to do just that, so you don’t have to think about it.",
 				"link_text": "View project on GitHub"
 			},
-			"gists": {
-				"title": "Gists",
-				"text": "Useful snippets, particularly for reference and system setup, that don’t fit anywhere else.",
-				"link_text": "View project on GitHub"
+			"refinement": {
+				"title": "Refinement",
+				"text": "An overview of the thought process behind the creation of the notification-handler component, akin to the refinement process.",
+				"link_text": "View write-up on Notion"
 			},
 			"guides": {
 				"title": "Guides",
 				"text": "A few short-form, simple guides, written as part of creating this project.",
 				"link_text": "View guides on Notion"
+			},
+			"gists": {
+				"title": "Gists",
+				"text": "Useful snippets, particularly for reference and system setup, that don’t fit anywhere else.",
+				"link_text": "View project on GitHub"
 			},
 			"reddit": {
 				"title": "Reddit feedback",
