@@ -27,13 +27,29 @@ defineProps({
 <style>
 @reference "../../assets/css/main.css";
 
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: var(--fade-in-end);
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
 .page-header:where(.dark, .dark *),
 .glasses:where(.dark, .dark *) {
-	--fade-in-end: 0.5;
+	--fade-in-end: 0.8;
 
 	position: relative;
 
 	&:before {
+		animation: pulseGlow 6s ease-in-out infinite;
 		background: radial-gradient(ellipse at center, var(--color-neon-pink), transparent 70%);
 		content: "";
 		left: 50%;
@@ -43,7 +59,6 @@ defineProps({
 		top: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -1;
-		animation: fadeIn 1s ease-in-out forwards;
 	}
 }
 
