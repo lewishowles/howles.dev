@@ -78,7 +78,7 @@ const projects = ref([
 		key: "design_system", icon: "project-icon-design-system", href: "https://www.sketch.com/s/27564627-6160-46a0-be47-f134c22e3aa4/prototype/9F9B6303-C9B6-45D0-9232-4C26B47D48A1/a/9F9B6303-C9B6-45D0-9232-4C26B47D48A1?resizeMode=ActualSize", type: "primary",
 	},
 	{
-		key: "components", icon: "project-icon-components", href: "https://github.com/lewishowles/components", type: "library",
+		key: "components", icon: "project-icon-components", href: "https://components.howles.dev", type: "library",
 	},
 	{
 		key: "helpers", icon: "project-icon-helpers", href: "https://github.com/lewishowles/helpers", type: "library",
