@@ -21,13 +21,13 @@
 				</template>
 			</form-input>
 
-			<radio-group v-model="project.type" v-bind="{ options: tm('create_project.form.project_type.options'), inline: true }">
+			<form-radio-group v-model="project.type" v-bind="{ options: tm('create_project.form.project_type.options'), inline: true }">
 				{{ t("create_project.form.project_type.label") }}
 
 				<template #introduction>
 					{{ t("create_project.form.project_type.introduction") }}
 				</template>
-			</radio-group>
+			</form-radio-group>
 
 			<form-actions class="inset-well bg-grey-50 transition-colors dark:bg-grey-950/30">
 				<ui-button ref="submitButton" v-bind="{ reactive: true }" class="button--primary" @click="createProject">
