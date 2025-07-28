@@ -265,6 +265,11 @@
 				"text": "Comments look better, to me, wrapped at 80 characters. This plugin re-flows a comment to do just that, so you don’t have to think about it.",
 				"link_text": "View project on GitHub"
 			},
+			"image_tag": {
+				"title": "image-tag",
+				"text": "An HTML custom element intended to represent the functionality of `image-tag` in the @lewishowles/components library.",
+				"link_text": "View project on GitHub"
+			},
 			"refinement": {
 				"title": "Refinement",
 				"text": "An overview of the thought process behind the creation of the notification-handler component, akin to the refinement process.",

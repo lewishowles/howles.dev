@@ -114,6 +114,9 @@ const projects = ref([
 		key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments", type: "vscode",
 	},
 	{
+		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "misc",
+	},
+	{
 		key: "refinement", icon: "project-icon-refinement", href: "https://lewishowles.notion.site/Specification-Notification-handler-1b92b9e312118050bb76d8d9200d50a8", type: "misc",
 	},
 	{
