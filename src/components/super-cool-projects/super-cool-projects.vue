@@ -87,10 +87,10 @@ const projects = ref([
 		key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library",
 	},
 	{
-		key: "form_builder", icon: "project-icon-form-builder", href: "https://github.com/lewishowles/form-builder", type: "tool",
+		key: "form_builder", icon: "project-icon-form-builder", href: "https://github.com/lewishowles/tool-form-builder", type: "tool",
 	},
 	{
-		key: "snippet_generator", icon: "project-icon-snippet-generator", href: "https://github.com/lewishowles/vscode-snippet-generator", type: "tool",
+		key: "snippet_generator", icon: "project-icon-snippet-generator", href: "https://github.com/lewishowles/tool-vs-code-snippet-generator", type: "tool",
 	},
 	{
 		key: "boilersuit", icon: "project-icon-boilersuit", href: "https://github.com/lewishowles/boilersuit", type: "tool",
@@ -108,10 +108,16 @@ const projects = ref([
 		key: "sketch_rename_symbol_instances", icon: "project-icon-sketch-rename-symbol-instances", href: "https://github.com/lewishowles/sketch-rename-symbol-instances", type: "sketch",
 	},
 	{
-		key: "sort_imports", icon: "project-icon-sort-imports", href: "https://github.com/lewishowles/sort-imports", type: "vscode",
+		key: "sort_imports", icon: "project-icon-sort-imports", href: "https://github.com/lewishowles/vs-code-sort-imports", type: "vscode",
 	},
 	{
-		key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/wrap-comments", type: "vscode",
+		key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/vs-code-wrap-comments", type: "vscode",
+	},
+	{
+		key: "raycast_vs_code_snippet_generator", icon: "project-icon-raycast-extension-vs-code-snippet-generator", href: "https://github.com/lewishowles/raycast-extension-vs-code-snippet-generator", type: "raycast",
+	},
+	{
+		key: "raycast_form_builder", icon: "project-icon-raycast-extension-form-builder", href: "https://github.com/lewishowles/raycast-extension-form-builder", type: "raycast",
 	},
 	{
 		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "misc",

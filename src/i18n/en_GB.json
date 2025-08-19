@@ -191,7 +191,8 @@
 			"library": "Libraries",
 			"tool": "Tools",
 			"sketch": "Sketch plugins",
-			"vscode": "Visual Studio Code plugins",
+			"vscode": "Visual Studio Code extensions",
+			"raycast": "Raycast extensions",
 			"misc": "Miscellaneous"
 		},
 		"projects": {
@@ -222,12 +223,12 @@
 			},
 			"snippet_generator": {
 				"title": "Snippet generator",
-				"text": "A tool to help quickly turn code into re-usable VSCode snippets.",
+				"text": "A tool to help quickly turn code into re-usable VS Code snippets.",
 				"link_text": "View project on GitHub"
 			},
 			"form_builder": {
 				"title": "Form builder",
-				"text": "A simple tool to help quickly build consistent forms using shorthand, generating form code on the fly.",
+				"text": "A simple tool to help quickly build consistent forms using shorthand.",
 				"link_text": "View project on GitHub"
 			},
 			"boilersuit": {
@@ -263,6 +264,16 @@
 			"wrap_comments": {
 				"title": "Wrap comments",
 				"text": "Comments look better, to me, wrapped at 80 characters. This plugin re-flows a comment to do just that, so you don’t have to think about it.",
+				"link_text": "View project on GitHub"
+			},
+			"raycast_vs_code_snippet_generator": {
+				"title": "VS Code snippet generator",
+				"text": "A Raycast extension to help quickly turn code into re-usable VS Code snippets.",
+				"link_text": "View project on GitHub"
+			},
+			"raycast_form_builder": {
+				"title": "Form builder",
+				"text": "A Raycast extension to help quickly build consistent forms using shorthand.",
 				"link_text": "View project on GitHub"
 			},
 			"image_tag": {
