@@ -73,7 +73,7 @@ describe("theme-selector", () => {
 });
 
 function openMenu() {
-	cy.getByData("summary-details-summary").click();
+	cy.getByData("theme-selector-summary").click();
 }
 
 /**

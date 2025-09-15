@@ -1,9 +1,10 @@
 import { createTestingPinia } from "@pinia/testing";
 import { fn } from "@vitest/spy";
 import { mount } from "cypress/vue";
-import components from "@lewishowles/components";
 import GlobalComponents from "@/plugins/global-components";
+import components from "@lewishowles/components";
 import i18n from "@/i18n";
+import router from "@/router";
 
 Cypress.Commands.add("mount", (component, options = {}) => {
 	options.global = options.global || {};
@@ -15,6 +16,7 @@ Cypress.Commands.add("mount", (component, options = {}) => {
 	options.global.plugins = [
 		components,
 		i18n,
+		router,
 		GlobalComponents,
 		createTestingPinia({ createSpy: fn }),
 		...options.global.plugins,
@@ -59,10 +61,9 @@ export function createMount(component, defaultOptions = {}) {
 			},
 		};
 
-		if (!Object.hasOwn(mergedOptions, "props") && !Object.hasOwn(mergedOptions, "slots")) {
-			cy.mount(component, { props: mergedOptions });
-		} else {
-			cy.mount(component, mergedOptions);
-		}
+		const isDirectProps = !Object.hasOwn(mergedOptions, "props") && !Object.hasOwn(mergedOptions, "slots");
+		const providedOptions = isDirectProps ? { props: mergedOptions } : mergedOptions;
+
+		cy.mount(component, providedOptions);
 	};
 }

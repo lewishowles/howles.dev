@@ -14,7 +14,7 @@ describe("paddock-status", () => {
 
 		cy.getByData("paddock-status").shouldBeVisible();
 		cy.getByData("paddock-status-status").shouldBeVisible().shouldHaveText("Secure");
-		cy.getByData("paddock-status-markers").shouldBeVisible().find("li").shouldHaveCount(35);
+		cy.getByData("paddock-status-markers").shouldBeVisible().find("li").shouldHaveCount(36);
 	});
 
 	it("A failed load is handled", () => {

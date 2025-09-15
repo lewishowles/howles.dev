@@ -9,4 +9,10 @@ describe("core-values", () => {
 
 		cy.getByData("core-values").shouldBeVisible();
 	});
+
+	it("The appropriate number of values are displayed", () => {
+		mount();
+
+		cy.getByData("core-value").shouldHaveCount(9);
+	});
 });

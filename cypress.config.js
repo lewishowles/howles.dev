@@ -1,12 +1,11 @@
 import { defineConfig } from "cypress";
-import viteConfig from "./vite.config";
+import viteConfig from "./vite.config.js";
 import vue from "@vitejs/plugin-vue";
-import vueDevTools from "vite-plugin-vue-devtools";
 
 export default defineConfig({
 	fixturesFolder: "",
-	screenshotsFolder: "test/cypress/screenshots",
-	videosFolder: "test/cypress/videos",
+	screenshotOnRunFailure: false,
+	video: false,
 	viewportWidth: 1440,
 	viewPortHeight: 900,
 
@@ -25,10 +24,10 @@ export default defineConfig({
 			bundler: "vite",
 			viteConfig: {
 				...viteConfig,
-				plugins: [
-					vue(),
-					vueDevTools(),
-				],
+				plugins: [vue()],
+				resolve: {
+					...viteConfig.resolve,
+				},
 			},
 		},
 		viewportWidth: 1000,

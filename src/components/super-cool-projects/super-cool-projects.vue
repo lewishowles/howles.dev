@@ -1,5 +1,5 @@
 <template>
-	<content-section id="cool-projects" data-test="cool-projects">
+	<content-section id="cool-projects" data-test="super-cool-projects">
 		<template #eyebrow>
 			{{ t("cool_projects.pre_title") }}
 		</template>
@@ -10,8 +10,8 @@
 			{{ t("cool_projects.intro") }}
 		</template>
 
-		<ol class="flex gap-4 text-sm mb-10">
-			<li v-for="type in projectTypes" :key="type.slug">
+		<ol class="flex flex-wrap gap-4 text-sm mb-10">
+			<li v-for="type in projectTypes" :key="type.slug" data-test="super-cool-projects-project-type">
 				<a :href="`#project-type-${type.slug}`" class="flex items-center gap-2 rounded-lg border border-grey-300 bg-white px-4 py-2 no-underline transition-colors dark:border-0 dark:bg-black/20 hocus:border-purple-300 hocus:bg-grey-50 dark:hocus:bg-black/30">
 					{{ t(`cool_projects.type.${type.type}`) }}
 
