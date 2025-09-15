@@ -10,6 +10,12 @@ describe("welcome-part-deux", () => {
 		cy.getByData("welcome-part-deux").shouldBeVisible();
 	});
 
+	it("The project link has an appropriate href", () => {
+		mount();
+
+		cy.getByData("welcome-part-deux-project-link").shouldHaveAttribute("href", "#cool-projects");
+	});
+
 	it("The correct number of skills are shown", () => {
 		mount();
 
