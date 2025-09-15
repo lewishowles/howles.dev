@@ -24,7 +24,7 @@
 
 		<div ref="projects-element" class="flex flex-col gap-10">
 			<div v-for="type in projectTypes" :key="type.slug">
-				<div class="mb-4 flex items-center gap-4">
+				<div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1">
 					<h3 :id="`project-type-${type.slug}`" class="text-2xl font-bold">
 						{{ t(`cool_projects.type.${type.type}`) }}
 					</h3>
@@ -67,7 +67,7 @@ const { t } = useI18n();
 // A reference to our values list, allowing us to observe it.
 const projectsElement = useTemplateRef("projects-element");
 // Set up our intersection observer.
-const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 0.05, desktopThreshold: 0.1 });
+const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 0, desktopThreshold: 0.1 });
 
 // The list of cool project keys, used to generate the components.
 const projects = ref([
