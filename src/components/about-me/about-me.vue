@@ -30,6 +30,12 @@
 					{{ t("about.quote") }}
 				</div>
 
+				<i18n-t keypath="about.did_you_try" tag="div" scope="global" class="hidden sm:block italic text-sm">
+					<template #paddock_link_text>
+						<a href="#paddock-status">{{ t("about.paddock_link_text") }}</a>
+					</template>
+				</i18n-t>
+
 				<div class="absolute inset-x-0 bottom-0 hidden grid-cols-7 gap-14 px-12 pb-12 text-pink-700 xl:grid dark:text-pink-200">
 					<component :is="icon" v-for="(icon, index) in icons" :key="index" class="size-[1.125rem]" />
 				</div>

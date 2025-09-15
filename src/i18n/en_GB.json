@@ -178,7 +178,9 @@
 			"Whether planning, designing or developing, I aim to be as well rounded as I can in order to make the best experiences possible, with the ability to advocate for the user, keep a level head, and to help guide decisions. I pride myself in my problem solving, attention to detail, efficiency, and my ability to communicate technical subjects to less technical people.",
 			"I was once described as the glue that brought the team together and I like to help my team whenever I can. I have extensive experience with team supervision and review, including designs, code, and usability. I also love to create libraries and tools, ensuring the highest standards and consistency for everyone to work from."
 		],
-		"quote": "Most of all, I like to bring fun to the workplace—such as adding film references to designs or to code."
+		"quote": "Most of all, I like to bring fun to the workplace—such as adding film references to designs or to code.",
+		"did_you_try": "Wait, when did you last check the {paddock_link_text}?",
+		"paddock_link_text": "Tyrannosaurus Paddock"
 	},
 
 	"cool_projects": {

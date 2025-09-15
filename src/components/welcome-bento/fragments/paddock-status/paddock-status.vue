@@ -1,5 +1,5 @@
 <template>
-	<bento-box class="relative flex h-full flex-col justify-center overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
+	<bento-box id="paddock-status" class="relative flex h-full flex-col justify-center overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300': !paddockSecure }" data-test="paddock-status">
 		<paddock-status-skeleton v-show="isLoading" class="my-auto">
 			{{ t("paddock_status.loading") }}
 		</paddock-status-skeleton>
