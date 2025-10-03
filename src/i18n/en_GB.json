@@ -211,7 +211,7 @@
 			"components": {
 				"title": "Components",
 				"text": "A library of beautiful components, promoting rapid development, while ensuring that usability and accessibility are at the fore. Don’t miss the scaffold scripts!",
-				"link_text": "View project on GitHub"
+				"link_text": "View documentation"
 			},
 			"helpers": {
 				"title": "Helpers",
