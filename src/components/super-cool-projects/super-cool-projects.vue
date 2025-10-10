@@ -78,6 +78,9 @@ const projects = ref([
 		key: "design_system", icon: "project-icon-design-system", href: "https://www.sketch.com/s/27564627-6160-46a0-be47-f134c22e3aa4/prototype/9F9B6303-C9B6-45D0-9232-4C26B47D48A1/a/9F9B6303-C9B6-45D0-9232-4C26B47D48A1?resizeMode=ActualSize", type: "primary",
 	},
 	{
+		key: "mockup_system", icon: "project-icon-mockup-system", href: "https://sketch.com/s/5b022182-f17c-4b10-9202-c991ec88c2d2", type: "primary",
+	},
+	{
 		key: "components", icon: "project-icon-components", href: "https://components.howles.dev", type: "library",
 	},
 	{

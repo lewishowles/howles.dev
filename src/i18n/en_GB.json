@@ -208,6 +208,11 @@
 				"text": "My personal design system helps to rocket-fuel UI design, providing me with great-looking, consistent, accessible components.",
 				"link_text": "View project in Sketch"
 			},
+			"mockup_system": {
+				"title": "Mockup system",
+				"text": "A simple library to speed up the process of creating mockup screens, stripping back the design to focus on functionality and clarity.",
+				"link_text": "View project in Sketch"
+			},
 			"components": {
 				"title": "Components",
 				"text": "A library of beautiful components, promoting rapid development, while ensuring that usability and accessibility are at the fore. Don’t miss the scaffold scripts!",
