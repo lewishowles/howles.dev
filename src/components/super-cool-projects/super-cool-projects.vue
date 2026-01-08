@@ -126,7 +126,7 @@ const projects = ref([
 		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "misc",
 	},
 	{
-		key: "refinement", icon: "project-icon-refinement", href: "https://lewishowles.notion.site/Specification-Notification-handler-1b92b9e312118050bb76d8d9200d50a8", type: "misc",
+		key: "refinement", icon: "project-icon-refinement", href: "https://lewishowles.notion.site/Notification-handler-1b92b9e312118050bb76d8d9200d50a8", type: "misc",
 	},
 	{
 		key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81", type: "misc",
