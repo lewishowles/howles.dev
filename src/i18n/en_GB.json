@@ -286,7 +286,7 @@
 			},
 			"image_tag": {
 				"title": "image-tag",
-				"text": "An HTML custom element intended to represent the functionality of `image-tag` in the @lewishowles/components library.",
+				"text": "An HTML custom element intended to represent the functionality of `image-tag` in the Components library.",
 				"link_text": "View project on GitHub"
 			},
 			"thought_process": {
