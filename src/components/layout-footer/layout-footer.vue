@@ -25,10 +25,6 @@
 					</link-tag>
 				</template>
 			</i18n-t>
-
-			<p class="md:ms-auto">
-				{{ t("footer.thanks") }}
-			</p>
 		</div>
 	</div>
 </template>
