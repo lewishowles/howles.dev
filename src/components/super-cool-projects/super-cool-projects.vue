@@ -90,6 +90,9 @@ const projects = ref([
 		key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library",
 	},
 	{
+		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "project",
+	},
+	{
 		key: "form_builder", icon: "project-icon-form-builder", href: "https://github.com/lewishowles/tool-form-builder", type: "tool",
 	},
 	{
@@ -123,13 +126,7 @@ const projects = ref([
 		key: "raycast_form_builder", icon: "project-icon-raycast-extension-form-builder", href: "https://github.com/lewishowles/raycast-extension-form-builder", type: "raycast",
 	},
 	{
-		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "misc",
-	},
-	{
-		key: "refinement", icon: "project-icon-refinement", href: "https://lewishowles.notion.site/Notification-handler-1b92b9e312118050bb76d8d9200d50a8", type: "misc",
-	},
-	{
-		key: "guides", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81", type: "misc",
+		key: "thought_process", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81", type: "misc",
 	},
 	{
 		key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/", type: "misc",

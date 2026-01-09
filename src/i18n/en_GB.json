@@ -191,6 +191,7 @@
 		"type": {
 			"primary": "Primary",
 			"library": "Libraries",
+			"project": "Projects",
 			"tool": "Tools",
 			"sketch": "Sketch plugins",
 			"vscode": "Visual Studio Code extensions",
@@ -288,14 +289,9 @@
 				"text": "An HTML custom element intended to represent the functionality of `image-tag` in the @lewishowles/components library.",
 				"link_text": "View project on GitHub"
 			},
-			"refinement": {
-				"title": "Refinement",
-				"text": "An overview of the thought process behind the creation of the notification-handler component, akin to the refinement process.",
-				"link_text": "View write-up on Notion"
-			},
-			"guides": {
-				"title": "Guides",
-				"text": "A few short-form, simple guides, written as part of creating this project.",
+			"thought_process": {
+				"title": "Thought process",
+				"text": "A collection of documents, from guides to refinement, which aim to outline my thought process, refinement process, and writing style.",
 				"link_text": "View guides on Notion"
 			},
 			"gists": {
