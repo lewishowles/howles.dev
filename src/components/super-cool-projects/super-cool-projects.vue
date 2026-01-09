@@ -126,7 +126,7 @@ const projects = ref([
 		key: "raycast_form_builder", icon: "project-icon-raycast-extension-form-builder", href: "https://github.com/lewishowles/raycast-extension-form-builder", type: "raycast",
 	},
 	{
-		key: "thought_process", icon: "project-icon-guides", href: "https://lewishowles.notion.site/Hi-I-m-Lewis-be37154a2b9d46bb957914b168d0ee81", type: "misc",
+		key: "thought_process", icon: "project-icon-guides", href: "https://lewishowles.notion.site/My-thought-process-2e22b9e3121180ea896bdcec5534353c", type: "misc",
 	},
 	{
 		key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/", type: "misc",
