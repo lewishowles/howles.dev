@@ -90,6 +90,9 @@ const projects = ref([
 		key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library",
 	},
 	{
+		key: "cinewatch", icon: "project-icon-cinewatch", href: "https://github.com/lewishowles/cinewatch-app", type: "project",
+	},
+	{
 		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "project",
 	},
 	{

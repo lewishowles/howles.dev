@@ -284,6 +284,11 @@
 				"text": "A Raycast extension to help quickly build consistent forms using shorthand.",
 				"link_text": "View project on GitHub"
 			},
+			"cinewatch": {
+				"title": "Cinewatch",
+				"text": "Cinewatch provides a quick and easy way to find the best way to watch multiple films in a single day at the cinema, minimising the time spent \"waiting\" between films.",
+				"link_text": "View project on GitHub"
+			},
 			"image_tag": {
 				"title": "image-tag",
 				"text": "An HTML custom element intended to represent the functionality of `image-tag` in the Components library.",
