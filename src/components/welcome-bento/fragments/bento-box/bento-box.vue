@@ -1,5 +1,5 @@
 <template>
-	<div class="rounded-2xl border border-grey-300 shadow-sm transition-colors dark:border-transparent dark:bg-grey-950/20 dark:shadow-none" :class="paddingClasses" data-test="bento-box">
+	<div class="rounded-2xl border shadow-sm transition-colors dark:bg-grey-950/20 dark:shadow-none" :class="[paddingClasses, borderColourClasses]" data-test="bento-box">
 		<slot />
 	</div>
 </template>
@@ -27,5 +27,25 @@ const paddingClasses = computed(() => {
 	}
 
 	return paddingClasses;
+});
+
+
+// Our border colour, adding a default colour unless it is provided by the user.
+const borderColourClasses = computed(() => {
+	const classes = attrs.class ? attrs.class.split(" ") : [];
+	const hasBorderColour = classes.some(className => className.startsWith("border-"));
+	const hasDarkBorderColour = classes.some(className => className.startsWith("dark:border-"));
+
+	const borderClasses = [];
+
+	if (!hasBorderColour) {
+		borderClasses.push("border-grey-300");
+	}
+
+	if (!hasDarkBorderColour) {
+		borderClasses.push("dark:border-transparent");
+	}
+
+	return borderClasses;
 });
 </script>
