@@ -10,7 +10,7 @@
 				<span class="animate-fade-in-left delay">{{ t("new_role.text") }}</span>
 			</div>
 
-			<router-link v-bind="{ to: { name: 'cv' } }" class="animate-fade-in-right button--primary mt-2 inline-flex items-center gap-2 text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50">
+			<router-link v-bind="{ to: { name: 'cv' } }" target="_blank" class="animate-fade-in-right button--primary mt-2 inline-flex items-center gap-2 text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50">
 				{{ t("new_role.button") }}
 
 				<icon-arrow-right />
