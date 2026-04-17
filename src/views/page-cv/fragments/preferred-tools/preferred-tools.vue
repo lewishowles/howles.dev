@@ -8,7 +8,7 @@
 			{{ t("cv.preferred_tools.intro") }}
 		</p>
 
-		<dl ref="tools" class="grid grid-cols-1 lg:grid-cols-[max-content_1fr] lg:items-start">
+		<dl ref="tools" class="grid grid-cols-1 lg:grid-cols-[max-content_1fr] gap-x-4 lg:items-start">
 			<template v-for="tool in tm('cv.preferred_tools.tools')" :key="tool.name">
 				<dt class="flex items-center gap-2 font-semibold motion-safe:opacity-0" :class="{ 'animate-fade-in-up delay': showTools }">
 					{{ tool.name }}
