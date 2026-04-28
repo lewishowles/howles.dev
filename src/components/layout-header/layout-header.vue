@@ -1,4 +1,6 @@
 <template>
+	<a href="#main" class="absolute top-[-100%] start-4 px-4 py-2 rounded focus-visible:top-0">Skip to main content</a>
+
 	<theme-selector />
 
 	<div class="page-header flex w-full flex-col items-center bg-linear-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">

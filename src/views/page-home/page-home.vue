@@ -1,10 +1,14 @@
 <template>
 	<div class="flex flex-col items-center gap-16 lg:gap-28">
 		<layout-header />
-		<welcome-bento />
-		<core-values />
-		<about-me />
-		<super-cool-projects />
+
+		<main id="main" class="flex flex-col items-center gap-16 lg:gap-28 outline-0" tabindex="-1">
+			<welcome-bento />
+			<core-values />
+			<about-me />
+			<super-cool-projects />
+		</main>
+
 		<layout-footer />
 	</div>
 </template>

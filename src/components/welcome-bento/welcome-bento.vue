@@ -2,7 +2,7 @@
 	<div class="welcome-bento mx-auto w-full max-w-7xl grid-cols-3 gap-6 text-sm lg:grid lg:px-6 xl:px-0" data-test="welcome-bento">
 		<welcome-part-one class="col-start-1 row-span-4 row-start-1 -mt-12 mx-4 rounded-lg lg:mx-0 lg:mt-0" />
 
-		<template v-if="includeUiExamples">
+		<div v-if="includeUiExamples" aria-hidden="true" class="contents">
 			<div class="col-start-2 row-span-3 row-start-1">
 				<paddock-status />
 			</div>
@@ -18,11 +18,11 @@
 			<div class="col-start-3 row-start-6">
 				<headline-users />
 			</div>
-		</template>
+		</div>
 
 		<welcome-part-deux class="col-span-2 col-start-2 row-span-4 row-start-7" />
 
-		<div v-if="includeUiExamples" class="col-start-1 row-span-2 row-start-9">
+		<div v-if="includeUiExamples" class="col-start-1 row-span-2 row-start-9" aria-hidden="true">
 			<team-access />
 		</div>
 	</div>
