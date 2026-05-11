@@ -1,10 +1,10 @@
 import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
-import LookingForWork from "./looking-for-work.vue";
+import PageCallout from "./page-callout.vue";
 
-const mount = createMount(LookingForWork);
+const mount = createMount(PageCallout);
 
-describe("looking-for-work", () => {
+describe("page-callout", () => {
 	describe("Initialisation", () => {
 		test("should exist as a Vue component", () => {
 			const wrapper = mount();

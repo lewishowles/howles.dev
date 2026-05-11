@@ -11,7 +11,7 @@
 
 	<div class="mx-auto flex max-w-6xl flex-col items-center gap-16 px-8 pb-10 md:pb-20 lg:gap-28">
 		<div class="flex flex-col gap-16">
-			<layout-header v-bind="{ includeLookingForWork: false }" />
+			<layout-header v-bind="{ includePageCallout: false }" />
 
 			<get-in-touch />
 		</div>

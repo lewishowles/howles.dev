@@ -6,20 +6,20 @@
 	<div class="page-header flex w-full flex-col items-center bg-linear-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
 		<howles-logo />
 
-		<looking-for-work v-if="includeLookingForWork" class="mt-12 lg:mt-8" />
+		<page-callout v-if="includePageCallout" class="mt-12 lg:mt-8" />
 	</div>
 </template>
 
 <script setup>
 import HowlesLogo from "./fragments/howles-logo/howles-logo.vue";
-import LookingForWork from "./fragments/looking-for-work/looking-for-work.vue";
+import PageCallout from "./fragments/page-callout/page-callout.vue";
 import ThemeSelector from "@/components/theme-selector/theme-selector.vue";
 
 defineProps({
 	/**
 	 * Whether to include the "looking for work" banner.
 	 */
-	includeLookingForWork: {
+	includePageCallout: {
 		type: Boolean,
 		default: true,
 	},

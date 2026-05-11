@@ -12,10 +12,10 @@
 		]
 	},
 
-	"new_role": {
-		"title": "I’m looking for a new role!",
-		"text": "Find out more about me—and what I can bring to your team.",
-		"button": "View CV"
+	"callout": {
+		"title": "I started a blog!",
+		"text": "A place to get tips, and learn even more about my thought processes.",
+		"button": "View blog"
 	},
 
 	"welcome": {
