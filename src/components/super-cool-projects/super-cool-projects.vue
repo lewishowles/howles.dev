@@ -108,9 +108,6 @@ const projects = ref([
 		key: "boilerplate", icon: "project-icon-boilerplate", href: "https://github.com/lewishowles/boilerplate", type: "tool",
 	},
 	{
-		key: "sketch_nudge_text", icon: "project-icon-sketch-nudge-text", href: "https://github.com/lewishowles/sketch-nudge-text", type: "sketch",
-	},
-	{
 		key: "sketch_organise_symbols", icon: "project-icon-sketch-organise-symbols", href: "https://github.com/lewishowles/sketch-organise-symbols", type: "sketch",
 	},
 	{
@@ -127,12 +124,6 @@ const projects = ref([
 	},
 	{
 		key: "raycast_form_builder", icon: "project-icon-raycast-extension-form-builder", href: "https://github.com/lewishowles/raycast-extension-form-builder", type: "raycast",
-	},
-	{
-		key: "thought_process", icon: "project-icon-guides", href: "https://lewishowles.notion.site/My-thought-process-2e22b9e3121180ea896bdcec5534353c", type: "misc",
-	},
-	{
-		key: "gists", icon: "project-icon-gists", href: "https://gist.github.com/lewishowles/", type: "misc",
 	},
 	{
 		key: "reddit", icon: "project-icon-reddit", href: "https://www.reddit.com/user/lhowles/", type: "misc",
