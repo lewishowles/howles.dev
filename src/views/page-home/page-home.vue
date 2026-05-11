@@ -2,7 +2,7 @@
 	<div class="flex flex-col items-center gap-16 lg:gap-28">
 		<layout-header />
 
-		<main id="main" class="flex flex-col items-center gap-16 lg:gap-28 outline-0" tabindex="-1">
+		<main id="main" class="flex flex-col items-center gap-16 lg:gap-28 outline-0 w-full" tabindex="-1">
 			<welcome-bento />
 			<core-values />
 			<about-me />
