@@ -20,7 +20,7 @@
 
 	"welcome": {
 		"part_one": {
-			"hi": "Hi, I’m Lewis  👋",
+			"hi": "Hi, I’m Lewis",
 			"text": "I’m a passionate, versatile UI/UX Developer and Designer, with over {experience} experience spanning UI Design, Front-end Development, Web Design, Graphic Design, Accessibility, and, historically, Backend Development.",
 			"experience": "15 years"
 		},
