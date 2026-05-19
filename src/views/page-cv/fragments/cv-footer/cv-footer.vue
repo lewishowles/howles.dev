@@ -7,7 +7,7 @@
 				{{ t("cv.footer.home") }}
 			</router-link>
 
-			<icon-lh class="h-16 w-auto text-purple-800 dark:text-blue-400 motion-safe:opacity-0" :class="{ 'animate-fade-in-left delay': showFooter }" />
+			<icon-h class="h-16 w-auto fill-purple-800 dark:fill-blue-400 motion-safe:opacity-0" :class="{ 'animate-fade-in-left delay': showFooter }" />
 		</div>
 
 		<icon-glasses class="watermark pointer-events-none fixed start-0 bottom-0 h-80 w-auto -translate-x-1/3 opacity-20 mix-blend-overlay" :style="{ transform: `translateY(${translateProportion}%)` }" />

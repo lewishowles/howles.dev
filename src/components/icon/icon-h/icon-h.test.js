@@ -1,8 +1,8 @@
 import { createMount } from "@unit/support/mount";
 import { describe, expect, test } from "vitest";
-import IconLh from "./icon-lh.vue";
+import IconH from "./icon-h.vue";
 
-const mount = createMount(IconLh);
+const mount = createMount(IconH);
 
 describe("icon-lh", () => {
 	describe("Initialisation", () => {
