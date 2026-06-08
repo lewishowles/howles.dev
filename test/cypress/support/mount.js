@@ -61,7 +61,9 @@ export function createMount(component, defaultOptions = {}) {
 			},
 		};
 
-		const isDirectProps = !Object.hasOwn(mergedOptions, "props") && !Object.hasOwn(mergedOptions, "slots");
+		const isDirectProps =
+			!Object.hasOwn(mergedOptions, "props") && !Object.hasOwn(mergedOptions, "slots");
+
 		const providedOptions = isDirectProps ? { props: mergedOptions } : mergedOptions;
 
 		cy.mount(component, providedOptions);

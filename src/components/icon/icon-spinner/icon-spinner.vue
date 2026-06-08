@@ -1,6 +1,13 @@
 <template>
 	<base-icon>
-		<g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+		<g
+			fill="none"
+			fill-rule="evenodd"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="1.5"
+		>
 			<path d="M9.25 2v2.5" />
 			<path d="m14.377 4.123-1.768 1.768" opacity=".88" />
 			<path d="M16.5 9.25H14" opacity=".75" />

@@ -1,5 +1,9 @@
 <template>
-	<div class="rounded-2xl border shadow-sm transition-colors dark:bg-grey-950/20 dark:shadow-none" :class="[paddingClasses, borderColourClasses]" data-test="bento-box">
+	<div
+		class="dark:bg-grey-950/20 rounded-2xl border shadow-sm transition-colors dark:shadow-none"
+		:class="[paddingClasses, borderColourClasses]"
+		data-test="bento-box"
+	>
 		<slot />
 	</div>
 </template>
@@ -13,8 +17,14 @@ const attrs = useAttrs();
 // by the user.
 const paddingClasses = computed(() => {
 	const classes = attrs.class ? attrs.class.split(" ") : [];
-	const hasHorizontalPadding = classes.some(className => className.startsWith("p-") || className.startsWith("px-"));
-	const hasVerticalPadding = classes.some(className => className.startsWith("p-") || className.startsWith("py-"));
+
+	const hasHorizontalPadding = classes.some(
+		(className) => className.startsWith("p-") || className.startsWith("px-"),
+	);
+
+	const hasVerticalPadding = classes.some(
+		(className) => className.startsWith("p-") || className.startsWith("py-"),
+	);
 
 	const paddingClasses = [];
 
@@ -29,12 +39,11 @@ const paddingClasses = computed(() => {
 	return paddingClasses;
 });
 
-
 // Our border colour, adding a default colour unless it is provided by the user.
 const borderColourClasses = computed(() => {
 	const classes = attrs.class ? attrs.class.split(" ") : [];
-	const hasBorderColour = classes.some(className => className.startsWith("border-"));
-	const hasDarkBorderColour = classes.some(className => className.startsWith("dark:border-"));
+	const hasBorderColour = classes.some((className) => className.startsWith("border-"));
+	const hasDarkBorderColour = classes.some((className) => className.startsWith("dark:border-"));
 
 	const borderClasses = [];
 

@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 import { createMount } from "@unit/support/mount";
 import { flushPromises } from "@vue/test-utils";
 import TeamAccess from "./team-access.vue";
@@ -35,7 +35,7 @@ describe("team-access", () => {
 					["object (empty)", {}],
 					["null", null],
 					["undefined", undefined],
-				])("%s", async([, userData]) => {
+				])("%s", async ([, userData]) => {
 					const wrapper = mount();
 					const vm = wrapper.vm;
 
@@ -47,7 +47,7 @@ describe("team-access", () => {
 				});
 			});
 
-			test("should add user initials", async() => {
+			test("should add user initials", async () => {
 				const wrapper = mount();
 				const vm = wrapper.vm;
 
@@ -73,7 +73,7 @@ describe("team-access", () => {
 				]);
 			});
 
-			test("should supplement a missing name", async() => {
+			test("should supplement a missing name", async () => {
 				const wrapper = mount();
 				const vm = wrapper.vm;
 
@@ -112,7 +112,7 @@ describe("team-access", () => {
 					["object (empty)", {}],
 					["null", null],
 					["undefined", undefined],
-				])("%s", async([, user]) => {
+				])("%s", async ([, user]) => {
 					const wrapper = mount();
 					const vm = wrapper.vm;
 

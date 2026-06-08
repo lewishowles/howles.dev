@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import IconSparkle from "./icon-sparkle.vue";
 
 const mount = createMount(IconSparkle);

@@ -1,9 +1,14 @@
 <template>
-	<a href="#main" class="absolute top-[-100%] start-4 px-4 py-2 rounded focus-visible:top-0">Skip to main content</a>
+	<a href="#main" class="absolute start-4 top-[-100%] rounded px-4 py-2 focus-visible:top-0">
+		Skip to main content
+	</a>
 
 	<theme-selector />
 
-	<div class="page-header flex w-full flex-col items-center bg-linear-to-b from-grey-50 pt-16 dark:bg-none" data-test="page-header">
+	<div
+		class="page-header from-grey-50 flex w-full flex-col items-center bg-linear-to-b pt-16 dark:bg-none"
+		data-test="page-header"
+	>
 		<howles-logo />
 
 		<page-callout v-if="includePageCallout" class="mt-12 lg:mt-8" />
@@ -30,18 +35,18 @@ defineProps({
 @reference "../../assets/css/main.css";
 
 @keyframes pulseGlow {
-    0% {
-        opacity: 0.5;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        opacity: var(--fade-in-end);
-        transform: translate(-50%, -50%) scale(1.5);
-    }
-    100% {
-        opacity: 0.5;
-        transform: translate(-50%, -50%) scale(1);
-    }
+	0% {
+		opacity: 0.5;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50% {
+		opacity: var(--fade-in-end);
+		transform: translate(-50%, -50%) scale(1.5);
+	}
+	100% {
+		opacity: 0.5;
+		transform: translate(-50%, -50%) scale(1);
+	}
 }
 
 .page-header:where(.dark, .dark *),

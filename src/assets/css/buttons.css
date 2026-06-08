@@ -1,18 +1,14 @@
 @utility button {
-	@apply px-[1em] py-[0.5em] rounded-full;
+	@apply rounded-full px-[1em] py-[0.5em];
 }
 
 @utility button--primary {
 	@apply button;
-	@apply transition-all font-semibold text-white;
+	@apply font-semibold text-white transition-all;
 	@apply hocus:text-white;
 	@apply active:text-white;
 
-	background: linear-gradient(
-		135deg,
-		var(--primary-gradient-start),
-		var(--primary-gradient-end)
-	);
+	background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
 
 	transition:
 		box-shadow 150ms,
@@ -45,10 +41,10 @@
 
 @utility button--muted {
 	@apply button;
-	@apply bg-white border border-grey-300;
+	@apply border-grey-300 border bg-white;
 	@apply hocus:bg-grey-50 hocus:border-grey-400;
 	@apply active:bg-grey-100 active:border-grey-500;
-	@apply dark:bg-white/20 dark:border-white/20;
+	@apply dark:border-white/20 dark:bg-white/20;
 	@apply dark:hocus:bg-white/30 dark:hocus:border-white/20;
-	@apply dark:active:bg-white/40 dark:hocus:border-white/20;
+	@apply dark:hocus:border-white/20 dark:active:bg-white/40;
 }

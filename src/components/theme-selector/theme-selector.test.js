@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import ThemeSelector from "./theme-selector.vue";
 
 const mount = createMount(ThemeSelector);

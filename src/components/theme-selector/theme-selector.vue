@@ -14,7 +14,7 @@
 		<template v-for="theme in tm('theme.options')" :key="theme.value">
 			<ui-button
 				:icon-start="theme.icon"
-				class="px-4 py-2 inline-flex items-center transition-colors whitespace-nowrap active:bg-purple-100 active:text-purple-800 hocus:bg-purple-50 hocus:text-purple-700 dark:active:bg-pink-500/20 dark:active:text-pink-400 dark:hocus:bg-pink-400/20 dark:hocus:text-pink-300"
+				class="hocus:bg-purple-50 hocus:text-purple-700 dark:hocus:bg-pink-400/20 dark:hocus:text-pink-300 inline-flex items-center px-4 py-2 whitespace-nowrap transition-colors active:bg-purple-100 active:text-purple-800 dark:active:bg-pink-500/20 dark:active:text-pink-400"
 				:class="{ 'text-purple-700 dark:text-pink-300': theme.value === selectedTheme }"
 				icon-classes="size-4"
 				data-test="theme-selector-button"
@@ -36,7 +36,12 @@ const { t, tm } = useI18n();
 // The user's current theme, based on a local storage key and the system
 // settings. We use `store` here because it returns the selected mode -
 // including "auto" - not just the current theme.
-const colourMode = useColorMode({ storageKey: "howles:colour-scheme", disableTransition: false, initialValue: "dark" });
+const colourMode = useColorMode({
+	storageKey: "howles:colour-scheme",
+	disableTransition: false,
+	initialValue: "dark",
+});
+
 const currentTheme = colourMode;
 const { store: selectedTheme } = colourMode;
 

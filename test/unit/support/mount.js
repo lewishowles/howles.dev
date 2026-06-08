@@ -37,12 +37,9 @@ export function createMount(component, defaultOptions = {}, mountFunction = shal
 		const isDirectProps = !Object.hasOwn(options, "props") && !Object.hasOwn(options, "slots");
 		const providedOptions = isDirectProps ? { props: options } : options;
 
-		return mountFunction(
-			component,
-			deepMerge(defaultOptions, globalOptions, providedOptions),
-		);
+		return mountFunction(component, deepMerge(defaultOptions, globalOptions, providedOptions));
 	};
-};
+}
 
 /**
  * Use mount instead of shallowMount to create a mount.

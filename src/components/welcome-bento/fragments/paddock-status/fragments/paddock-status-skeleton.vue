@@ -13,12 +13,12 @@
 					<skeleton-indicator class="h-3 w-12 rounded-sm" />
 				</div>
 
-				<skeleton-indicator class="mb-1 mt-3 h-5 w-40 rounded-sm" />
+				<skeleton-indicator class="mt-3 mb-1 h-5 w-40 rounded-sm" />
 				<skeleton-indicator class="h-5 w-32 rounded-sm" />
 			</div>
 		</div>
 
-		<skeleton-indicator class="mb-2 mt-6 h-7 w-full rounded-sm" />
+		<skeleton-indicator class="mt-6 mb-2 h-7 w-full rounded-sm" />
 
 		<div class="mb-1 flex justify-between">
 			<skeleton-indicator class="h-3 w-10 rounded-sm" />

@@ -1,7 +1,11 @@
 <template>
-	<div class="flex flex-col justify-center gap-3 rounded-2xl bg-linear-to-br from-pink-700 to-purple-800 p-8 text-balance text-white lg:px-12 lg:py-10 lg:text-lg" data-test="welcome-part-one">
-		<p class="font-bold flex items-center gap-2">
-			{{ t("welcome.part_one.hi") }} <icon-wave />
+	<div
+		class="flex flex-col justify-center gap-3 rounded-2xl bg-linear-to-br from-pink-700 to-purple-800 p-8 text-balance text-white lg:px-12 lg:py-10 lg:text-lg"
+		data-test="welcome-part-one"
+	>
+		<p class="flex items-center gap-2 font-bold">
+			{{ t("welcome.part_one.hi") }}
+			<icon-wave />
 		</p>
 
 		<i18n-t keypath="welcome.part_one.text" tag="p" scope="global">

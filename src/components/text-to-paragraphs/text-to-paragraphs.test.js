@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test, vi } from "vitest";
+import { describe, expect, test, vi } from "vite-plus/test";
 import TextToParagraphs from "./text-to-paragraphs.vue";
 
 const mount = createMount(TextToParagraphs);

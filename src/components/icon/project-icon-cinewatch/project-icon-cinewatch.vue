@@ -1,6 +1,12 @@
 <template>
 	<base-icon viewBox="0 0 108 101">
-		<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+		<g
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="3"
+		>
 			<path
 				d="M106 24v66a9 9 0 0 1-9 9H19a9 9 0 0 1-9-9l-.002-4.055Q10.492 86 11 86h78a9 9 0 0 0 9-9V15.055c4.5.497 8 4.312 8 8.945"
 			/>

@@ -1,20 +1,50 @@
 <template>
-	<bento-box id="paddock-status" class="relative flex h-full flex-col justify-center overflow-hidden" :class="{ 'border-grey-300': paddockSecure, 'border-red-300 dark:border-red-300': !paddockSecure }" data-test="paddock-status">
+	<bento-box
+		id="paddock-status"
+		class="relative flex h-full flex-col justify-center overflow-hidden"
+		:class="{
+			'border-grey-300': paddockSecure,
+			'border-red-300 dark:border-red-300': !paddockSecure,
+		}"
+		data-test="paddock-status"
+	>
 		<paddock-status-skeleton v-show="isLoading" class="my-auto">
 			{{ t("paddock_status.loading") }}
 		</paddock-status-skeleton>
 
 		<div v-show="isReady">
 			<div v-show="!isLoading" class="flex gap-4">
-				<div class="w-1 rounded-full transition-colors" :class="{ 'bg-grey-300 dark:bg-white/20': isLoading, 'bg-green-600 dark:bg-green-400': !isLoading && paddockSecure, 'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure }" />
+				<div
+					class="w-1 rounded-full transition-colors"
+					:class="{
+						'bg-grey-300 dark:bg-white/20': isLoading,
+						'bg-green-600 dark:bg-green-400': !isLoading && paddockSecure,
+						'animate-pulse bg-red-600 dark:bg-red-300': !paddockSecure,
+					}"
+				/>
 				<div>
-					<div class="flex items-center gap-2 transition-colors" :class="{ 'text-green-600 dark:text-green-400': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure, 'invisible': isLoading }">
+					<div
+						class="flex items-center gap-2 transition-colors"
+						:class="{
+							'text-green-600 dark:text-green-400': paddockSecure,
+							'text-red-600 dark:text-red-300': !paddockSecure,
+							invisible: isLoading,
+						}"
+					>
 						<icon-check-circled v-if="paddockSecure" />
 						<icon-danger v-else />
 
-						<span class="text-sm" data-test="paddock-status-status">{{ currentStatusDescriptor }}</span>
+						<span class="text-sm" data-test="paddock-status-status">
+							{{ currentStatusDescriptor }}
+						</span>
 					</div>
-					<div class="mb-1 text-lg font-semibold transition-colors" :class="{ 'text-grey-950 dark:text-grey-50': paddockSecure, 'text-red-600 dark:text-red-300': !paddockSecure }">
+					<div
+						class="mb-1 text-lg font-semibold transition-colors"
+						:class="{
+							'text-grey-950 dark:text-grey-50': paddockSecure,
+							'text-red-600 dark:text-red-300': !paddockSecure,
+						}"
+					>
 						{{ t("paddock_status.title") }}
 					</div>
 					<pill-badge icon-start="icon-clock">
@@ -23,28 +53,45 @@
 				</div>
 			</div>
 
-			<div v-show="!isLoading" class="mb-5 mt-6">
+			<div v-show="!isLoading" class="mt-6 mb-5">
 				<div v-show="haveStatuses">
 					<ul class="flex gap-0.5 overflow-hidden rounded-sm" data-test="paddock-status-markers">
-						<li v-for="status in statuses" :key="status.id" v-bind="{ title: status.outcomeLabel }" class="animate-fade-in delay-micro flex h-7 flex-1 items-end hover:opacity-80" :class="{ 'bg-green-600 dark:bg-green-400': status.pass, 'bg-red-600 dark:bg-red-400': !status.pass }">
-							<div class="h-1/3 w-full bg-grey-950 opacity-20" />
+						<li
+							v-for="status in statuses"
+							:key="status.id"
+							v-bind="{ title: status.outcomeLabel }"
+							class="animate-fade-in delay-micro flex h-7 flex-1 items-end hover:opacity-80"
+							:class="{
+								'bg-green-600 dark:bg-green-400': status.pass,
+								'bg-red-600 dark:bg-red-400': !status.pass,
+							}"
+						>
+							<div class="bg-grey-950 h-1/3 w-full opacity-20" />
 							<span class="sr-only">
 								{{ status.outcomeLabel }}
 							</span>
 						</li>
 					</ul>
-					<div class="mt-1 flex justify-between text-xs text-grey-500 dark:text-grey-50/60">
+					<div class="text-grey-500 dark:text-grey-50/60 mt-1 flex justify-between text-xs">
 						<span>{{ startDate }}</span>
 						<span>{{ t("paddock_status.today") }}</span>
 					</div>
 				</div>
 			</div>
 
-			<ui-button ref="checkNowButton" class="button--muted text-sm" v-bind="{ iconStart: 'icon-reload', reactive: true }" @click="loadData('surprise')">
+			<ui-button
+				ref="checkNowButton"
+				class="button--muted text-sm"
+				v-bind="{ iconStart: 'icon-reload', reactive: true }"
+				@click="loadData('surprise')"
+			>
 				{{ t("paddock_status.check_now") }}
 			</ui-button>
 
-			<div v-if="!paddockSecure" class="animate-fade-in-up warning-tape absolute inset-x-0 bottom-0 h-2" />
+			<div
+				v-if="!paddockSecure"
+				class="animate-fade-in-up warning-tape absolute inset-x-0 bottom-0 h-2"
+			/>
 		</div>
 	</bento-box>
 </template>
@@ -124,7 +171,9 @@ async function loadData(file = "default") {
 		const response = await load(getApiUrl("paddock-status", file));
 
 		if (!isNonEmptyArray(response)) {
-			throw new Error(`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`);
+			throw new Error(
+				`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`,
+			);
 		}
 
 		statuses.value = augmentResponse(response);
@@ -144,9 +193,11 @@ function augmentResponse(response) {
 		return [];
 	}
 
-	return response.map(status => {
+	return response.map((status) => {
 		// Provide a representative label that can be used for accessibility.
-		const outcome = status.pass ? t("paddock_status.status.secure") : t("paddock_status.status.breach");
+		const outcome = status.pass
+			? t("paddock_status.status.secure")
+			: t("paddock_status.status.breach");
 
 		status.outcomeLabel = `${status.year}: ${outcome}`;
 
@@ -159,10 +210,10 @@ function augmentResponse(response) {
 .warning-tape {
 	background: repeating-linear-gradient(
 		-45deg,
-		theme('colors.yellow.400'),
-		theme('colors.yellow.400') 15px,
-		theme('colors.grey.950') 15px,
-		theme('colors.grey.950') 30px
+		theme("colors.yellow.400"),
+		theme("colors.yellow.400") 15px,
+		theme("colors.grey.950") 15px,
+		theme("colors.grey.950") 30px
 	);
 }
 </style>

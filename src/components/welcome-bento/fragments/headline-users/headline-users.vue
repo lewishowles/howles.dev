@@ -1,5 +1,9 @@
 <template>
-	<bento-box class="group flex cursor-pointer items-center gap-4 py-6 transition-colors hocus:bg-linear-to-b hocus:from-white hocus:to-grey-100 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none" tabindex="0" data-test="headline-users">
+	<bento-box
+		class="group hocus:bg-linear-to-b hocus:from-white hocus:to-grey-100 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none flex cursor-pointer items-center gap-4 py-6 transition-colors"
+		tabindex="0"
+		data-test="headline-users"
+	>
 		<div class="size-14 rounded-full bg-linear-to-br from-pink-700 to-purple-800 p-4">
 			<icon-user class="size-6 text-white" />
 		</div>
@@ -10,7 +14,11 @@
 			</span>
 
 			<div class="flex items-center gap-4">
-				<span v-show="!isLoading" class="text-3xl font-bold text-grey-950 dark:text-grey-50" data-test="headline-users-figure">
+				<span
+					v-show="!isLoading"
+					class="text-grey-950 dark:text-grey-50 text-3xl font-bold"
+					data-test="headline-users-figure"
+				>
 					<template v-if="currentPeriod">
 						{{ currentPeriod }}
 					</template>
@@ -29,7 +37,10 @@
 			</div>
 		</div>
 
-		<icon-chevron-right class="group-hocus:animate-fade-in-right ms-auto size-5 shrink-0 text-grey-400 motion-safe:opacity-0 dark:text-white/30" data-test="headline-users-chevron" />
+		<icon-chevron-right
+			class="group-hocus:animate-fade-in-right text-grey-400 ms-auto size-5 shrink-0 motion-safe:opacity-0 dark:text-white/30"
+			data-test="headline-users-chevron"
+		/>
 	</bento-box>
 </template>
 
@@ -88,7 +99,9 @@ async function loadData() {
 		const response = await load(getApiUrl("analytics", "users"));
 
 		if (!isNonEmptyObject(response)) {
-			throw new Error(`Expected non-empty object <response>, received ${getFriendlyDisplay(response)}`);
+			throw new Error(
+				`Expected non-empty object <response>, received ${getFriendlyDisplay(response)}`,
+			);
 		}
 
 		statistics.value = response;

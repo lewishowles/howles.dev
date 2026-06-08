@@ -10,7 +10,9 @@
 			{{ t("about.intro") }}
 		</template>
 
-		<div class="flex flex-col gap-12 px-6 lg:flex-row lg:rounded-3xl lg:border lg:border-grey-200 lg:bg-white lg:p-12 dark:border-transparent lg:dark:bg-grey-950/20">
+		<div
+			class="lg:border-grey-200 lg:dark:bg-grey-950/20 flex flex-col gap-12 px-6 lg:flex-row lg:rounded-3xl lg:border lg:bg-white lg:p-12 dark:border-transparent"
+		>
 			<div class="flex-1">
 				<div v-for="(paragraph, index) in tm('about.text')" :key="index">
 					<div v-if="index > 0" class="my-6 flex w-full items-center gap-4">
@@ -26,18 +28,32 @@
 			<div class="about-me-gradients relative flex flex-1 flex-col justify-center gap-7 p-12">
 				<icon-film-reel class="dark:neon-glow size-12 text-pink-700 dark:text-pink-200" />
 
-				<div class="bg-linear-to-br from-pink-700 to-purple-800 bg-clip-text text-4xl font-bold text-transparent dark:from-pink-200 dark:to-purple-300">
+				<div
+					class="bg-linear-to-br from-pink-700 to-purple-800 bg-clip-text text-4xl font-bold text-transparent dark:from-pink-200 dark:to-purple-300"
+				>
 					{{ t("about.quote") }}
 				</div>
 
-				<i18n-t keypath="about.did_you_try" tag="div" scope="global" class="hidden sm:block italic text-sm">
+				<i18n-t
+					keypath="about.did_you_try"
+					tag="div"
+					scope="global"
+					class="hidden text-sm italic sm:block"
+				>
 					<template #paddock_link_text>
 						<a href="#paddock-status">{{ t("about.paddock_link_text") }}</a>
 					</template>
 				</i18n-t>
 
-				<div class="absolute inset-x-0 bottom-0 hidden grid-cols-7 gap-14 px-12 pb-12 text-pink-700 xl:grid dark:text-pink-200">
-					<component :is="icon" v-for="(icon, index) in icons" :key="index" class="size-[1.125rem]" />
+				<div
+					class="absolute inset-x-0 bottom-0 hidden grid-cols-7 gap-14 px-12 pb-12 text-pink-700 xl:grid dark:text-pink-200"
+				>
+					<component
+						:is="icon"
+						v-for="(icon, index) in icons"
+						:key="index"
+						class="size-[1.125rem]"
+					/>
 				</div>
 			</div>
 		</div>
@@ -85,10 +101,10 @@ const icons = [
 
 	background-color: theme("colors.grey.50");
 	background-image:
-		radial-gradient(circle at 69% 65%, #F3E8FF 0%, rgba(243, 232, 255, 0) 50%),
-		radial-gradient(circle at 35% 27%, #DFF3FE 0%, rgba(223, 243, 254, 0) 50%),
-		radial-gradient(circle at 73% 24%, #CDFBF1 0%, rgba(205, 251, 241, 0) 50%),
-		radial-gradient(circle at 19% 76%, #FDE6F4 0%, rgba(253, 230, 244, 0) 50%);
+		radial-gradient(circle at 69% 65%, #f3e8ff 0%, rgba(243, 232, 255, 0) 50%),
+		radial-gradient(circle at 35% 27%, #dff3fe 0%, rgba(223, 243, 254, 0) 50%),
+		radial-gradient(circle at 73% 24%, #cdfbf1 0%, rgba(205, 251, 241, 0) 50%),
+		radial-gradient(circle at 19% 76%, #fde6f4 0%, rgba(253, 230, 244, 0) 50%);
 
 	&:where(.dark, .dark *) {
 		background-color: theme("colors.grey.950");

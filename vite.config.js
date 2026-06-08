@@ -1,15 +1,19 @@
-import { defineConfig } from "vite";
-import { fileURLToPath, URL } from "node:url";
+import { alias } from "./support/aliases.js";
+import { defineConfig } from "vite-plus";
+import fmt from "./.oxfmtrc.json" with { type: "json" };
+import lint from "./.oxlintrc.json" with { type: "json" };
+import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
 export default defineConfig({
-	plugins: [vue(), vueDevTools()],
+	staged: {
+		"*": "vp check --fix",
+	},
+	fmt,
+	lint,
+	plugins: [tailwindcss(), vue(), vueDevTools()],
 	resolve: {
-		alias: {
-			"@": fileURLToPath(new URL("./src", import.meta.url)),
-			"@cypress": fileURLToPath(new URL("./test/cypress", import.meta.url)),
-			"@unit": fileURLToPath(new URL("./test/unit", import.meta.url)),
-		},
+		alias,
 	},
 });

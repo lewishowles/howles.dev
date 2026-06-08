@@ -5,12 +5,23 @@
 		</section-title>
 
 		<div ref="education" class="flex flex-col gap-4 lg:flex-row lg:items-center">
-			<logo-sheffield class="h-auto w-10 text-[#440099] motion-safe:opacity-0 dark:text-current" :class="{ 'animate-fade-in-right': showEducation }" />
+			<logo-sheffield
+				class="h-auto w-10 text-[#440099] motion-safe:opacity-0 dark:text-current"
+				:class="{ 'animate-fade-in-right': showEducation }"
+			/>
 
 			<div class="flex flex-col">
-				<i18n-t keypath="cv.education_history.degree" tag="strong" scope="global" class="font-bold motion-safe:opacity-0" :class="{ 'animate-fade-in-up': showEducation }">
+				<i18n-t
+					keypath="cv.education_history.degree"
+					tag="strong"
+					scope="global"
+					class="font-bold motion-safe:opacity-0"
+					:class="{ 'animate-fade-in-up': showEducation }"
+				>
 					<template #university_name>
-						<span class="font-normal block lg:inline">{{ t("cv.education_history.university_name") }}</span>
+						<span class="block font-normal lg:inline">
+							{{ t("cv.education_history.university_name") }}
+						</span>
 					</template>
 				</i18n-t>
 

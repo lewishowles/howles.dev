@@ -11,7 +11,13 @@
 		</template>
 
 		<ul ref="values" class="grid gap-6 md:grid-cols-3">
-			<core-value v-for="value in coreValues" :key="value.key" v-bind="{ icon: value.icon }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showValues }">
+			<core-value
+				v-for="value in coreValues"
+				:key="value.key"
+				v-bind="{ icon: value.icon }"
+				class="motion-safe:opacity-0"
+				:class="{ 'animate-fade-in delay': showValues }"
+			>
 				<template #title>
 					{{ t(`core_values.values.${value.key}.title`) }}
 				</template>
@@ -33,8 +39,12 @@ import CoreValue from "./fragments/core-value/core-value.vue";
 const { t } = useI18n();
 // A reference to our values list, allowing us to observe it.
 const valuesElement = useTemplateRef("values");
+
 // Set up our intersection observer.
-const { show: showValues } = useIntersect(valuesElement, { mobileThreshold: 0.05, desktopThreshold: 0.3 });
+const { show: showValues } = useIntersect(valuesElement, {
+	mobileThreshold: 0.05,
+	desktopThreshold: 0.3,
+});
 
 // The list of core value keys, used to generate the components.
 const coreValues = ref([

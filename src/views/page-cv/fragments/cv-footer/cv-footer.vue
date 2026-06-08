@@ -1,16 +1,26 @@
 <template>
 	<div ref="footer" class="relative self-stretch">
 		<div class="flex items-center justify-between gap-4">
-			<router-link v-bind="{ to: { name: 'home' } }" class="inline-flex items-center gap-2 text-sm motion-safe:opacity-0" :class="{ 'animate-fade-in-right': showFooter }">
+			<router-link
+				v-bind="{ to: { name: 'home' } }"
+				class="inline-flex items-center gap-2 text-sm motion-safe:opacity-0"
+				:class="{ 'animate-fade-in-right': showFooter }"
+			>
 				<icon-arrow-left />
 
 				{{ t("cv.footer.home") }}
 			</router-link>
 
-			<icon-h class="h-16 w-auto fill-purple-800 dark:fill-blue-400 motion-safe:opacity-0" :class="{ 'animate-fade-in-left delay': showFooter }" />
+			<icon-h
+				class="h-16 w-auto fill-purple-800 motion-safe:opacity-0 dark:fill-blue-400"
+				:class="{ 'animate-fade-in-left delay': showFooter }"
+			/>
 		</div>
 
-		<icon-glasses class="watermark pointer-events-none fixed start-0 bottom-0 h-80 w-auto -translate-x-1/3 opacity-20 mix-blend-overlay" :style="{ transform: `translateY(${translateProportion}%)` }" />
+		<icon-glasses
+			class="watermark pointer-events-none fixed start-0 bottom-0 h-80 w-auto -translate-x-1/3 opacity-20 mix-blend-overlay"
+			:style="{ transform: `translateY(${translateProportion}%)` }"
+		/>
 	</div>
 </template>
 
@@ -38,4 +48,3 @@ const translateProportion = computed(() => {
 	mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 </style>
-

@@ -18,7 +18,10 @@ import { useIntersectionObserver, useMediaQuery } from "@vueuse/core";
  *     The threshold (0-1) before the element is considered to be visible. Used
  *     for both smaller and larger screens and overrides the other two values.
  */
-export default function useIntersect(element, { mobileThreshold = 0.05, desktopThreshold = 0.3, threshold = null, once = true } = {}) {
+export default function useIntersect(
+	element,
+	{ mobileThreshold = 0.05, desktopThreshold = 0.3, threshold = null, once = true } = {},
+) {
 	// Whether we're looking at a (relatively) large screen.
 	const largeScreen = useMediaQuery("(min-width: 1024px)");
 	// Whether the element should be shown.
@@ -39,13 +42,17 @@ export default function useIntersect(element, { mobileThreshold = 0.05, desktopT
 		return desktopThreshold;
 	});
 
-	const { stop } = useIntersectionObserver(element, ([{ isIntersecting }]) => {
-		show.value = isIntersecting;
+	const { stop } = useIntersectionObserver(
+		element,
+		([{ isIntersecting }]) => {
+			show.value = isIntersecting;
 
-		if (once && isIntersecting) {
-			stop();
-		}
-	}, { threshold: intersectionThreshold.value });
+			if (once && isIntersecting) {
+				stop();
+			}
+		},
+		{ threshold: intersectionThreshold.value },
+	);
 
 	return {
 		show,

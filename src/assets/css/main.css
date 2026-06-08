@@ -58,10 +58,12 @@
 	--color-neon-pink: #e61980;
 	--color-neon-blue: #19cbe6;
 
-	--font-sans: "Funnel Sans", ui-sans-serif, system-ui, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-		Consolas, "Liberation Mono", "Courier New", monospace;
+	--font-sans:
+		"Funnel Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
+	--font-mono:
+		"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+		"Courier New", monospace;
 
 	--container-3xs: 12rem;
 	--container-2xs: 16rem;
@@ -110,13 +112,18 @@
 		width: 1em;
 	}
 
-	a, button, summary, [contenteditable], [tabindex] {
+	a,
+	button,
+	summary,
+	[contenteditable],
+	[tabindex] {
 		@apply transition-all;
-		@apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-purple-800 focus-visible:ring-offset-2;
+		@apply focus-visible:ring-2 focus-visible:ring-purple-800 focus-visible:ring-offset-2 focus-visible:outline-hidden;
 		@apply dark:focus-visible:ring-purple-400 dark:focus-visible:ring-offset-0;
 	}
 
-	a, summary {
+	a,
+	summary {
 		@apply text-purple-800 underline underline-offset-4;
 		@apply hocus:text-purple-900 hocus:no-underline;
 		@apply dark:text-purple-300;

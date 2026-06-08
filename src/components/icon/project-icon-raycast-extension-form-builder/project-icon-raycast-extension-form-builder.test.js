@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import ProjectIconRaycastExtensionFormBuilder from "./project-icon-raycast-extension-form-builder.vue";
 
 const mount = createMount(ProjectIconRaycastExtensionFormBuilder);

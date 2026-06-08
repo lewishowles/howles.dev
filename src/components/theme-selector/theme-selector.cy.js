@@ -16,9 +16,7 @@ describe("theme-selector", () => {
 
 			openMenu();
 
-			cy.getByData("theme-selector-button")
-				.shouldBeVisible()
-				.shouldHaveCount(3);
+			cy.getByData("theme-selector-button").shouldBeVisible().shouldHaveCount(3);
 		});
 
 		it("Dark mode is the default", () => {
@@ -52,7 +50,7 @@ describe("theme-selector", () => {
 
 			cy.getByData("theme-selector-button").shouldNotBeVisible();
 
-			cy.getByData("click-target").then(element => {
+			cy.getByData("click-target").then((element) => {
 				element.remove();
 			});
 		});
@@ -86,7 +84,7 @@ function openMenu() {
  *     The `data-test` selector for the element
  */
 function createSiblingElement(content, selector) {
-	cy.get("body").then(body => {
+	cy.get("body").then((body) => {
 		const siblingElement = document.createElement("div");
 
 		siblingElement.setAttribute("data-test", selector);

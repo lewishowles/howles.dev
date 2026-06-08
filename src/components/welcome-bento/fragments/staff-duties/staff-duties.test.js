@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import { flushPromises } from "@vue/test-utils";
 import StaffDuties from "./staff-duties.vue";
 import sampleData from "./fixtures/duties.json";
@@ -19,7 +19,7 @@ describe("staff-duties", () => {
 
 	describe("Methods", () => {
 		describe("loadData", () => {
-			test("should load data from the correct source", async() => {
+			test("should load data from the correct source", async () => {
 				fetch.mockResolvedValue({ json: () => sampleData });
 
 				mount();
@@ -29,7 +29,7 @@ describe("staff-duties", () => {
 				expect(fetch).toHaveBeenCalledWith("/data/analytics/duties.json");
 			});
 
-			test("should allow an alternative data source", async() => {
+			test("should allow an alternative data source", async () => {
 				fetch.mockResolvedValue({ json: () => sampleData });
 
 				const wrapper = mount();

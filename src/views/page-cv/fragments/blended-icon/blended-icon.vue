@@ -1,7 +1,9 @@
 <template>
-	<div class="grid place-items-center text-purple-500 dark:text-white [grid-template-areas:'stack']">
-		<component :is="icon" class="size-5 [grid-area:stack] opacity-20 hidden dark:block" />
-		<component :is="icon" class="size-5 dark:mix-blend-overlay [grid-area:stack]" />
+	<div
+		class="grid place-items-center text-purple-500 [grid-template-areas:'stack'] dark:text-white"
+	>
+		<component :is="icon" class="hidden size-5 opacity-20 [grid-area:stack] dark:block" />
+		<component :is="icon" class="size-5 [grid-area:stack] dark:mix-blend-overlay" />
 	</div>
 </template>
 

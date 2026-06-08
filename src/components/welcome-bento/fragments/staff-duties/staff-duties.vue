@@ -1,6 +1,6 @@
 <template>
 	<bento-box class="h-full" data-test="staff-duties">
-		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
+		<h2 class="text-grey-950 dark:text-grey-50 mb-1 text-lg font-semibold">
 			{{ t("staff_duties.title") }}
 		</h2>
 
@@ -12,13 +12,25 @@
 			{{ t("staff_duties.loading") }}
 		</staff-duties-skeleton>
 
-		<donut-chart v-show="!isLoading && haveData" v-bind="{ values: figures, colourful: true }" class="animate-fade-in mx-auto size-52" data-test="staff-duties-chart" />
+		<donut-chart
+			v-show="!isLoading && haveData"
+			v-bind="{ values: figures, colourful: true }"
+			class="animate-fade-in mx-auto size-52"
+			data-test="staff-duties-chart"
+		/>
 
-		<dl v-show="!isLoading && haveData" class="mx-auto mt-6 max-w-72 divide-y divide-grey-200 text-xs dark:divide-white/30" data-test="staff-duties-key">
+		<dl
+			v-show="!isLoading && haveData"
+			class="divide-grey-200 mx-auto mt-6 max-w-72 divide-y text-xs dark:divide-white/30"
+			data-test="staff-duties-key"
+		>
 			<template v-for="(duty, index) in duties" :key="duty.category">
 				<div class="flex items-center py-1">
 					<dt class="flex items-center gap-1.5">
-						<div class="size-3 rounded-sm bg-current" :class="getNextColour(index, brightColours)" />
+						<div
+							class="size-3 rounded-sm bg-current"
+							:class="getNextColour(index, brightColours)"
+						/>
 
 						{{ t(`staff_duties.categories.${duty.category}`) }}
 					</dt>
@@ -58,7 +70,7 @@ const figures = computed(() => {
 		return [];
 	}
 
-	return data.value.map(duty => get(duty, "total_time_logged"));
+	return data.value.map((duty) => get(duty, "total_time_logged"));
 });
 
 // Enhanced data, especially helpful for the chart key.
@@ -94,7 +106,7 @@ const totalTimeLogged = computed(() => {
 		return 0;
 	}
 
-	if (!figures.value.every(figure => isNumber(figure))) {
+	if (!figures.value.every((figure) => isNumber(figure))) {
 		return 0;
 	}
 
@@ -109,11 +121,14 @@ const numberFormatter = new Intl.NumberFormat(navigator.language, {
 
 loadData();
 
-watch(() => securityStore.secure, () => {
-	if (securityStore.secure === false) {
-		loadData("duties-breach");
-	}
-});
+watch(
+	() => securityStore.secure,
+	() => {
+		if (securityStore.secure === false) {
+			loadData("duties-breach");
+		}
+	},
+);
 
 /**
  * Load the most recent staff duty analytics.
@@ -126,7 +141,9 @@ async function loadData(file = "duties") {
 		const response = await load(getApiUrl("analytics", file));
 
 		if (!isNonEmptyArray(response)) {
-			throw new Error(`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`);
+			throw new Error(
+				`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`,
+			);
 		}
 
 		data.value = response;

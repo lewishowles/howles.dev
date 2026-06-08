@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import CoolProjects from "./super-cool-projects.vue";
 
 const mount = createMount(CoolProjects);

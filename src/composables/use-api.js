@@ -68,7 +68,7 @@ export default function useApi() {
 			return Promise.resolve();
 		}
 
-		return new Promise(resolve => setTimeout(resolve, time));
+		return new Promise((resolve) => setTimeout(resolve, time));
 	}
 
 	return {

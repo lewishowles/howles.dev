@@ -7,7 +7,10 @@ export default {
 		const icons = import.meta.glob("@/components/icon/**/*.vue");
 
 		for (const path in icons) {
-			const componentName = path.split("/").pop().replace(/\.\w+$/, "");
+			const componentName = path
+				.split("/")
+				.pop()
+				.replace(/\.\w+$/, "");
 
 			app.component(componentName, defineAsyncComponent(icons[path]));
 		}

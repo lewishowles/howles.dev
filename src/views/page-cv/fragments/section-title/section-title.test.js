@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import SectionTitle from "./section-title.vue";
 
 const mount = createMount(SectionTitle);

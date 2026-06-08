@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import ProjectIconWebsite from "./project-icon-website.vue";
 
 const mount = createMount(ProjectIconWebsite);

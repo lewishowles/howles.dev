@@ -1,5 +1,5 @@
 import { createMount } from "@unit/support/mount";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import { flushPromises } from "@vue/test-utils";
 import HeadlineUsers from "./headline-users.vue";
 import sampleData from "./fixtures/users.json";
@@ -173,7 +173,7 @@ describe("headline-users", () => {
 
 	describe("Methods", () => {
 		describe("loadData", () => {
-			test("should load data from the correct source", async() => {
+			test("should load data from the correct source", async () => {
 				fetch.mockResolvedValueOnce({ json: () => sampleData });
 
 				mount();

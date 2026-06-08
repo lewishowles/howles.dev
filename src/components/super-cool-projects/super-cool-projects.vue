@@ -10,9 +10,16 @@
 			{{ t("cool_projects.intro") }}
 		</template>
 
-		<ol class="flex flex-wrap gap-4 text-sm mb-10">
-			<li v-for="type in projectTypes" :key="type.slug" data-test="super-cool-projects-project-type">
-				<a :href="`#project-type-${type.slug}`" class="flex items-center gap-2 rounded-lg border border-grey-300 bg-white px-4 py-2 no-underline transition-colors dark:border-0 dark:bg-black/20 hocus:border-purple-300 hocus:bg-grey-50 dark:hocus:bg-black/30">
+		<ol class="mb-10 flex flex-wrap gap-4 text-sm">
+			<li
+				v-for="type in projectTypes"
+				:key="type.slug"
+				data-test="super-cool-projects-project-type"
+			>
+				<a
+					:href="`#project-type-${type.slug}`"
+					class="border-grey-300 hocus:border-purple-300 hocus:bg-grey-50 dark:hocus:bg-black/30 flex items-center gap-2 rounded-lg border bg-white px-4 py-2 no-underline transition-colors dark:border-0 dark:bg-black/20"
+				>
 					{{ t(`cool_projects.type.${type.type}`) }}
 
 					<pill-badge colour="purple">
@@ -35,7 +42,13 @@
 				</div>
 
 				<ul class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-					<cool-project v-for="project in groupedProjects[type.type]" :key="project.key" v-bind="{ icon: project.icon, href: project.href, type: project.type }" class="motion-safe:opacity-0" :class="{ 'animate-fade-in delay': showProjects }">
+					<cool-project
+						v-for="project in groupedProjects[type.type]"
+						:key="project.key"
+						v-bind="{ icon: project.icon, href: project.href, type: project.type }"
+						class="motion-safe:opacity-0"
+						:class="{ 'animate-fade-in delay': showProjects }"
+					>
 						<template #title>
 							{{ t(`cool_projects.projects.${project.key}.title`) }}
 						</template>
@@ -66,67 +79,128 @@ import CoolProject from "./fragments/cool-project/cool-project.vue";
 const { t } = useI18n();
 // A reference to our values list, allowing us to observe it.
 const projectsElement = useTemplateRef("projects-element");
+
 // Set up our intersection observer.
-const { show: showProjects } = useIntersect(projectsElement, { mobileThreshold: 0, desktopThreshold: 0.1 });
+const { show: showProjects } = useIntersect(projectsElement, {
+	mobileThreshold: 0,
+	desktopThreshold: 0.1,
+});
 
 // The list of cool project keys, used to generate the components.
 const projects = ref([
 	{
-		key: "website", icon: "project-icon-website", href: "https://github.com/lewishowles/howles.dev", type: "primary",
+		key: "website",
+		icon: "project-icon-website",
+		href: "https://github.com/lewishowles/howles.dev",
+		type: "primary",
 	},
 	{
-		key: "design_system", icon: "project-icon-design-system", href: "https://www.sketch.com/s/27564627-6160-46a0-be47-f134c22e3aa4/prototype/9F9B6303-C9B6-45D0-9232-4C26B47D48A1/a/9F9B6303-C9B6-45D0-9232-4C26B47D48A1?resizeMode=ActualSize", type: "primary",
+		key: "design_system",
+		icon: "project-icon-design-system",
+		href: "https://www.sketch.com/s/27564627-6160-46a0-be47-f134c22e3aa4/prototype/9F9B6303-C9B6-45D0-9232-4C26B47D48A1/a/9F9B6303-C9B6-45D0-9232-4C26B47D48A1?resizeMode=ActualSize",
+		type: "primary",
 	},
 	{
-		key: "mockup_system", icon: "project-icon-mockup-system", href: "https://sketch.com/s/5b022182-f17c-4b10-9202-c991ec88c2d2", type: "primary",
+		key: "mockup_system",
+		icon: "project-icon-mockup-system",
+		href: "https://sketch.com/s/5b022182-f17c-4b10-9202-c991ec88c2d2",
+		type: "primary",
 	},
 	{
-		key: "components", icon: "project-icon-components", href: "https://components.howles.dev", type: "library",
+		key: "components",
+		icon: "project-icon-components",
+		href: "https://components.howles.dev",
+		type: "library",
 	},
 	{
-		key: "helpers", icon: "project-icon-helpers", href: "https://github.com/lewishowles/helpers", type: "library",
+		key: "helpers",
+		icon: "project-icon-helpers",
+		href: "https://github.com/lewishowles/helpers",
+		type: "library",
 	},
 	{
-		key: "testing", icon: "project-icon-testing", href: "https://github.com/lewishowles/testing", type: "library",
+		key: "testing",
+		icon: "project-icon-testing",
+		href: "https://github.com/lewishowles/testing",
+		type: "library",
 	},
 	{
-		key: "cinewatch", icon: "project-icon-cinewatch", href: "https://github.com/lewishowles/cinewatch-app", type: "project",
+		key: "cinewatch",
+		icon: "project-icon-cinewatch",
+		href: "https://github.com/lewishowles/cinewatch-app",
+		type: "project",
 	},
 	{
-		key: "image_tag", icon: "project-icon-image-tag", href: "https://github.com/lewishowles/image-tag", type: "project",
+		key: "image_tag",
+		icon: "project-icon-image-tag",
+		href: "https://github.com/lewishowles/image-tag",
+		type: "project",
 	},
 	{
-		key: "form_builder", icon: "project-icon-form-builder", href: "https://github.com/lewishowles/tool-form-builder", type: "tool",
+		key: "form_builder",
+		icon: "project-icon-form-builder",
+		href: "https://github.com/lewishowles/tool-form-builder",
+		type: "tool",
 	},
 	{
-		key: "snippet_generator", icon: "project-icon-snippet-generator", href: "https://github.com/lewishowles/tool-vs-code-snippet-generator", type: "tool",
+		key: "snippet_generator",
+		icon: "project-icon-snippet-generator",
+		href: "https://github.com/lewishowles/tool-vs-code-snippet-generator",
+		type: "tool",
 	},
 	{
-		key: "boilersuit", icon: "project-icon-boilersuit", href: "https://github.com/lewishowles/boilersuit", type: "tool",
+		key: "boilersuit",
+		icon: "project-icon-boilersuit",
+		href: "https://github.com/lewishowles/boilersuit",
+		type: "tool",
 	},
 	{
-		key: "boilerplate", icon: "project-icon-boilerplate", href: "https://github.com/lewishowles/boilerplate", type: "tool",
+		key: "boilerplate",
+		icon: "project-icon-boilerplate",
+		href: "https://github.com/lewishowles/boilerplate",
+		type: "tool",
 	},
 	{
-		key: "sketch_organise_symbols", icon: "project-icon-sketch-organise-symbols", href: "https://github.com/lewishowles/sketch-organise-symbols", type: "sketch",
+		key: "sketch_organise_symbols",
+		icon: "project-icon-sketch-organise-symbols",
+		href: "https://github.com/lewishowles/sketch-organise-symbols",
+		type: "sketch",
 	},
 	{
-		key: "sketch_rename_symbol_instances", icon: "project-icon-sketch-rename-symbol-instances", href: "https://github.com/lewishowles/sketch-rename-symbol-instances", type: "sketch",
+		key: "sketch_rename_symbol_instances",
+		icon: "project-icon-sketch-rename-symbol-instances",
+		href: "https://github.com/lewishowles/sketch-rename-symbol-instances",
+		type: "sketch",
 	},
 	{
-		key: "sort_imports", icon: "project-icon-sort-imports", href: "https://github.com/lewishowles/vs-code-sort-imports", type: "vscode",
+		key: "sort_imports",
+		icon: "project-icon-sort-imports",
+		href: "https://github.com/lewishowles/vs-code-sort-imports",
+		type: "vscode",
 	},
 	{
-		key: "wrap_comments", icon: "project-icon-wrap-comments", href: "https://github.com/lewishowles/vs-code-wrap-comments", type: "vscode",
+		key: "wrap_comments",
+		icon: "project-icon-wrap-comments",
+		href: "https://github.com/lewishowles/vs-code-wrap-comments",
+		type: "vscode",
 	},
 	{
-		key: "raycast_vs_code_snippet_generator", icon: "project-icon-raycast-extension-vs-code-snippet-generator", href: "https://github.com/lewishowles/raycast-extension-vs-code-snippet-generator", type: "raycast",
+		key: "raycast_vs_code_snippet_generator",
+		icon: "project-icon-raycast-extension-vs-code-snippet-generator",
+		href: "https://github.com/lewishowles/raycast-extension-vs-code-snippet-generator",
+		type: "raycast",
 	},
 	{
-		key: "raycast_form_builder", icon: "project-icon-raycast-extension-form-builder", href: "https://github.com/lewishowles/raycast-extension-form-builder", type: "raycast",
+		key: "raycast_form_builder",
+		icon: "project-icon-raycast-extension-form-builder",
+		href: "https://github.com/lewishowles/raycast-extension-form-builder",
+		type: "raycast",
 	},
 	{
-		key: "reddit", icon: "project-icon-reddit", href: "https://www.reddit.com/user/lhowles/", type: "misc",
+		key: "reddit",
+		icon: "project-icon-reddit",
+		href: "https://www.reddit.com/user/lhowles/",
+		type: "misc",
 	},
 ]);
 
@@ -163,7 +237,11 @@ const projectTypes = computed(() => {
 		if (Object.prototype.hasOwnProperty.call(groupedProjects.value, projectType)) {
 			const projectGroup = groupedProjects.value[projectType];
 
-			const slug = projectType.toLowerCase().trim().replace(/[\s]+/g, "-").replace(/[^a-z0-9-]/g, "");
+			const slug = projectType
+				.toLowerCase()
+				.trim()
+				.replace(/[\s]+/g, "-")
+				.replace(/[^a-z0-9-]/g, "");
 
 			projectTypes.push({ type: projectType, count: arrayLength(projectGroup), slug });
 		}

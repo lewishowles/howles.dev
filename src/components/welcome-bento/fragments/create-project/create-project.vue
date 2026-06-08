@@ -1,6 +1,6 @@
 <template>
 	<bento-box class="relative" data-test="create-project">
-		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
+		<h2 class="text-grey-950 dark:text-grey-50 mb-1 text-lg font-semibold">
 			{{ t("create_project.title") }}
 		</h2>
 
@@ -9,7 +9,11 @@
 		</p>
 
 		<form-layout data-test="create-project-form">
-			<form-input ref="projectNameInput" v-model="project.name" v-bind="{ inputAttributes: { required: true } }">
+			<form-input
+				ref="projectNameInput"
+				v-model="project.name"
+				v-bind="{ inputAttributes: { required: true } }"
+			>
 				{{ t("create_project.form.project_name.label") }}
 
 				<template #help>
@@ -21,7 +25,10 @@
 				</template>
 			</form-input>
 
-			<form-radio-group v-model="project.type" v-bind="{ options: tm('create_project.form.project_type.options'), inline: true }">
+			<form-radio-group
+				v-model="project.type"
+				v-bind="{ options: tm('create_project.form.project_type.options'), inline: true }"
+			>
 				{{ t("create_project.form.project_type.label") }}
 
 				<template #introduction>
@@ -29,14 +36,24 @@
 				</template>
 			</form-radio-group>
 
-			<form-actions class="inset-well bg-grey-50 transition-colors dark:bg-grey-950/30">
-				<ui-button ref="submitButton" v-bind="{ reactive: true }" class="button--primary" @click="createProject">
+			<form-actions class="inset-well bg-grey-50 dark:bg-grey-950/30 transition-colors">
+				<ui-button
+					ref="submitButton"
+					v-bind="{ reactive: true }"
+					class="button--primary"
+					@click="createProject"
+				>
 					{{ t("create_project.form.submit") }}
 				</ui-button>
 			</form-actions>
 		</form-layout>
 
-		<div v-show="showingSuccessMessage" class="animate-fade-in-down absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-linear-to-br from-green-500 to-green-600 dark:from-green-400 dark:to-green-500 p-6 text-white" aria-live="polite" data-test="create-project-success">
+		<div
+			v-show="showingSuccessMessage"
+			class="animate-fade-in-down absolute inset-x-0 top-0 mx-1 mt-1 flex items-center justify-center gap-2 rounded-xl bg-linear-to-br from-green-500 to-green-600 p-6 text-white dark:from-green-400 dark:to-green-500"
+			aria-live="polite"
+			data-test="create-project-success"
+		>
 			<icon-check-circled class="size-6" />
 
 			{{ t("create_project.form.success") }}

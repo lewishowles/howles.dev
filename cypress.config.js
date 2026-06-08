@@ -1,8 +1,10 @@
 import { defineConfig } from "cypress";
-import viteConfig from "./vite.config.js";
+import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
+import { alias } from "./support/aliases.js";
 
 export default defineConfig({
+	allowCypressEnv: false,
 	fixturesFolder: "",
 	screenshotOnRunFailure: false,
 	video: false,
@@ -23,10 +25,9 @@ export default defineConfig({
 			framework: "vue",
 			bundler: "vite",
 			viteConfig: {
-				...viteConfig,
-				plugins: [vue()],
+				plugins: [vue(), tailwindcss()],
 				resolve: {
-					...viteConfig.resolve,
+					alias,
 				},
 			},
 		},

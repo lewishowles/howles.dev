@@ -15,7 +15,10 @@
 			<g fill-rule="evenodd">
 				<path d="M50 67V51M43.372 81l-5.371-12.188 12.068-17.811L62 68.81 56.629 81" />
 				<path stroke-linecap="square" stroke-linejoin="round" d="M61 84v-3H40v3" />
-				<path stroke-linecap="square" d="M32 29h36M26.5 34.5v19M74.5 34.5v19M22 25h9v9h-9zM70 25h9v9h-9zM22 55h9v9h-9zM70 55h9v9h-9z" />
+				<path
+					stroke-linecap="square"
+					d="M32 29h36M26.5 34.5v19M74.5 34.5v19M22 25h9v9h-9zM70 25h9v9h-9zM22 55h9v9h-9zM70 55h9v9h-9z"
+				/>
 			</g>
 		</g>
 	</base-icon>

@@ -1,6 +1,6 @@
 <template>
 	<bento-box data-test="team-access">
-		<h2 class="mb-1 text-lg font-semibold text-grey-950 dark:text-grey-50">
+		<h2 class="text-grey-950 dark:text-grey-50 mb-1 text-lg font-semibold">
 			{{ t("team_access.title") }}
 		</h2>
 
@@ -12,17 +12,29 @@
 			{{ t("team_access.loading") }}
 		</team-access-skeleton>
 
-		<div v-show="!isLoading" v-if="isReady && !haveUsers" class="text-grey-500 dark:text-grey-50/60" data-test="team-access-none-found">
+		<div
+			v-show="!isLoading"
+			v-if="isReady && !haveUsers"
+			class="text-grey-500 dark:text-grey-50/60"
+			data-test="team-access-none-found"
+		>
 			{{ t("team_access.no_users") }}
 		</div>
 
 		<ul v-show="!isLoading" v-if="isReady && haveUsers">
-			<li v-for="user in users" :key="user.id" class="flex items-center gap-2" data-test="team-access-user">
-				<div class="flex size-10 items-center justify-center rounded-full border border-purple-200 bg-purple-50 font-bold text-purple-800 dark:border-purple-400/30 dark:bg-purple-400/20 dark:text-purple-200">
+			<li
+				v-for="user in users"
+				:key="user.id"
+				class="flex items-center gap-2"
+				data-test="team-access-user"
+			>
+				<div
+					class="flex size-10 items-center justify-center rounded-full border border-purple-200 bg-purple-50 font-bold text-purple-800 dark:border-purple-400/30 dark:bg-purple-400/20 dark:text-purple-200"
+				>
 					{{ user.initials }}
 				</div>
 				<div class="flex flex-col">
-					<span class="font-semibold text-grey-950 dark:text-grey-50">
+					<span class="text-grey-950 dark:text-grey-50 font-semibold">
 						{{ user.name }}
 					</span>
 					<span class="text-grey-500 dark:text-grey-50/60">
@@ -70,7 +82,10 @@ const users = computed(() => {
 			user.name = t("team_access.users.unknown");
 		}
 
-		user.initials = user.name.split(" ").map(word => word.charAt(0).toUpperCase()).join("");
+		user.initials = user.name
+			.split(" ")
+			.map((word) => word.charAt(0).toUpperCase())
+			.join("");
 
 		filteredUsers.push(user);
 
@@ -95,7 +110,9 @@ async function loadData() {
 		const response = await load(getApiUrl("users"));
 
 		if (!isNonEmptyArray(response)) {
-			throw new Error(`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`);
+			throw new Error(
+				`Expected non-empty array <response>, received ${getFriendlyDisplay(response)}`,
+			);
 		}
 
 		userData.value = response;
