@@ -1,6 +1,6 @@
 <template>
 	<bento-box
-		class="group hocus:bg-linear-to-b hocus:from-white hocus:to-grey-100 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none flex cursor-pointer items-center gap-4 py-6 transition-colors"
+		class="group hocus:bg-linear-to-b hocus:from-white hocus:to-grey-100 hocus:ring-2 hocus:ring-primary-600 dark:bg-grey-950/20 dark:hocus:bg-grey-950/30 dark:hocus:bg-none flex cursor-pointer items-center gap-4 py-6 transition-colors"
 		tabindex="0"
 		data-test="headline-users"
 	>

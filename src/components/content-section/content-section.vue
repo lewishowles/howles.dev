@@ -38,10 +38,10 @@
 .content-section-eyebrow {
 	&::before,
 	&::after {
-		@apply text-grey-200 absolute;
-
 		border-color: currentColor;
+		color: var(--color-grey-200);
 		content: "";
+		position: absolute;
 		right: 100%;
 		top: 0;
 	}
@@ -49,7 +49,7 @@
 	&:where(.dark, .dark *) {
 		&::before,
 		&::after {
-			@apply text-grey-50/20;
+			color: --alpha(var(--color-grey-50) / 20%);
 		}
 	}
 

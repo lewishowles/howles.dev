@@ -210,10 +210,10 @@ function augmentResponse(response) {
 .warning-tape {
 	background: repeating-linear-gradient(
 		-45deg,
-		theme("colors.yellow.400"),
-		theme("colors.yellow.400") 15px,
-		theme("colors.grey.950") 15px,
-		theme("colors.grey.950") 30px
+		var(--color-yellow-400),
+		var(--color-yellow-400) 15px,
+		var(--color-grey-950) 15px,
+		var(--color-grey-950) 30px
 	);
 }
 </style>

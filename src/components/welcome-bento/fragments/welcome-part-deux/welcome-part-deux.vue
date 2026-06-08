@@ -16,7 +16,16 @@
 			<link-tag
 				href="#cool-projects"
 				icon-end="icon-arrow-right"
-				class="button--primary hocus:text-white lg:bg-grey-950/30 lg:active:bg-grey-950/50 lg:hocus:bg-grey-950/40 text-base no-underline lg:bg-none lg:ring-offset-pink-700 lg:focus-visible:ring-purple-300"
+				class="button--primary text-base no-underline lg:hidden"
+				data-test="welcome-part-deux-project-link"
+			>
+				{{ t("welcome.part_deux.button") }}
+			</link-tag>
+
+			<link-tag
+				href="#cool-projects"
+				icon-end="icon-arrow-right"
+				class="button--secondary text-base no-underline lg:inline-block"
 				data-test="welcome-part-deux-project-link"
 			>
 				{{ t("welcome.part_deux.button") }}

@@ -48,12 +48,7 @@
 				<div
 					class="absolute inset-x-0 bottom-0 hidden grid-cols-7 gap-14 px-12 pb-12 text-pink-700 xl:grid dark:text-pink-200"
 				>
-					<component
-						:is="icon"
-						v-for="(icon, index) in icons"
-						:key="index"
-						class="size-[1.125rem]"
-					/>
+					<component :is="icon" v-for="(icon, index) in icons" :key="index" class="size-4.5" />
 				</div>
 			</div>
 		</div>
@@ -99,7 +94,7 @@ const icons = [
 		margin-left: 0;
 	}
 
-	background-color: theme("colors.grey.50");
+	background-color: var(--color-grey-50);
 	background-image:
 		radial-gradient(circle at 69% 65%, #f3e8ff 0%, rgba(243, 232, 255, 0) 50%),
 		radial-gradient(circle at 35% 27%, #dff3fe 0%, rgba(223, 243, 254, 0) 50%),
@@ -107,7 +102,7 @@ const icons = [
 		radial-gradient(circle at 19% 76%, #fde6f4 0%, rgba(253, 230, 244, 0) 50%);
 
 	&:where(.dark, .dark *) {
-		background-color: theme("colors.grey.950");
+		background-color: var(--color-grey-950);
 		background-image:
 			radial-gradient(circle at 69% 65%, rgba(192, 131, 252, 0.2) 0%, rgba(192, 131, 252, 0) 50%),
 			radial-gradient(circle at 35% 27%, rgba(55, 190, 248, 0.2) 0%, rgba(55, 190, 248, 0) 50%),
