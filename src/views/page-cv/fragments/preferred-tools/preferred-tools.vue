@@ -32,8 +32,6 @@ import { useI18n } from "vue-i18n";
 import { useTemplateRef } from "vue";
 import useIntersect from "@/composables/use-intersect";
 
-import SectionTitle from "../section-title/section-title.vue";
-
 const { t, tm } = useI18n();
 
 const toolsElement = useTemplateRef("tools");

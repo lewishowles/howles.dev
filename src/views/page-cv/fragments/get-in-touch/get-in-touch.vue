@@ -47,7 +47,5 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 
-import BlendedIcon from "../blended-icon/blended-icon.vue";
-
 const { t } = useI18n();
 </script>

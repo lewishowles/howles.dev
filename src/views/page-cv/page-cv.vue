@@ -49,15 +49,5 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 
-import CvFooter from "./fragments/cv-footer/cv-footer.vue";
-import EducationHistory from "./fragments/education-history/education-history.vue";
-import EmploymentHistory from "./fragments/employment-history/employment-history.vue";
-import FunFact from "./fragments/fun-fact/fun-fact.vue";
-import GetInTouch from "./fragments/get-in-touch/get-in-touch.vue";
-import KeySkills from "./fragments/key-skills/key-skills.vue";
-import LayoutHeader from "@/components/layout-header/layout-header.vue";
-import PersonOverview from "./fragments/person-overview/person-overview.vue";
-import PreferredTools from "./fragments/preferred-tools/preferred-tools.vue";
-
 const { t } = useI18n();
 </script>

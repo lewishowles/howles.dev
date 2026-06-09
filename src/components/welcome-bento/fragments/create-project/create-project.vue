@@ -68,8 +68,6 @@ import { runComponentMethod } from "@lewishowles/helpers/vue";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
 
-import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
-
 const { t, tm } = useI18n();
 const { delay } = useApi();
 // A reference to the submit button, allowing us to reset it after project

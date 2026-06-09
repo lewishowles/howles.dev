@@ -43,8 +43,6 @@
 </template>
 
 <script setup>
-import ProjectTypePill from "@/components/super-cool-projects/fragments/project-type-pill/project-type-pill.vue";
-
 const props = defineProps({
 	/**
 	 * The icon to display for this project.

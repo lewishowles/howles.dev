@@ -59,9 +59,6 @@ import { isNonEmptyString } from "@lewishowles/helpers/string";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
 
-import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
-import TeamAccessSkeleton from "./fragments/team-access-skeleton.vue";
-
 const { t } = useI18n();
 const { isLoading, isReady, load } = useApi();
 // Our user data, as provided by the API.

@@ -83,8 +83,6 @@ import { useI18n } from "vue-i18n";
 import { useTemplateRef } from "vue";
 import useIntersect from "@/composables/use-intersect";
 
-import SectionTitle from "../section-title/section-title.vue";
-
 const { t, tm } = useI18n();
 const employmentElement = useTemplateRef("employment");
 const { show: showEmployment } = useIntersect(employmentElement, { threshold: 0.1 });

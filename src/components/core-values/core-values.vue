@@ -33,9 +33,6 @@ import { ref, useTemplateRef } from "vue";
 import { useI18n } from "vue-i18n";
 import useIntersect from "@/composables/use-intersect";
 
-import ContentSection from "@/components/content-section/content-section.vue";
-import CoreValue from "./fragments/core-value/core-value.vue";
-
 const { t } = useI18n();
 // A reference to our values list, allowing us to observe it.
 const valuesElement = useTemplateRef("values");

@@ -16,10 +16,6 @@
 </template>
 
 <script setup>
-import HowlesLogo from "./fragments/howles-logo/howles-logo.vue";
-import PageCallout from "./fragments/page-callout/page-callout.vue";
-import ThemeSelector from "@/components/theme-selector/theme-selector.vue";
-
 defineProps({
 	/**
 	 * Whether to include the "looking for work" banner.

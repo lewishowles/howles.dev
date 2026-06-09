@@ -37,8 +37,6 @@
 import { useI18n } from "vue-i18n";
 import { useTemplateRef } from "vue";
 
-import SectionTitle from "../section-title/section-title.vue";
-import LogoSheffield from "../logo-sheffield/logo-sheffield.vue";
 import useIntersect from "@/composables/use-intersect";
 
 const { t } = useI18n();

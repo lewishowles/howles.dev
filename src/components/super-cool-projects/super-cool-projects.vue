@@ -69,10 +69,6 @@ import { projectTypes } from "./project-types";
 import { useI18n } from "vue-i18n";
 import useIntersect from "@/composables/use-intersect";
 
-import ContentSection from "@/components/content-section/content-section.vue";
-import CoolProject from "./fragments/cool-project/cool-project.vue";
-import HighlightedProject from "./fragments/highlighted-project/highlighted-project.vue";
-
 const { t } = useI18n();
 // A reference to our values list, allowing us to observe it.
 const projectsElement = useTemplateRef("projects-element");

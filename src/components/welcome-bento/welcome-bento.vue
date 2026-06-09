@@ -36,15 +36,6 @@
 <script setup>
 import { useMediaQuery } from "@vueuse/core";
 
-import CreateProject from "./fragments/create-project/create-project.vue";
-import HeadlineUsers from "./fragments/headline-users/headline-users.vue";
-import PaddockStatus from "./fragments/paddock-status/paddock-status.vue";
-import StaffDuties from "./fragments/staff-duties/staff-duties.vue";
-import TeamAccess from "./fragments/team-access/team-access.vue";
-import UserPreferences from "./fragments/user-preferences/user-preferences.vue";
-import WelcomePartDeux from "./fragments/welcome-part-deux/welcome-part-deux.vue";
-import WelcomePartOne from "./fragments/welcome-part-one/welcome-part-one.vue";
-
 // Why do we do it like this? It's better to do a simple media query check and
 // avoid loading all of the sample components if they're not shown.
 const includeUiExamples = useMediaQuery("(min-width: 1024px)");

@@ -107,9 +107,6 @@ import { useI18n } from "vue-i18n";
 import { useSecurityStore } from "@/stores/security";
 import useApi from "@/composables/use-api";
 
-import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
-import PaddockStatusSkeleton from "./fragments/paddock-status-skeleton.vue";
-
 const { t } = useI18n();
 const { isLoading, isReady, load, lastRunTime } = useApi();
 const securityStore = useSecurityStore();

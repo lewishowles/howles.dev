@@ -15,8 +15,5 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 
-import BlendedIcon from "../blended-icon/blended-icon.vue";
-import SectionTitle from "../section-title/section-title.vue";
-
 const { t } = useI18n();
 </script>

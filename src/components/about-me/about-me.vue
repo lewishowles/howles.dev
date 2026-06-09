@@ -58,8 +58,6 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 
-import ContentSection from "@/components/content-section/content-section.vue";
-
 const { t, tm } = useI18n();
 
 const icons = [

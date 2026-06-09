@@ -22,8 +22,6 @@
 import { useColorMode } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
-import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
-
 const { t, tm } = useI18n();
 
 // The user's current theme, based on a local storage key and the system

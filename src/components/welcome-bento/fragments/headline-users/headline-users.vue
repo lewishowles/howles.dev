@@ -54,9 +54,6 @@ import { isNumber } from "@lewishowles/helpers/number";
 import { useI18n } from "vue-i18n";
 import useApi from "@/composables/use-api";
 
-import BentoBox from "@/components/welcome-bento/fragments/bento-box/bento-box.vue";
-import HeadlineUsersSkeleton from "./fragments/headline-users-skeleton.vue";
-
 const { t } = useI18n();
 const { load, isLoading } = useApi();
 
