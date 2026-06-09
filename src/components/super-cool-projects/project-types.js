@@ -6,4 +6,5 @@ export const projectTypes = {
 	SKETCH: "sketch",
 	VSCODE: "vscode",
 	RAYCAST: "raycast",
+	CONFIGURATION: "configuration",
 };

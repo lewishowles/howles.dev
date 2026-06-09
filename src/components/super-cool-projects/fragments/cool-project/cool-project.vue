@@ -7,7 +7,7 @@
 		>
 			<component
 				:is="icon"
-				class="dark:neon-glow group-hocus:text-purple-800 dark:group-hocus:text-purple-300 size-10 text-blue-800 transition-colors dark:text-blue-500"
+				class="dark:neon-glow group-hocus:text-purple-800 dark:group-hocus:text-purple-300 size-10 shrink-0 text-blue-800 transition-colors dark:text-blue-500"
 			/>
 
 			<div class="flex grow flex-col">

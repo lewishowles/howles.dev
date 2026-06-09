@@ -65,7 +65,6 @@
 <script setup>
 import { computed, ref, useTemplateRef } from "vue";
 import { isNonEmptyArray } from "@lewishowles/helpers/array";
-import { isNonEmptyObject } from "@lewishowles/helpers/object";
 import { projectTypes } from "./project-types";
 import { useI18n } from "vue-i18n";
 import useIntersect from "@/composables/use-intersect";
@@ -139,6 +138,12 @@ const projects = ref([
 		type: projectTypes.PERSONAL,
 	},
 	{
+		key: "agents",
+		icon: "project-icon-agents",
+		href: "http://github.com/lewishowles/agents",
+		type: projectTypes.CONFIGURATION,
+	},
+	{
 		key: "sketch_organise_symbols",
 		icon: "project-icon-sketch-organise-symbols",
 		href: "https://github.com/lewishowles/sketch-organise-symbols",
@@ -173,6 +178,18 @@ const projects = ref([
 		icon: "project-icon-raycast-extension-form-builder",
 		href: "https://github.com/lewishowles/raycast-extension-form-builder",
 		type: projectTypes.RAYCAST,
+	},
+	{
+		key: "visual_studio_code_settings",
+		icon: "project-icon-visual-studio-code-settings",
+		href: "http://github.com/lewishowles/visual-studio-code-settings",
+		type: projectTypes.CONFIGURATION,
+	},
+	{
+		key: "zsh",
+		icon: "project-icon-zsh",
+		href: "http://github.com/lewishowles/zsh",
+		type: projectTypes.CONFIGURATION,
 	},
 ]);
 </script>

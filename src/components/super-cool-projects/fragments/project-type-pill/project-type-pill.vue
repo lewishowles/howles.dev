@@ -1,18 +1,5 @@
 <template>
 	<pill-badge v-bind="{ colour }" class="inline-flex">
-		<img
-			v-if="type === projectTypes.SKETCH"
-			src="@/assets/images/logos/sketch.svg"
-			alt=""
-			class="size-3"
-		/>
-		<img
-			v-if="type === projectTypes.VSCODE"
-			src="@/assets/images/logos/visual-studio-code.svg"
-			alt=""
-			class="size-3"
-		/>
-
 		{{ t(`cool_projects.type.${type}`) }}
 	</pill-badge>
 </template>
@@ -49,6 +36,8 @@ const colour = computed(() => {
 			return "blue";
 		case projectTypes.RAYCAST:
 			return "red";
+		case projectTypes.CONFIGURATION:
+			return "green";
 		default:
 			return "grey";
 	}

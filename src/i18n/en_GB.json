@@ -198,7 +198,8 @@
 			"personal": "Personal",
 			"sketch": "Sketch plugin",
 			"vscode": "Visual Studio Code extension",
-			"raycast": "Raycast extension"
+			"raycast": "Raycast extension",
+			"configuration": "Configuration"
 		},
 		"projects": {
 			"components": {
@@ -224,6 +225,11 @@
 			"website": {
 				"title": "howles.dev",
 				"text": "The source behind this website. Built with Vue and Tailwind, and shaped by the same principles that guide the rest of my work: accessibility, maintainability, and reducing unnecessary complexity.",
+				"link_text": "View project on GitHub"
+			},
+			"agents": {
+				"title": "Agents",
+				"text": "Shared configuration for Claude Code, OpenAI Codex, and ChatGPT. The repository combines rules, skills, hooks, and project templates into a single system, allowing me to apply the same conventions and workflows across different tools. The result is more consistent output, less repeated setup, and AI assistants that better reflect the way I design and build software.",
 				"link_text": "View project on GitHub"
 			},
 			"sketch_organise_symbols": {
@@ -254,6 +260,16 @@
 			"raycast_form_builder": {
 				"title": "Form builder",
 				"text": "A Raycast extension for generating forms from shorthand definitions, helping reduce repetitive UI work and encouraging consistency.",
+				"link_text": "View project on GitHub"
+			},
+			"visual_studio_code_settings": {
+				"title": "Visual Studio Code Settings",
+				"text": "A version-controlled collection of my Visual Studio Code settings and snippets, with instructions for linking them into the real configuration directory. It provides a single place to maintain, back up, and synchronise the tools I use every day.",
+				"link_text": "View project on GitHub"
+			},
+			"zsh": {
+				"title": "zsh",
+				"text": "A modular shell configuration built around small, focused files rather than a single ever-growing .zshrc. It gives me a place to refine the commands, aliases, and workflows I use every day, while keeping everything easy to understand and maintain.",
 				"link_text": "View project on GitHub"
 			}
 		}
