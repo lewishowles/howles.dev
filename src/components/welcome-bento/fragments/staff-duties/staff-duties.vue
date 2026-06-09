@@ -12,12 +12,13 @@
 			{{ t("staff_duties.loading") }}
 		</staff-duties-skeleton>
 
-		<donut-chart
+		<div
 			v-show="!isLoading && haveData"
-			v-bind="{ values: figures, colourful: true }"
 			class="animate-fade-in mx-auto size-52"
 			data-test="staff-duties-chart"
-		/>
+		>
+			<donut-chart v-bind="{ values: figures, colourful: true }" class="size-52" />
+		</div>
 
 		<dl
 			v-show="!isLoading && haveData"
