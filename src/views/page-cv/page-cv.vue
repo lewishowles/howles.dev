@@ -1,8 +1,8 @@
 <template>
-	<div class="animate-fade-in-right absolute start-0 top-0 z-10 ms-4 mt-5">
+	<div class="animate-fade-in-right absolute inset-s-0 top-0 z-10 ms-4 mt-5">
 		<link-tag
 			href="/Lewis Howles - CV.pdf"
-			v-bind="{ iconStart: 'icon-download' }"
+			icon-start="icon-download"
 			download
 			class="button--primary text-sm no-underline lg:ring-offset-purple-50 dark:hidden"
 		>
@@ -11,9 +11,9 @@
 
 		<link-tag
 			href="/Lewis Howles - CV - Dark.pdf"
-			v-bind="{ iconStart: 'icon-download' }"
+			icon-start="icon-download"
 			download
-			class="button--primary text-sm no-underline not-dark:hidden lg:ring-offset-purple-50 dark:inline-flex"
+			class="button--primary text-sm no-underline not-dark:hidden lg:ring-offset-purple-50 dark:block"
 		>
 			{{ t("cv.download_cv") }}
 		</link-tag>

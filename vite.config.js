@@ -22,7 +22,7 @@ export default defineConfig({
 		Components({
 			dts: false,
 			// Automatically resolve components and layout components.
-			dirs: ["src/components", "src/layout"],
+			dirs: ["src/components", "src/layout", "src/views"],
 			// Automatically resolve components in the component library.
 			resolvers: [componentsResolver()],
 		}),
