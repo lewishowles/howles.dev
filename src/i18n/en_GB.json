@@ -21,12 +21,12 @@
 	"welcome": {
 		"part_one": {
 			"hi": "Hi, I’m Lewis",
-			"text": "I’m a passionate, versatile UI/UX Developer and Designer, with over {experience} experience spanning UI Design, Front-end Development, Web Design, Graphic Design, Accessibility, and, historically, Backend Development.",
+			"text": "I'm a front-end developer and designer with over {experience} of experience, building beautiful, accessible websites and applications.",
 			"experience": "15 years"
 		},
 
 		"part_deux": {
-			"text": "I’m enthusiastic about improving the user’s experience, the developer’s experience, creating scalable products, and making websites and apps that are not only beautiful and powerful, but also {easy_to_use} and {accessible}, all while solving the business problem at hand. My passion for inclusive design fuels my drive to craft delightful user experiences, and my passion for efficiency drives me to create tools to streamline workflows.",
+			"text": "I genuinely care about the user experience and the developer experience. My work covers design and development, which means accessible, polished interfaces, reusable components, practical tooling, and front-end work that stays maintainable over time.",
 			"easy_to_use": "easy to use",
 			"accessible": "accessible",
 			"button": "Super-cool projects",
