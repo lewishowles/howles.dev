@@ -188,126 +188,73 @@
 		"title": "Super-cool projects",
 		"intro": "Since my previous work has been private, I’ve created some projects that are both useful to me and that show the kind of products I create. All of these were used in some way in the creation of this website or related projects.",
 		"back_to_top": "Back to projects",
+		"group": {
+			"highlighted": "Highlighted projects",
+			"other": "Other projects"
+		},
 		"type": {
-			"primary": "Primary",
-			"library": "Libraries",
-			"project": "Projects",
-			"tool": "Tools",
-			"sketch": "Sketch plugins",
-			"vscode": "Visual Studio Code extensions",
-			"raycast": "Raycast extensions",
-			"misc": "Miscellaneous"
+			"library": "Library",
+			"design": "Design",
+			"personal": "Personal",
+			"sketch": "Sketch plugin",
+			"vscode": "Visual Studio Code extension",
+			"raycast": "Raycast extension"
 		},
 		"projects": {
-			"website": {
-				"title": "howles.dev",
-				"text": "This website was built using Vue.js and Tailwind to make it as close to the projects I love to build as possible, and the code is all available to view on GitHub.",
-				"link_text": "View project on GitHub"
-			},
-			"design_system": {
-				"title": "Design system",
-				"text": "My personal design system helps to rocket-fuel UI design, providing me with great-looking, consistent, accessible components.",
-				"link_text": "View project in Sketch"
-			},
-			"mockup_system": {
-				"title": "Mockup system",
-				"text": "A simple library to speed up the process of creating mockup screens, stripping back the design to focus on functionality and clarity.",
-				"link_text": "View project in Sketch"
-			},
 			"components": {
 				"title": "Components",
-				"text": "A library of beautiful components, promoting rapid development, while ensuring that usability and accessibility are at the fore. Don’t miss the scaffold scripts!",
+				"text": "A library of accessible components and tooling that helps me build consistent interfaces quickly. It forms the foundation of many of my projects and reflects the way I think about design systems and front-end architecture.",
 				"link_text": "View documentation"
 			},
 			"helpers": {
 				"title": "Helpers",
-				"text": "A library of gorgeous Javascript methods to make working with—and validating—data quicker and less error-prone, letting the developer concentrate on the fun stuff.",
+				"text": "A collection of JavaScript utilities for working with data safely and predictably, particularly when dealing with APIs and edge cases that are easy to overlook.",
 				"link_text": "View project on GitHub"
 			},
-			"testing": {
-				"title": "Testing",
-				"text": "Supercharge Cypress and Vitest testing with super-handy helpers for everything from selecting and counting elements to API mocking.",
-				"link_text": "View project on GitHub"
-			},
-			"snippet_generator": {
-				"title": "Snippet generator",
-				"text": "A tool to help quickly turn code into re-usable VS Code snippets.",
-				"link_text": "View project on GitHub"
-			},
-			"form_builder": {
-				"title": "Form builder",
-				"text": "A simple tool to help quickly build consistent forms using shorthand.",
-				"link_text": "View project on GitHub"
-			},
-			"boilersuit": {
-				"title": "Boilersuit",
-				"text": "A command line tool written in node to quickly scaffold a new project using the Boilerplate repo as a starting point.",
-				"link_text": "View project on GitHub"
+			"howles_design_system": {
+				"title": "Howles design system",
+				"text": "The design foundation behind many of my projects, providing reusable patterns and components that help keep interfaces consistent and easy to evolve.",
+				"link_text": "View project in Sketch"
 			},
 			"boilerplate": {
 				"title": "Boilerplate",
-				"text": "A starting point for Vue-based projects, incorporating a number of customisations to the base Vue scaffold that I have come to prefer",
+				"text": "My starting point for Vue projects, bringing together the tools and conventions I’ve refined through client work and personal projects.",
 				"link_text": "View project on GitHub"
 			},
-			"sketch_nudge_text": {
-				"title": "sketch-nudge-text",
-				"text": "Quickly jump between pre-defined font sizes, weights and colours, because who doesn’t want to save time by using keyboard shortcuts?!",
+			"website": {
+				"title": "howles.dev",
+				"text": "The source behind this website. Built with Vue and Tailwind, and shaped by the same principles that guide the rest of my work: accessibility, maintainability, and reducing unnecessary complexity.",
 				"link_text": "View project on GitHub"
 			},
 			"sketch_organise_symbols": {
 				"title": "sketch-organise-symbols",
-				"text": "Organise symbol masters in a predictable way based on their names, keeping like symbols together",
+				"text": "A Sketch plugin for keeping symbol libraries organised and predictable, making larger design systems easier to work with.",
 				"link_text": "View project on GitHub"
 			},
 			"sketch_rename_symbol_instances": {
 				"title": "sketch-rename-symbol-instances",
-				"text": "Rename all instances of Symbols to match the name of the symbol itself. Particularly useful when swapping a Symbol in-place. Good layer hygiene is good design.",
+				"text": "A small utility for keeping symbol layers tidy when swapping components, helping maintain order in larger Sketch files.",
 				"link_text": "View project on GitHub"
 			},
 			"sort_imports": {
 				"title": "Sort imports",
-				"text": "Destructured imports are easier to see when they're ordered alphabetically. This plugin re-arranges imports, so you don't have to think about it.",
+				"text": "A VS Code extension that alphabetises destructured imports, making larger files easier to scan and maintain.",
 				"link_text": "View project on GitHub"
 			},
 			"wrap_comments": {
 				"title": "Wrap comments",
-				"text": "Comments look better, to me, wrapped at 80 characters. This plugin re-flows a comment to do just that, so you don’t have to think about it.",
+				"text": "A VS Code extension that reflows comments to a preferred line length, helping keep longer explanations readable and consistently formatted.",
 				"link_text": "View project on GitHub"
 			},
 			"raycast_vs_code_snippet_generator": {
 				"title": "VS Code snippet generator",
-				"text": "A Raycast extension to help quickly turn code into re-usable VS Code snippets.",
+				"text": "A Raycast extension that turns existing code into reusable VS Code snippets, removing some of the friction from maintaining larger snippet libraries.",
 				"link_text": "View project on GitHub"
 			},
 			"raycast_form_builder": {
 				"title": "Form builder",
-				"text": "A Raycast extension to help quickly build consistent forms using shorthand.",
+				"text": "A Raycast extension for generating forms from shorthand definitions, helping reduce repetitive UI work and encouraging consistency.",
 				"link_text": "View project on GitHub"
-			},
-			"cinewatch": {
-				"title": "Cinewatch",
-				"text": "Cinewatch provides a quick and easy way to find the best way to watch multiple films in a single day at the cinema, minimising the time spent \"waiting\" between films.",
-				"link_text": "View project on GitHub"
-			},
-			"image_tag": {
-				"title": "image-tag",
-				"text": "An HTML custom element intended to represent the functionality of `image-tag` in the Components library.",
-				"link_text": "View project on GitHub"
-			},
-			"thought_process": {
-				"title": "Thought process",
-				"text": "A collection of documents, from guides to refinement, which aim to outline my thought process, refinement process, and writing style.",
-				"link_text": "View guides on Notion"
-			},
-			"gists": {
-				"title": "Gists",
-				"text": "Useful snippets, particularly for reference and system setup, that don’t fit anywhere else.",
-				"link_text": "View project on GitHub"
-			},
-			"reddit": {
-				"title": "Reddit feedback",
-				"text": "Providing constructive design and website feedback to users who ask for it on Reddit, passing on my knowledge and experience, and championing accessibility.",
-				"link_text": "View feedback on Reddit"
 			}
 		}
 	},
