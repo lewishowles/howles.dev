@@ -4,7 +4,7 @@
 		data-test="core-value"
 	>
 		<component
-			:is="icon"
+			:is="resolvedIcon"
 			class="mb-3 size-8 text-purple-500 transition-all group-hover:translate-x-1 group-hover:rotate-6 group-hover:text-pink-500 dark:text-purple-300 dark:group-hover:text-pink-300"
 		/>
 
@@ -21,7 +21,10 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from "vue";
+import { resolveIconComponent } from "@/utilities/resolve-icon-component";
+
+const props = defineProps({
 	/**
 	 * The icon to display for this value.
 	 */
@@ -30,4 +33,7 @@ defineProps({
 		required: true,
 	},
 });
+
+// The component represented by the stored icon name.
+const resolvedIcon = computed(() => resolveIconComponent(props.icon));
 </script>

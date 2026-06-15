@@ -1,4 +1,5 @@
 import { alias } from "./support/aliases.js";
+import { createSiteIcons } from "./support/site-icons.js";
 import { componentsResolver } from "@lewishowles/components/resolver";
 import { defineConfig } from "vite-plus";
 import Components from "unplugin-vue-components/vite";
@@ -19,6 +20,7 @@ export default defineConfig({
 		VueRouter({
 			dts: false,
 		}),
+		createSiteIcons(),
 		Components({
 			dts: false,
 			// Automatically resolve components and layout components.

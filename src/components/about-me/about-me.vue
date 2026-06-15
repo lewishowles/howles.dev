@@ -57,9 +57,11 @@
 
 <script setup>
 import { useI18n } from "vue-i18n";
+import { resolveIconComponent } from "@/utilities/resolve-icon-component";
 
 const { t, tm } = useI18n();
 
+// The icon components shown behind the pull quote.
 const icons = [
 	"icon-leaf",
 	"icon-accessibility",
@@ -75,7 +77,7 @@ const icons = [
 	"icon-branch",
 	"icon-database",
 	"icon-run",
-];
+].map(resolveIconComponent);
 </script>
 
 <style>

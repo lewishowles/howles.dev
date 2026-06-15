@@ -9,7 +9,7 @@
 
 			<div class="flex flex-col items-center justify-center gap-12 pt-24 dark:pb-24">
 				<component
-					:is="icon"
+					:is="resolvedIcon"
 					class="dark:neon-glow group-hocus:text-purple-800 dark:group-hocus:text-purple-300 size-24 text-blue-800 transition-colors dark:text-blue-500"
 				/>
 
@@ -43,6 +43,9 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { resolveIconComponent } from "@/utilities/resolve-icon-component";
+
 const props = defineProps({
 	/**
 	 * The icon to display for this project.
@@ -68,4 +71,7 @@ const props = defineProps({
 		default: null,
 	},
 });
+
+// The component represented by the stored project icon name.
+const resolvedIcon = computed(() => resolveIconComponent(props.icon));
 </script>

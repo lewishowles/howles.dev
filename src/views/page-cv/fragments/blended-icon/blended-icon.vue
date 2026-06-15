@@ -2,17 +2,20 @@
 	<div
 		class="grid place-items-center text-purple-500 [grid-template-areas:'stack'] dark:text-white"
 	>
-		<component :is="icon" class="hidden size-5 opacity-20 [grid-area:stack] dark:block" />
-		<component :is="icon" class="size-5 [grid-area:stack] dark:mix-blend-overlay" />
+		<component :is="resolvedIcon" class="hidden size-5 opacity-20 [grid-area:stack] dark:block" />
+		<component :is="resolvedIcon" class="size-5 [grid-area:stack] dark:mix-blend-overlay" />
 	</div>
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { resolveIconComponent } from "@/utilities/resolve-icon-component";
+
 /**
  * By using a combination of opacity and blend modes, `blended-icon` creates a
  * version of a given icon that subtly blends into the background colour.
  */
-defineProps({
+const props = defineProps({
 	/**
 	 * The icon to display
 	 */
@@ -21,4 +24,7 @@ defineProps({
 		required: true,
 	},
 });
+
+// The component represented by the provided icon name.
+const resolvedIcon = computed(() => resolveIconComponent(props.icon));
 </script>
