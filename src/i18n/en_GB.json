@@ -21,8 +21,8 @@
 	"welcome": {
 		"part_one": {
 			"hi": "Hi, I’m Lewis",
-			"text": "I'm a front-end developer and designer with over {experience} of experience, building beautiful, accessible websites and applications.",
-			"experience": "15 years"
+			"text": "I’m a front-end developer and designer with over {experience} of experience, building beautiful, accessible websites and applications. I work across design and development, so I’m happiest around polished interfaces, reusable components, first-class accessibility, and maintainable front-end systems.",
+			"experience": "17 years"
 		},
 
 		"part_deux": {
