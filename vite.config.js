@@ -1,7 +1,7 @@
 import { alias } from "./support/aliases.js";
 import { createSiteIcons } from "./support/site-icons.js";
 import { componentsResolver } from "@lewishowles/components/resolver";
-import { defineConfig } from "vite-plus";
+import { defineConfig, lazyPlugins } from "vite-plus";
 import Components from "unplugin-vue-components/vite";
 import VueRouter from "vue-router/vite";
 import fmt from "./.oxfmtrc.json" with { type: "json" };
@@ -16,7 +16,7 @@ export default defineConfig({
 	},
 	fmt,
 	lint,
-	plugins: [
+	plugins: lazyPlugins(() => [
 		VueRouter({
 			dts: false,
 		}),
@@ -31,7 +31,7 @@ export default defineConfig({
 		tailwindcss(),
 		vue(),
 		vueDevTools(),
-	],
+	]),
 	resolve: {
 		alias,
 	},
