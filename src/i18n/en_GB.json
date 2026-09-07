@@ -1,6 +1,6 @@
 {
 	"header": {
-		"subtitle": "Versatile UI/UX Developer, Designer & Leader"
+		"subtitle": "Accessible front-end developer, designer & technical lead"
 	},
 
 	"theme": {
@@ -13,9 +13,9 @@
 	},
 
 	"callout": {
-		"title": "I started a blog!",
-		"text": "A place to get tips, and learn even more about my thought processes.",
-		"button": "View blog"
+		"title": "Available for work",
+		"text": "Open to new roles and freelance projects, from accessibility audits to complete front-end builds.",
+		"button": "View CV"
 	},
 
 	"welcome": {
@@ -26,7 +26,7 @@
 		},
 
 		"part_deux": {
-			"text": "I genuinely care about the user experience and the developer experience. My work covers design and development, which means accessible, polished interfaces, reusable components, practical tooling, and front-end work that stays maintainable over time.",
+			"text": "I genuinely care about the user experience and the developer experience. My work covers design and development, which means accessible, polished interfaces, reusable components, practical tooling, and front-end work that stays maintainable over time. Alongside the hands-on work, I lead projects, guide technical decisions, and help teams bridge design and development.",
 			"easy_to_use": "easy to use",
 			"accessible": "accessible",
 			"button": "Super-cool projects",

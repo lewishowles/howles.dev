@@ -15,14 +15,14 @@
 				<span class="animate-fade-in-left delay">{{ t("callout.text") }}</span>
 			</div>
 
-			<a
-				href="https://blog.howles.dev"
+			<router-link
+				v-bind="{ to: { name: 'cv' } }"
 				class="animate-fade-in-right button--primary mt-2 inline-flex items-center gap-2 text-sm no-underline lg:ms-auto lg:mt-0 lg:ring-offset-purple-50"
 			>
 				{{ t("callout.button") }}
 
 				<icon-arrow-right />
-			</a>
+			</router-link>
 		</div>
 		<div class="h-2 bg-linear-to-r from-pink-700 to-purple-800 lg:hidden dark:hidden" />
 	</div>
