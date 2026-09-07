@@ -23,6 +23,16 @@
 
 					<p>{{ paragraph }}</p>
 				</div>
+
+				<p class="mt-6 text-sm italic">
+					<link-tag
+						v-bind="{ href: 'https://blog.howles.dev', external: true }"
+						class="dark:text-blue-300"
+						data-test="about-me-blog-link"
+					>
+						{{ t("about.blog_link_text") }}
+					</link-tag>
+				</p>
 			</div>
 
 			<div class="about-me-gradients relative flex flex-1 flex-col justify-center gap-7 p-12">

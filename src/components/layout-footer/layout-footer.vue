@@ -32,6 +32,15 @@
 						{{ t("footer.github_link_text") }}
 					</link-tag>
 				</template>
+				<template #blog_link_text>
+					<link-tag
+						v-bind="{ href: 'https://blog.howles.dev', external: true }"
+						class="dark:text-blue-300"
+						data-test="layout-footer-blog-link"
+					>
+						{{ t("footer.blog_link_text") }}
+					</link-tag>
+				</template>
 			</i18n-t>
 		</div>
 	</div>

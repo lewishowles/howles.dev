@@ -180,7 +180,8 @@
 		],
 		"quote": "Most of all, I like to bring fun to the workplace—such as adding film references to designs or to code.",
 		"did_you_try": "Wait, when did you last check the {paddock_link_text}?",
-		"paddock_link_text": "Tyrannosaurus Paddock"
+		"paddock_link_text": "Tyrannosaurus Paddock",
+		"blog_link_text": "More thoughts on my blog"
 	},
 
 	"cool_projects": {
@@ -507,8 +508,9 @@
 	},
 
 	"footer": {
-		"text": "Thanks for making it this far! Find {sketch_link_text}, or {github_link_text}.",
+		"text": "Thanks for making it this far! Find {sketch_link_text}, {github_link_text}, or {blog_link_text}.",
 		"sketch_link_text": "the original design on Sketch",
-		"github_link_text": "the code on GitHub"
+		"github_link_text": "the code on GitHub",
+		"blog_link_text": "my blog"
 	}
 }

@@ -21,5 +21,10 @@ describe("layout-footer", () => {
 			"href",
 			"https://github.com/lewishowles/howles.dev",
 		);
+		cy.getByData("layout-footer-blog-link")
+			.shouldBeVisible()
+			.and("contain.text", "my blog")
+			.and("have.attr", "href", "https://blog.howles.dev")
+			.and("have.attr", "target", "_blank");
 	});
 });
