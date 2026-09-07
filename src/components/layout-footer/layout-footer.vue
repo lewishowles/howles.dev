@@ -34,8 +34,9 @@
 				</template>
 				<template #blog_link_text>
 					<link-tag
-						v-bind="{ href: 'https://blog.howles.dev', external: true }"
+						href="https://blog.howles.dev"
 						class="dark:text-blue-300"
+						:external="true"
 						data-test="layout-footer-blog-link"
 					>
 						{{ t("footer.blog_link_text") }}

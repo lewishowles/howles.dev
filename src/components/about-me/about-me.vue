@@ -13,26 +13,12 @@
 		<div
 			class="lg:border-grey-200 lg:dark:bg-grey-950/20 flex flex-col gap-12 px-6 lg:flex-row lg:rounded-3xl lg:border lg:bg-white lg:p-12 dark:border-transparent"
 		>
-			<div class="flex-1">
-				<div v-for="(paragraph, index) in tm('about.text')" :key="index">
-					<div v-if="index > 0" class="my-6 flex w-full items-center gap-4">
-						<div class="h-px grow bg-current text-purple-300 dark:text-purple-300/50" />
-						<icon-glasses class="h-3 w-auto text-purple-300 dark:text-purple-300/50" />
-						<div class="h-px grow bg-current text-purple-300 dark:text-purple-300/50" />
-					</div>
+			<div class="flex flex-1 flex-col gap-6">
+				<p v-for="(paragraph, index) in tm('about.text')" :key="index">{{ paragraph }}</p>
 
-					<p>{{ paragraph }}</p>
-				</div>
-
-				<p class="mt-6 text-sm italic">
-					<link-tag
-						v-bind="{ href: 'https://blog.howles.dev', external: true }"
-						class="dark:text-blue-300"
-						data-test="about-me-blog-link"
-					>
-						{{ t("about.blog_link_text") }}
-					</link-tag>
-				</p>
+				<link-tag href="https://blog.howles.dev" :external="true">
+					{{ t("about.blog_link_text") }}
+				</link-tag>
 			</div>
 
 			<div class="about-me-gradients relative flex flex-1 flex-col justify-center gap-7 p-12">
@@ -56,9 +42,24 @@
 				</i18n-t>
 
 				<div
-					class="absolute inset-x-0 bottom-0 hidden grid-cols-7 gap-14 px-12 pb-12 text-pink-700 xl:grid dark:text-pink-200"
+					class="absolute inset-x-0 inset-bs-0 hidden p-12 text-pink-700 xl:flex xl:justify-between dark:text-pink-200"
 				>
-					<component :is="icon" v-for="(icon, index) in icons" :key="index" class="size-4.5" />
+					<component
+						:is="icon"
+						v-for="(icon, index) in icons.slice(0, Math.ceil(icons.length / 2))"
+						:key="index"
+						class="size-4.5"
+					/>
+				</div>
+				<div
+					class="absolute inset-x-0 inset-be-0 hidden p-12 text-pink-700 xl:flex xl:justify-between dark:text-pink-200"
+				>
+					<component
+						:is="icon"
+						v-for="(icon, index) in icons.slice(Math.ceil(icons.length / 2))"
+						:key="index"
+						class="size-4.5"
+					/>
 				</div>
 			</div>
 		</div>
