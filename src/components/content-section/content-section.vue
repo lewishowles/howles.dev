@@ -9,11 +9,13 @@
 				<div class="from-grey-200 dark:from-grey-50/20 hidden h-px w-64 bg-linear-to-r md:block" />
 			</h2>
 
-			<p class="text-grey-950 dark:text-grey-50 mb-6 text-4xl font-bold xl:mb-6 xl:text-5xl">
+			<p
+				class="text-grey-950 dark:text-grey-50 mb-6 text-4xl font-bold text-balance xl:mb-6 xl:text-5xl xl:tracking-tight"
+			>
 				<slot name="title" />
 			</p>
 
-			<p class="max-w-[37.5rem]">
+			<p class="max-w-150">
 				<slot name="intro" />
 			</p>
 		</div>

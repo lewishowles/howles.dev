@@ -8,6 +8,7 @@
 			tabindex="-1"
 		>
 			<welcome-bento />
+			<what-i-help-with />
 			<core-values />
 			<about-me />
 			<super-cool-projects />

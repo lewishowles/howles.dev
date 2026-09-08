@@ -46,6 +46,30 @@
 		}
 	},
 
+	"help_with": {
+		"pre_title": "How I can help",
+		"title": "I make interfaces easier to {use}, easier to {build}, and harder to break.",
+		"intro": "Design · accessibility · front-end · developer experience",
+		"items": {
+			"accessible_front_end_builds": {
+				"title": "Accessible front-end builds",
+				"description": "Keyboard, screen reader, and semantics handled during the build, not bolted on afterwards."
+			},
+			"design_systems_and_reusable_components": {
+				"title": "Design systems and reusable components",
+				"description": "Patterns and components that settle decisions once, so design and build move quicker."
+			},
+			"front_end_tooling_and_developer_experience": {
+				"title": "Front-end tooling and developer experience",
+				"description": "Testing and automation that keep the repetitive work out of the way, and let developers focus on the fun things."
+			},
+			"design_and_front_end_together": {
+				"title": "Design and front-end in one pair of hands",
+				"description": "One person either side of the design-to-production gap, so intent survives the handoff."
+			}
+		}
+	},
+
 	"paddock_status": {
 		"loading": "Checking status",
 		"title": "Tyrannosaurus Paddock",
